@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14460.20"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="BannerViewController">
+            <connections>
+                <outlet property="view" destination="ZbE-3t-Maf" id="UXP-76-GcB"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="ZbE-3t-Maf">
+            <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="vpU-NE-FSg">
+                    <rect key="frame" x="32" y="355" width="62" height="30"/>
+                    <accessibility key="accessibilityConfiguration" identifier="show_ad_button"/>
+                    <state key="normal" title="展示广告"/>
+                    <connections>
+                        <action selector="clickLoadAd:" destination="-1" eventType="touchUpInside" id="j3R-Yw-7vf"/>
+                    </connections>
+                </button>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="scA-oh-CAh">
+                    <rect key="frame" x="144" y="355" width="62" height="30"/>
+                    <accessibility key="accessibilityConfiguration" identifier="remove_ad_button"/>
+                    <state key="normal" title="移除广告"/>
+                    <connections>
+                        <action selector="clickRemoveAd:" destination="-1" eventType="touchUpInside" id="fYU-tW-Rzt"/>
+                    </connections>
+                </button>
+            </subviews>
+            <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <constraints>
+                <constraint firstAttribute="bottom" secondItem="vpU-NE-FSg" secondAttribute="bottom" constant="282" id="0OW-Xa-xpq"/>
+                <constraint firstItem="scA-oh-CAh" firstAttribute="width" secondItem="vpU-NE-FSg" secondAttribute="width" id="MUm-Uo-ToJ"/>
+                <constraint firstItem="scA-oh-CAh" firstAttribute="centerY" secondItem="vpU-NE-FSg" secondAttribute="centerY" id="N6R-id-oRH"/>
+                <constraint firstItem="vpU-NE-FSg" firstAttribute="leading" secondItem="ZbE-3t-Maf" secondAttribute="leading" constant="32" id="Pca-JE-qbs"/>
+                <constraint firstItem="scA-oh-CAh" firstAttribute="leading" secondItem="vpU-NE-FSg" secondAttribute="trailing" constant="50" id="UEN-uK-IbH"/>
+                <constraint firstItem="scA-oh-CAh" firstAttribute="height" secondItem="vpU-NE-FSg" secondAttribute="height" id="aid-z6-55Y"/>
+            </constraints>
+        </view>
+    </objects>
+</document>
