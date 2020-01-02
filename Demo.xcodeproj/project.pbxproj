@@ -56,6 +56,7 @@
 		548F3FE1231F4AAA003CE914 /* MSAdViewController+Sample.m in Sources */ = {isa = PBXBuildFile; fileRef = 548F3FD3231F4AAA003CE914 /* MSAdViewController+Sample.m */; };
 		548F3FE4231F4AFD003CE914 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 548F3FE3231F4AFD003CE914 /* AppDelegate.m */; };
 		5490C624238CC9120050DCDD /* MSNativeAdController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5490C623238CC9120050DCDD /* MSNativeAdController.m */; };
+		E986F2BD23BD99A500A5EECA /* libMSAdSDK.a in Frameworks */ = {isa = PBXBuildFile; fileRef = E986F2BC23BD99A500A5EECA /* libMSAdSDK.a */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -143,20 +144,20 @@
 		548F3FE3231F4AFD003CE914 /* AppDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
 		5490C622238CC9120050DCDD /* MSNativeAdController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MSNativeAdController.h; sourceTree = "<group>"; };
 		5490C623238CC9120050DCDD /* MSNativeAdController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MSNativeAdController.m; sourceTree = "<group>"; };
-		E96D03D123B5F6DF001C29D4 /* MSAdModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MSAdModel.h; sourceTree = "<group>"; };
-		E96D03D223B5F6DF001C29D4 /* MSRewardVideoAd.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MSRewardVideoAd.h; sourceTree = "<group>"; };
-		E96D03D323B5F6DF001C29D4 /* MRApplication.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MRApplication.h; sourceTree = "<group>"; };
-		E96D03D423B5F6DF001C29D4 /* MSSDKDefines.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MSSDKDefines.h; sourceTree = "<group>"; };
-		E96D03D523B5F6DF001C29D4 /* MSSplashAd.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MSSplashAd.h; sourceTree = "<group>"; };
-		E96D03D623B5F6DF001C29D4 /* MSCommCore.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MSCommCore.h; sourceTree = "<group>"; };
-		E96D03D723B5F6DF001C29D4 /* MSNativeAdView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MSNativeAdView.h; sourceTree = "<group>"; };
-		E96D03D823B5F6DF001C29D4 /* MSInterstitial.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MSInterstitial.h; sourceTree = "<group>"; };
-		E96D03D923B5F6DF001C29D4 /* MSNativeAd.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MSNativeAd.h; sourceTree = "<group>"; };
-		E96D03DA23B5F6DF001C29D4 /* MSConfiger.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MSConfiger.h; sourceTree = "<group>"; };
-		E96D03DB23B5F6DF001C29D4 /* MSBannerView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MSBannerView.h; sourceTree = "<group>"; };
-		E96D03DC23B5F6DF001C29D4 /* MSSDKModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MSSDKModel.h; sourceTree = "<group>"; };
-		E96D03DD23B5F6DF001C29D4 /* MSAdSDK.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MSAdSDK.h; sourceTree = "<group>"; };
-		E96D03DE23B5F6DF001C29D4 /* libMSAdSDK.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = libMSAdSDK.a; sourceTree = "<group>"; };
+		E986F2AF23BD99A500A5EECA /* MSAdModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MSAdModel.h; sourceTree = "<group>"; };
+		E986F2B023BD99A500A5EECA /* MSRewardVideoAd.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MSRewardVideoAd.h; sourceTree = "<group>"; };
+		E986F2B123BD99A500A5EECA /* MRApplication.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MRApplication.h; sourceTree = "<group>"; };
+		E986F2B223BD99A500A5EECA /* MSSDKDefines.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MSSDKDefines.h; sourceTree = "<group>"; };
+		E986F2B323BD99A500A5EECA /* MSSplashAd.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MSSplashAd.h; sourceTree = "<group>"; };
+		E986F2B423BD99A500A5EECA /* MSCommCore.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MSCommCore.h; sourceTree = "<group>"; };
+		E986F2B523BD99A500A5EECA /* MSNativeAdView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MSNativeAdView.h; sourceTree = "<group>"; };
+		E986F2B623BD99A500A5EECA /* MSInterstitial.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MSInterstitial.h; sourceTree = "<group>"; };
+		E986F2B723BD99A500A5EECA /* MSNativeAd.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MSNativeAd.h; sourceTree = "<group>"; };
+		E986F2B823BD99A500A5EECA /* MSConfiger.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MSConfiger.h; sourceTree = "<group>"; };
+		E986F2B923BD99A500A5EECA /* MSBannerView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MSBannerView.h; sourceTree = "<group>"; };
+		E986F2BA23BD99A500A5EECA /* MSSDKModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MSSDKModel.h; sourceTree = "<group>"; };
+		E986F2BB23BD99A500A5EECA /* MSAdSDK.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MSAdSDK.h; sourceTree = "<group>"; };
+		E986F2BC23BD99A500A5EECA /* libMSAdSDK.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = libMSAdSDK.a; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -180,6 +181,7 @@
 				2F2520D0231F5C39003212B0 /* CoreLocation.framework in Frameworks */,
 				2F2520CE231F5C32003212B0 /* QuartzCore.framework in Frameworks */,
 				2F2520CC231F5C2A003212B0 /* SystemConfiguration.framework in Frameworks */,
+				E986F2BD23BD99A500A5EECA /* libMSAdSDK.a in Frameworks */,
 				2F2520CA231F5C22003212B0 /* CoreGraphics.framework in Frameworks */,
 				2F2520C8231F5C16003212B0 /* UIKit.framework in Frameworks */,
 				2F2520C6231F5C10003212B0 /* Foundation.framework in Frameworks */,
@@ -314,7 +316,7 @@
 		548F3FB6231F4AAA003CE914 /* lib */ = {
 			isa = PBXGroup;
 			children = (
-				E96D03CE23B5F6DF001C29D4 /* MS */,
+				E986F2AC23BD99A500A5EECA /* MS */,
 				088392B12398D0AD00C0BB1F /* BUAdSDK.bundle */,
 				088392B02398D0AD00C0BB1F /* BUAdSDK.framework */,
 			);
@@ -394,39 +396,39 @@
 			path = MSSampleAdTypes;
 			sourceTree = "<group>";
 		};
-		E96D03CE23B5F6DF001C29D4 /* MS */ = {
+		E986F2AC23BD99A500A5EECA /* MS */ = {
 			isa = PBXGroup;
 			children = (
-				E96D03CF23B5F6DF001C29D4 /* include */,
-				E96D03DE23B5F6DF001C29D4 /* libMSAdSDK.a */,
+				E986F2AD23BD99A500A5EECA /* include */,
+				E986F2BC23BD99A500A5EECA /* libMSAdSDK.a */,
 			);
 			path = MS;
 			sourceTree = "<group>";
 		};
-		E96D03CF23B5F6DF001C29D4 /* include */ = {
+		E986F2AD23BD99A500A5EECA /* include */ = {
 			isa = PBXGroup;
 			children = (
-				E96D03D023B5F6DF001C29D4 /* MSAdSDK */,
+				E986F2AE23BD99A500A5EECA /* MSAdSDK */,
 			);
 			path = include;
 			sourceTree = "<group>";
 		};
-		E96D03D023B5F6DF001C29D4 /* MSAdSDK */ = {
+		E986F2AE23BD99A500A5EECA /* MSAdSDK */ = {
 			isa = PBXGroup;
 			children = (
-				E96D03D123B5F6DF001C29D4 /* MSAdModel.h */,
-				E96D03D223B5F6DF001C29D4 /* MSRewardVideoAd.h */,
-				E96D03D323B5F6DF001C29D4 /* MRApplication.h */,
-				E96D03D423B5F6DF001C29D4 /* MSSDKDefines.h */,
-				E96D03D523B5F6DF001C29D4 /* MSSplashAd.h */,
-				E96D03D623B5F6DF001C29D4 /* MSCommCore.h */,
-				E96D03D723B5F6DF001C29D4 /* MSNativeAdView.h */,
-				E96D03D823B5F6DF001C29D4 /* MSInterstitial.h */,
-				E96D03D923B5F6DF001C29D4 /* MSNativeAd.h */,
-				E96D03DA23B5F6DF001C29D4 /* MSConfiger.h */,
-				E96D03DB23B5F6DF001C29D4 /* MSBannerView.h */,
-				E96D03DC23B5F6DF001C29D4 /* MSSDKModel.h */,
-				E96D03DD23B5F6DF001C29D4 /* MSAdSDK.h */,
+				E986F2AF23BD99A500A5EECA /* MSAdModel.h */,
+				E986F2B023BD99A500A5EECA /* MSRewardVideoAd.h */,
+				E986F2B123BD99A500A5EECA /* MRApplication.h */,
+				E986F2B223BD99A500A5EECA /* MSSDKDefines.h */,
+				E986F2B323BD99A500A5EECA /* MSSplashAd.h */,
+				E986F2B423BD99A500A5EECA /* MSCommCore.h */,
+				E986F2B523BD99A500A5EECA /* MSNativeAdView.h */,
+				E986F2B623BD99A500A5EECA /* MSInterstitial.h */,
+				E986F2B723BD99A500A5EECA /* MSNativeAd.h */,
+				E986F2B823BD99A500A5EECA /* MSConfiger.h */,
+				E986F2B923BD99A500A5EECA /* MSBannerView.h */,
+				E986F2BA23BD99A500A5EECA /* MSSDKModel.h */,
+				E986F2BB23BD99A500A5EECA /* MSAdSDK.h */,
 			);
 			path = MSAdSDK;
 			sourceTree = "<group>";
