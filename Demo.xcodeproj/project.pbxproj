@@ -56,7 +56,13 @@
 		548F3FE1231F4AAA003CE914 /* MSAdViewController+Sample.m in Sources */ = {isa = PBXBuildFile; fileRef = 548F3FD3231F4AAA003CE914 /* MSAdViewController+Sample.m */; };
 		548F3FE4231F4AFD003CE914 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 548F3FE3231F4AFD003CE914 /* AppDelegate.m */; };
 		5490C624238CC9120050DCDD /* MSNativeAdController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5490C623238CC9120050DCDD /* MSNativeAdController.m */; };
-		E986F2BD23BD99A500A5EECA /* libMSAdSDK.a in Frameworks */ = {isa = PBXBuildFile; fileRef = E986F2BC23BD99A500A5EECA /* libMSAdSDK.a */; };
+		E986F27823BB508F00A5EECA /* MSIdProvider.m in Sources */ = {isa = PBXBuildFile; fileRef = E986F27723BB508F00A5EECA /* MSIdProvider.m */; };
+		E986F27A23BB51CF00A5EECA /* CSJIdProvider.m in Sources */ = {isa = PBXBuildFile; fileRef = E986F27923BB51CF00A5EECA /* CSJIdProvider.m */; };
+		E986F27C23BB529300A5EECA /* GDTIdProvider.m in Sources */ = {isa = PBXBuildFile; fileRef = E986F27B23BB529300A5EECA /* GDTIdProvider.m */; };
+		E986F27E23BB59A300A5EECA /* BDIdProvider.m in Sources */ = {isa = PBXBuildFile; fileRef = E986F27D23BB59A300A5EECA /* BDIdProvider.m */; };
+		E986F28123BB627A00A5EECA /* IdProviderFactory.m in Sources */ = {isa = PBXBuildFile; fileRef = E986F28023BB627A00A5EECA /* IdProviderFactory.m */; };
+		E986F28723BD94DB00A5EECA /* IAdIdProvider.m in Sources */ = {isa = PBXBuildFile; fileRef = E986F28623BD94DB00A5EECA /* IAdIdProvider.m */; };
+		E986F2CF23BDEF1600A5EECA /* libMSAdSDK.a in Frameworks */ = {isa = PBXBuildFile; fileRef = E986F2CE23BDEF1600A5EECA /* libMSAdSDK.a */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -144,20 +150,32 @@
 		548F3FE3231F4AFD003CE914 /* AppDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
 		5490C622238CC9120050DCDD /* MSNativeAdController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MSNativeAdController.h; sourceTree = "<group>"; };
 		5490C623238CC9120050DCDD /* MSNativeAdController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MSNativeAdController.m; sourceTree = "<group>"; };
-		E986F2AF23BD99A500A5EECA /* MSAdModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MSAdModel.h; sourceTree = "<group>"; };
-		E986F2B023BD99A500A5EECA /* MSRewardVideoAd.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MSRewardVideoAd.h; sourceTree = "<group>"; };
-		E986F2B123BD99A500A5EECA /* MRApplication.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MRApplication.h; sourceTree = "<group>"; };
-		E986F2B223BD99A500A5EECA /* MSSDKDefines.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MSSDKDefines.h; sourceTree = "<group>"; };
-		E986F2B323BD99A500A5EECA /* MSSplashAd.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MSSplashAd.h; sourceTree = "<group>"; };
-		E986F2B423BD99A500A5EECA /* MSCommCore.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MSCommCore.h; sourceTree = "<group>"; };
-		E986F2B523BD99A500A5EECA /* MSNativeAdView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MSNativeAdView.h; sourceTree = "<group>"; };
-		E986F2B623BD99A500A5EECA /* MSInterstitial.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MSInterstitial.h; sourceTree = "<group>"; };
-		E986F2B723BD99A500A5EECA /* MSNativeAd.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MSNativeAd.h; sourceTree = "<group>"; };
-		E986F2B823BD99A500A5EECA /* MSConfiger.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MSConfiger.h; sourceTree = "<group>"; };
-		E986F2B923BD99A500A5EECA /* MSBannerView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MSBannerView.h; sourceTree = "<group>"; };
-		E986F2BA23BD99A500A5EECA /* MSSDKModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MSSDKModel.h; sourceTree = "<group>"; };
-		E986F2BB23BD99A500A5EECA /* MSAdSDK.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MSAdSDK.h; sourceTree = "<group>"; };
-		E986F2BC23BD99A500A5EECA /* libMSAdSDK.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = libMSAdSDK.a; sourceTree = "<group>"; };
+		E986F27623BB4CC800A5EECA /* IAdIdProvider.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = IAdIdProvider.h; sourceTree = "<group>"; };
+		E986F27723BB508F00A5EECA /* MSIdProvider.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MSIdProvider.m; sourceTree = "<group>"; };
+		E986F27923BB51CF00A5EECA /* CSJIdProvider.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CSJIdProvider.m; sourceTree = "<group>"; };
+		E986F27B23BB529300A5EECA /* GDTIdProvider.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = GDTIdProvider.m; sourceTree = "<group>"; };
+		E986F27D23BB59A300A5EECA /* BDIdProvider.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BDIdProvider.m; sourceTree = "<group>"; };
+		E986F27F23BB608300A5EECA /* IdProviderFactory.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = IdProviderFactory.h; sourceTree = "<group>"; };
+		E986F28023BB627A00A5EECA /* IdProviderFactory.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = IdProviderFactory.m; sourceTree = "<group>"; };
+		E986F28223BB65B600A5EECA /* MSIdProvider.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MSIdProvider.h; sourceTree = "<group>"; };
+		E986F28323BB666200A5EECA /* CSJIdProvider.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CSJIdProvider.h; sourceTree = "<group>"; };
+		E986F28423BB668F00A5EECA /* GDTIdProvider.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = GDTIdProvider.h; sourceTree = "<group>"; };
+		E986F28523BB66BA00A5EECA /* BDIdProvider.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BDIdProvider.h; sourceTree = "<group>"; };
+		E986F28623BD94DB00A5EECA /* IAdIdProvider.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = IAdIdProvider.m; sourceTree = "<group>"; };
+		E986F2C123BDEF1600A5EECA /* MSAdModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MSAdModel.h; sourceTree = "<group>"; };
+		E986F2C223BDEF1600A5EECA /* MSRewardVideoAd.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MSRewardVideoAd.h; sourceTree = "<group>"; };
+		E986F2C323BDEF1600A5EECA /* MRApplication.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MRApplication.h; sourceTree = "<group>"; };
+		E986F2C423BDEF1600A5EECA /* MSSDKDefines.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MSSDKDefines.h; sourceTree = "<group>"; };
+		E986F2C523BDEF1600A5EECA /* MSSplashAd.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MSSplashAd.h; sourceTree = "<group>"; };
+		E986F2C623BDEF1600A5EECA /* MSCommCore.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MSCommCore.h; sourceTree = "<group>"; };
+		E986F2C723BDEF1600A5EECA /* MSNativeAdView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MSNativeAdView.h; sourceTree = "<group>"; };
+		E986F2C823BDEF1600A5EECA /* MSInterstitial.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MSInterstitial.h; sourceTree = "<group>"; };
+		E986F2C923BDEF1600A5EECA /* MSNativeAd.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MSNativeAd.h; sourceTree = "<group>"; };
+		E986F2CA23BDEF1600A5EECA /* MSConfiger.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MSConfiger.h; sourceTree = "<group>"; };
+		E986F2CB23BDEF1600A5EECA /* MSBannerView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MSBannerView.h; sourceTree = "<group>"; };
+		E986F2CC23BDEF1600A5EECA /* MSSDKModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MSSDKModel.h; sourceTree = "<group>"; };
+		E986F2CD23BDEF1600A5EECA /* MSAdSDK.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MSAdSDK.h; sourceTree = "<group>"; };
+		E986F2CE23BDEF1600A5EECA /* libMSAdSDK.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = libMSAdSDK.a; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -181,7 +199,7 @@
 				2F2520D0231F5C39003212B0 /* CoreLocation.framework in Frameworks */,
 				2F2520CE231F5C32003212B0 /* QuartzCore.framework in Frameworks */,
 				2F2520CC231F5C2A003212B0 /* SystemConfiguration.framework in Frameworks */,
-				E986F2BD23BD99A500A5EECA /* libMSAdSDK.a in Frameworks */,
+				E986F2CF23BDEF1600A5EECA /* libMSAdSDK.a in Frameworks */,
 				2F2520CA231F5C22003212B0 /* CoreGraphics.framework in Frameworks */,
 				2F2520C8231F5C16003212B0 /* UIKit.framework in Frameworks */,
 				2F2520C6231F5C10003212B0 /* Foundation.framework in Frameworks */,
@@ -267,6 +285,7 @@
 				0818F40C238667C1003A8D2B /* iPhoneX@2x.png */,
 				548F3FB6231F4AAA003CE914 /* lib */,
 				548F3FB8231F4AAA003CE914 /* MSAds */,
+				E986F27423BB4AC300A5EECA /* adid */,
 				548F3FCD231F4AAA003CE914 /* MSAdViewController.h */,
 				548F3FCE231F4AAA003CE914 /* MSAdViewController.m */,
 				548F3FCF231F4AAA003CE914 /* MSNavigationController.h */,
@@ -316,7 +335,7 @@
 		548F3FB6231F4AAA003CE914 /* lib */ = {
 			isa = PBXGroup;
 			children = (
-				E986F2AC23BD99A500A5EECA /* MS */,
+				E986F2BE23BDEF1600A5EECA /* MS */,
 				088392B12398D0AD00C0BB1F /* BUAdSDK.bundle */,
 				088392B02398D0AD00C0BB1F /* BUAdSDK.framework */,
 			);
@@ -396,39 +415,58 @@
 			path = MSSampleAdTypes;
 			sourceTree = "<group>";
 		};
-		E986F2AC23BD99A500A5EECA /* MS */ = {
+		E986F27423BB4AC300A5EECA /* adid */ = {
 			isa = PBXGroup;
 			children = (
-				E986F2AD23BD99A500A5EECA /* include */,
-				E986F2BC23BD99A500A5EECA /* libMSAdSDK.a */,
+				E986F27623BB4CC800A5EECA /* IAdIdProvider.h */,
+				E986F28623BD94DB00A5EECA /* IAdIdProvider.m */,
+				E986F28223BB65B600A5EECA /* MSIdProvider.h */,
+				E986F27723BB508F00A5EECA /* MSIdProvider.m */,
+				E986F28323BB666200A5EECA /* CSJIdProvider.h */,
+				E986F27923BB51CF00A5EECA /* CSJIdProvider.m */,
+				E986F28423BB668F00A5EECA /* GDTIdProvider.h */,
+				E986F27B23BB529300A5EECA /* GDTIdProvider.m */,
+				E986F28523BB66BA00A5EECA /* BDIdProvider.h */,
+				E986F27D23BB59A300A5EECA /* BDIdProvider.m */,
+				E986F27F23BB608300A5EECA /* IdProviderFactory.h */,
+				E986F28023BB627A00A5EECA /* IdProviderFactory.m */,
+			);
+			path = adid;
+			sourceTree = "<group>";
+		};
+		E986F2BE23BDEF1600A5EECA /* MS */ = {
+			isa = PBXGroup;
+			children = (
+				E986F2BF23BDEF1600A5EECA /* include */,
+				E986F2CE23BDEF1600A5EECA /* libMSAdSDK.a */,
 			);
 			path = MS;
 			sourceTree = "<group>";
 		};
-		E986F2AD23BD99A500A5EECA /* include */ = {
+		E986F2BF23BDEF1600A5EECA /* include */ = {
 			isa = PBXGroup;
 			children = (
-				E986F2AE23BD99A500A5EECA /* MSAdSDK */,
+				E986F2C023BDEF1600A5EECA /* MSAdSDK */,
 			);
 			path = include;
 			sourceTree = "<group>";
 		};
-		E986F2AE23BD99A500A5EECA /* MSAdSDK */ = {
+		E986F2C023BDEF1600A5EECA /* MSAdSDK */ = {
 			isa = PBXGroup;
 			children = (
-				E986F2AF23BD99A500A5EECA /* MSAdModel.h */,
-				E986F2B023BD99A500A5EECA /* MSRewardVideoAd.h */,
-				E986F2B123BD99A500A5EECA /* MRApplication.h */,
-				E986F2B223BD99A500A5EECA /* MSSDKDefines.h */,
-				E986F2B323BD99A500A5EECA /* MSSplashAd.h */,
-				E986F2B423BD99A500A5EECA /* MSCommCore.h */,
-				E986F2B523BD99A500A5EECA /* MSNativeAdView.h */,
-				E986F2B623BD99A500A5EECA /* MSInterstitial.h */,
-				E986F2B723BD99A500A5EECA /* MSNativeAd.h */,
-				E986F2B823BD99A500A5EECA /* MSConfiger.h */,
-				E986F2B923BD99A500A5EECA /* MSBannerView.h */,
-				E986F2BA23BD99A500A5EECA /* MSSDKModel.h */,
-				E986F2BB23BD99A500A5EECA /* MSAdSDK.h */,
+				E986F2C123BDEF1600A5EECA /* MSAdModel.h */,
+				E986F2C223BDEF1600A5EECA /* MSRewardVideoAd.h */,
+				E986F2C323BDEF1600A5EECA /* MRApplication.h */,
+				E986F2C423BDEF1600A5EECA /* MSSDKDefines.h */,
+				E986F2C523BDEF1600A5EECA /* MSSplashAd.h */,
+				E986F2C623BDEF1600A5EECA /* MSCommCore.h */,
+				E986F2C723BDEF1600A5EECA /* MSNativeAdView.h */,
+				E986F2C823BDEF1600A5EECA /* MSInterstitial.h */,
+				E986F2C923BDEF1600A5EECA /* MSNativeAd.h */,
+				E986F2CA23BDEF1600A5EECA /* MSConfiger.h */,
+				E986F2CB23BDEF1600A5EECA /* MSBannerView.h */,
+				E986F2CC23BDEF1600A5EECA /* MSSDKModel.h */,
+				E986F2CD23BDEF1600A5EECA /* MSAdSDK.h */,
 			);
 			path = MSAdSDK;
 			sourceTree = "<group>";
@@ -575,13 +613,19 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E986F28723BD94DB00A5EECA /* IAdIdProvider.m in Sources */,
+				E986F27E23BB59A300A5EECA /* BDIdProvider.m in Sources */,
 				548F3FE4231F4AFD003CE914 /* AppDelegate.m in Sources */,
+				E986F27C23BB529300A5EECA /* GDTIdProvider.m in Sources */,
+				E986F27A23BB51CF00A5EECA /* CSJIdProvider.m in Sources */,
 				548F3ECB231F47A4003CE914 /* ViewController.m in Sources */,
 				548F3FDF231F4AAA003CE914 /* MSAdViewController.m in Sources */,
 				548F3FD7231F4AAA003CE914 /* InterstitialViewController.m in Sources */,
 				548F3FDD231F4AAA003CE914 /* SplashViewController.m in Sources */,
+				E986F28123BB627A00A5EECA /* IdProviderFactory.m in Sources */,
 				5490C624238CC9120050DCDD /* MSNativeAdController.m in Sources */,
 				548F3FE0231F4AAA003CE914 /* MSNavigationController.m in Sources */,
+				E986F27823BB508F00A5EECA /* MSIdProvider.m in Sources */,
 				548F3FD9231F4AAA003CE914 /* NativeExpressAdViewController.m in Sources */,
 				548F3FDB231F4AAA003CE914 /* RewardVideoViewController.m in Sources */,
 				548F3FD5231F4AAA003CE914 /* BannerViewController.m in Sources */,

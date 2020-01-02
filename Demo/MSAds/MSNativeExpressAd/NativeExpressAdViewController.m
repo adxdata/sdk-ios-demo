@@ -9,6 +9,7 @@
 #import "NativeExpressAdViewController.h"
 #import "MSNativeAdView.h"
 #import "MSNativeAd.h"
+#import "IdProviderFactory.h"
 
 @interface NativeExpressAdViewController ()<MSNativeAdDelegate,UITableViewDelegate,UITableViewDataSource,MSNativeAdDelegate>
 
@@ -73,13 +74,13 @@
 }
 
 - (IBAction)refreshButton:(id)sender {
-    
-    
+//    NSString *pid = @"100424153";
+    NSString *pid = [[[IdProviderFactory sharedIdProviderFactory] getDefaultProvider] feedImageVertical];
     /*
      * 拉取广告,传入参数为拉取个数。
      * 发起拉取广告请求,在获得广告数据后回调delegate
      */
-    [self.nativeAd loadAd:10]; //这里以一次拉取一条原生广告为例
+    [self.nativeAd loadAd:10 pid:pid]; //这里以一次拉取一条原生广告为例
 }
 
 

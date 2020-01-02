@@ -8,6 +8,7 @@
 
 #import "SplashViewController.h"
 #import "MSSplashAd.h"
+#import "IdProviderFactory.h"
 
 @interface SplashViewController () <MSSplashAdDelegate>
 
@@ -38,8 +39,10 @@
     MSSplashAd *splash = [[MSSplashAd alloc]init];
     splash.delegate = self;
     self.splash = splash;
+//    NSString *pid = @"100424147";
+    NSString *pid = [[[IdProviderFactory sharedIdProviderFactory] getDefaultProvider] splash];
     UIWindow *window = [[UIApplication sharedApplication] keyWindow];
-    [splash loadAdAndShowInWindow:window];
+    [splash loadAdAndShowInWindow:window pid:pid];
 }
 
 /**

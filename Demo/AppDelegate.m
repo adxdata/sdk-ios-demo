@@ -9,6 +9,7 @@
 #import "AppDelegate.h"
 #import "MSSplashAd.h"
 #import "MSAdSDK.h"
+#import "IdProviderFactory.h"
 
 #import "MSNavigationController.h"
 #import "MSAdViewController.h"
@@ -22,6 +23,7 @@
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     [MSAdSDK setAppId:@"101629"];
+    [[IdProviderFactory sharedIdProviderFactory] setDefaultPlatform:PlatformNameCSJ];
     self.window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
     MSAdViewController *vc = [[MSAdViewController alloc] init];
     MSNavigationController *nav = [[MSNavigationController alloc] initWithRootViewController:vc];

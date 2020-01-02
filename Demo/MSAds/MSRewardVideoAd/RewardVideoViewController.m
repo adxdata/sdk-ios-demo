@@ -8,6 +8,7 @@
 
 #import "RewardVideoViewController.h"
 #import "MSRewardVideoAd.h"
+#import "IdProviderFactory.h"
 
 @interface RewardVideoViewController () <MSRewardedVideoAdDelegate>
 
@@ -48,8 +49,10 @@
         self.rewardVideoAd = [[MSRewardVideoAd alloc] initWithCurController:self];
     }
     self.rewardVideoAd.delegate = self;
+//    NSString *pid = @"100424157";
+    NSString *pid = [[[IdProviderFactory sharedIdProviderFactory] getDefaultProvider] rewardPortrait];
     //加载数据
-    [self.rewardVideoAd loadData];
+    [self.rewardVideoAd loadData:pid];
 }
 
 - (IBAction)playVideo:(UIButton *)sender {

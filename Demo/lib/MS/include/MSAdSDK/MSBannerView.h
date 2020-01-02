@@ -96,7 +96,7 @@ NS_ASSUME_NONNULL_BEGIN
 /**
  *  拉取并展示广告
  */
-- (void)loadAdAndShow:(UIViewController*)currentViewController;
+- (void)loadAdAndShow:(UIViewController*)currentViewController pid:(NSString *)pid;
 
 @end
 

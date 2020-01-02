@@ -76,8 +76,9 @@ NS_ASSUME_NONNULL_BEGIN
  *  详解：[可选]发起拉取广告请求,并将获取的广告以全屏形式展示在传入的Window参数中
  *  提示: Splash广告只支持竖屏
  *  @param window 展示全屏开屏的容器
+ *  @param pid 广告id
  */
-- (void)loadAdAndShowInWindow:(UIWindow *)window;
+- (void)loadAdAndShowInWindow:(UIWindow *)window pid:(NSString *)pid;
 
 @end
 

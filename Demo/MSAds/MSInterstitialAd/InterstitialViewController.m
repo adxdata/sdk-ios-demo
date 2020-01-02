@@ -8,6 +8,7 @@
 
 #import "InterstitialViewController.h"
 #import "MSInterstitial.h"
+#import "IdProviderFactory.h"
 
 @interface InterstitialViewController() <MSInterstitialDelegate>
 
@@ -40,7 +41,9 @@ static NSString *INTERSTITIAL_STATE_TEXT = @"插屏状态";
     if(self.interstitial) {
         self.interstitial.delegate = nil;
     }
-    self.interstitial = [[MSInterstitial alloc] initWithCurController:self];
+//    NSString *pid = @"100424148";
+    NSString *pid = [[[IdProviderFactory sharedIdProviderFactory] getDefaultProvider] insertScreen];
+    self.interstitial = [[MSInterstitial alloc] initWithCurController:self pid:pid];
     self.interstitial.delegate = self;
 }
 

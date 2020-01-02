@@ -8,6 +8,7 @@
 
 #import "BannerViewController.h"
 #import "MSBannerView.h"
+#import "IdProviderFactory.h"
 
 @interface BannerViewController() <MSBannerViewDelegate>
 
@@ -53,7 +54,9 @@
 - (IBAction)clickLoadAd:(id)sender {
     [self clickRemoveAd:nil];
     [self.view addSubview:self.bannerView];
-    [_bannerView loadAdAndShow:self];
+//    NSString *pid = @"100424146";
+    NSString *pid = [[[IdProviderFactory sharedIdProviderFactory] getDefaultProvider] banner];
+    [_bannerView loadAdAndShow:self pid:pid];
 }
 
 - (IBAction)clickRemoveAd:(id)sender {

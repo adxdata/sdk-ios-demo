@@ -96,7 +96,7 @@
 *  加载数据
 *  详解：加载数据
 */
-- (void)loadData;
+- (void)loadData:(NSString *)pid;
 
 /**
  *  显示广告

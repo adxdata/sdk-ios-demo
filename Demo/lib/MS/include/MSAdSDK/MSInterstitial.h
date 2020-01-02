@@ -62,7 +62,7 @@
  *  构造方法
  *  详解：frame - banner 展示的位置和大小
  */
-- (instancetype)initWithCurController:(UIViewController*)controller;
+- (instancetype)initWithCurController:(UIViewController*)controller pid:(NSString *)pid;
 
 /**
  *  显示广告

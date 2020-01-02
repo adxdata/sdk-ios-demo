@@ -58,8 +58,9 @@ NS_ASSUME_NONNULL_BEGIN
  *  广告发起请求方法
  *  详解：[必选]发起拉取广告请求,在获得广告数据后回调delegate
  *  @param adCount 一次拉取广告的个数
+ *  @param pid 广告id
  */
-- (void)loadAd:(int)adCount;
+- (void)loadAd:(int)adCount pid:(NSString *)pid;
 
 /**
  *  广告数据渲染完毕即将展示时调用方法
