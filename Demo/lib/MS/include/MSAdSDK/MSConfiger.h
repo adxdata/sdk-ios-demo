@@ -18,7 +18,12 @@ NS_ASSUME_NONNULL_BEGIN
 
 + (instancetype)share;
 - (void)update:(NSString*)baseUrl;
-- (void)loadAd:(MSAdModel*)model gdtCalllback:(void(^)(MSSDKModel* sdkModel))gdtCalllback csjCallback:(void(^)(MSSDKModel* sdkModel))csjCallback msCallback:(void(^)(MSAdModel* msModel))msCallback msEmptycallback:(void(^)(NSError* error))msEmptycallback;
+- (void)loadAd:(MSAdModel*)model
+        gdtCalllback:(void(^)(MSSDKModel* sdkModel))gdtCalllback
+        csjCallback:(void(^)(MSSDKModel* sdkModel))csjCallback
+        bdCallback:(void(^)(MSSDKModel* msModel))bdCallback
+        msCallback:(void(^)(MSAdModel* msModel))msCallback
+        msEmptycallback:(void(^)(NSError* error))msEmptycallback;
 @end
 
 NS_ASSUME_NONNULL_END

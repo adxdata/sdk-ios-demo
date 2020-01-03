@@ -30,6 +30,7 @@ typedef NS_ENUM(NSInteger, MSShowType) {
     MSShowTypeMS = 0, // 展示美数
     MSShowTypeGDT = 1, // 展示广点通
     MSShowTypeBU = 2, // 展示穿山甲
+    MSShowTypeBD = 3, // 展示百度
 };
 
 typedef NS_ENUM(NSInteger, MSOrientation) {

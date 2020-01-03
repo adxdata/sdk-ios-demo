@@ -22,7 +22,7 @@
 
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
-    [MSAdSDK setAppId:@"101629"];
+    [MSAdSDK setAppId:@"101647"];
     [[IdProviderFactory sharedIdProviderFactory] setDefaultPlatform:PlatformNameCSJ];
     self.window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
     MSAdViewController *vc = [[MSAdViewController alloc] init];

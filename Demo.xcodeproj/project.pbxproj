@@ -56,6 +56,9 @@
 		548F3FE1231F4AAA003CE914 /* MSAdViewController+Sample.m in Sources */ = {isa = PBXBuildFile; fileRef = 548F3FD3231F4AAA003CE914 /* MSAdViewController+Sample.m */; };
 		548F3FE4231F4AFD003CE914 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 548F3FE3231F4AFD003CE914 /* AppDelegate.m */; };
 		5490C624238CC9120050DCDD /* MSNativeAdController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5490C623238CC9120050DCDD /* MSNativeAdController.m */; };
+		E98605BA23BEEB9400A5EECA /* BaiduMobAdSDK.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E98605B923BEEB9400A5EECA /* BaiduMobAdSDK.framework */; };
+		E98605BC23BEEBC000A5EECA /* SafariServices.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E98605BB23BEEBC000A5EECA /* SafariServices.framework */; };
+		E98605BE23BEEBD000A5EECA /* MessageUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E98605BD23BEEBD000A5EECA /* MessageUI.framework */; };
 		E986F27823BB508F00A5EECA /* MSIdProvider.m in Sources */ = {isa = PBXBuildFile; fileRef = E986F27723BB508F00A5EECA /* MSIdProvider.m */; };
 		E986F27A23BB51CF00A5EECA /* CSJIdProvider.m in Sources */ = {isa = PBXBuildFile; fileRef = E986F27923BB51CF00A5EECA /* CSJIdProvider.m */; };
 		E986F27C23BB529300A5EECA /* GDTIdProvider.m in Sources */ = {isa = PBXBuildFile; fileRef = E986F27B23BB529300A5EECA /* GDTIdProvider.m */; };
@@ -150,6 +153,9 @@
 		548F3FE3231F4AFD003CE914 /* AppDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
 		5490C622238CC9120050DCDD /* MSNativeAdController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MSNativeAdController.h; sourceTree = "<group>"; };
 		5490C623238CC9120050DCDD /* MSNativeAdController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MSNativeAdController.m; sourceTree = "<group>"; };
+		E98605B923BEEB9400A5EECA /* BaiduMobAdSDK.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = BaiduMobAdSDK.framework; sourceTree = "<group>"; };
+		E98605BB23BEEBC000A5EECA /* SafariServices.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SafariServices.framework; path = System/Library/Frameworks/SafariServices.framework; sourceTree = SDKROOT; };
+		E98605BD23BEEBD000A5EECA /* MessageUI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MessageUI.framework; path = System/Library/Frameworks/MessageUI.framework; sourceTree = SDKROOT; };
 		E986F27623BB4CC800A5EECA /* IAdIdProvider.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = IAdIdProvider.h; sourceTree = "<group>"; };
 		E986F27723BB508F00A5EECA /* MSIdProvider.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MSIdProvider.m; sourceTree = "<group>"; };
 		E986F27923BB51CF00A5EECA /* CSJIdProvider.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CSJIdProvider.m; sourceTree = "<group>"; };
@@ -183,6 +189,9 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2F2520D8231F5C55003212B0 /* AVFoundation.framework in Frameworks */,
+				E98605BE23BEEBD000A5EECA /* MessageUI.framework in Frameworks */,
+				E98605BC23BEEBC000A5EECA /* SafariServices.framework in Frameworks */,
 				088392C92398D58700C0BB1F /* libsqlite3.tbd in Frameworks */,
 				088392C72398D56600C0BB1F /* Accelerate.framework in Frameworks */,
 				088392C52398D53F00C0BB1F /* CoreTelephony.framework in Frameworks */,
@@ -192,7 +201,6 @@
 				088392BD2398D4E000C0BB1F /* StoreKit.framework in Frameworks */,
 				2F2520DC231F5C63003212B0 /* libxml2.tbd in Frameworks */,
 				2F2520DA231F5C5B003212B0 /* WebKit.framework in Frameworks */,
-				2F2520D8231F5C55003212B0 /* AVFoundation.framework in Frameworks */,
 				2F2520D6231F5C4F003212B0 /* libz.tbd in Frameworks */,
 				2F2520D4231F5C47003212B0 /* Security.framework in Frameworks */,
 				2F2520D2231F5C3F003212B0 /* AdSupport.framework in Frameworks */,
@@ -202,6 +210,7 @@
 				E986F2CF23BDEF1600A5EECA /* libMSAdSDK.a in Frameworks */,
 				2F2520CA231F5C22003212B0 /* CoreGraphics.framework in Frameworks */,
 				2F2520C8231F5C16003212B0 /* UIKit.framework in Frameworks */,
+				E98605BA23BEEB9400A5EECA /* BaiduMobAdSDK.framework in Frameworks */,
 				2F2520C6231F5C10003212B0 /* Foundation.framework in Frameworks */,
 				2F2520C4231F5C08003212B0 /* Photos.framework in Frameworks */,
 				2F2520C2231F5BFF003212B0 /* CoreMotion.framework in Frameworks */,
@@ -231,6 +240,8 @@
 		2F2520BB231F5B35003212B0 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				E98605BD23BEEBD000A5EECA /* MessageUI.framework */,
+				E98605BB23BEEBC000A5EECA /* SafariServices.framework */,
 				088392C82398D58700C0BB1F /* libsqlite3.tbd */,
 				088392C62398D56500C0BB1F /* Accelerate.framework */,
 				088392C42398D53F00C0BB1F /* CoreTelephony.framework */,
@@ -335,6 +346,7 @@
 		548F3FB6231F4AAA003CE914 /* lib */ = {
 			isa = PBXGroup;
 			children = (
+				E98605B923BEEB9400A5EECA /* BaiduMobAdSDK.framework */,
 				E986F2BE23BDEF1600A5EECA /* MS */,
 				088392B12398D0AD00C0BB1F /* BUAdSDK.bundle */,
 				088392B02398D0AD00C0BB1F /* BUAdSDK.framework */,
