@@ -33,6 +33,13 @@ typedef NS_ENUM(NSInteger, MSShowType) {
     MSShowTypeBD = 3, // 展示百度
 };
 
+typedef NS_ENUM(NSInteger, MSReportType) {
+    MSReportLB = 0, // 加载广告前
+    MSReportLS = 1, // 加载广告成功
+    MSReportShow = 2, // 曝光
+    MSReportClick = 3, // 点击
+};
+
 typedef NS_ENUM(NSInteger, MSOrientation) {
     MSOrientationPortrait = 0, // 展示竖屏
     MSOrientationLandscapeRight = 1, // 展示横屏

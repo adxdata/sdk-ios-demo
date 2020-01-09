@@ -12,4 +12,5 @@
 @interface MSAdSDK : NSObject
 + (void)setAppId:(NSString *)appId;
 + (NSString *)appId;
++ (void)setDebug:(BOOL)isDebug;
 @end

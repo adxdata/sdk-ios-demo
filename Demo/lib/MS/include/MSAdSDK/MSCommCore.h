@@ -18,7 +18,16 @@
 
 + (NSString*)OpenUDID;
 
+/**
+ * 获取广告请求的公共参数
+ */
 + (NSMutableDictionary *)publicParams;
+
+/**
+ * 获取广告的参数
+ * @param pid 广告位id
+ */
++ (NSMutableDictionary *)adParams:(NSString *)pid;
 
 /**
   统一处理上报类型
@@ -29,5 +38,7 @@
 2、0 req:加载广告前  1rsp:加载广告成功  2imp:曝光  3 clk:点击
  */
 + (void)uploadSDKModel:(MSAdModel*)adModel SDKType:(NSInteger)SDKType report:(NSInteger)report;
+
++ (NSString *)getPlatformName:(NSInteger)SDKType;
 @end
 

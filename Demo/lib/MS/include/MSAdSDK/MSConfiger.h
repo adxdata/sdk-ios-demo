@@ -14,10 +14,15 @@ NS_ASSUME_NONNULL_BEGIN
 @interface MSConfiger : NSObject
 
 @property (nonatomic, strong) NSString* baseUrl;
+@property (nonatomic) BOOL isDebug;
 @property (nonatomic) BOOL isIpad;
 
 + (instancetype)share;
+
 - (void)update:(NSString*)baseUrl;
+
+- (void)setIsDebug:(BOOL)isDebug;
+
 - (void)loadAd:(MSAdModel*)model
         gdtCalllback:(void(^)(MSSDKModel* sdkModel))gdtCalllback
         csjCallback:(void(^)(MSSDKModel* sdkModel))csjCallback
