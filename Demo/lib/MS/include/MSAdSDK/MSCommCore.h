@@ -40,5 +40,7 @@
 + (void)uploadSDKModel:(MSAdModel*)adModel SDKType:(NSInteger)SDKType report:(NSInteger)report;
 
 + (NSString *)getPlatformName:(NSInteger)SDKType;
+
++ (NSError *)createError:(NSInteger)code desc:(NSString *)desc reason:(NSString *)reason recovery:(NSString *)recovery;
 @end
 
