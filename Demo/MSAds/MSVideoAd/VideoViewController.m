@@ -21,7 +21,27 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    CGRect frame = self.container.frame;
+    frame.size.width = [UIScreen mainScreen].bounds.size.width;
+    self.container.frame = frame;
+
     [self loadAd];
+    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(handleDeviceOrientationChange) name:UIDeviceOrientationDidChangeNotification object:nil];
+}
+
+- (void)handleDeviceOrientationChange {
+    UIDeviceOrientation orientation = [UIDevice currentDevice].orientation;
+    NSInteger interfaceOrientation = UIDeviceOrientationPortrait;
+    if (orientation == UIDeviceOrientationLandscapeLeft) {
+        interfaceOrientation = UIInterfaceOrientationLandscapeRight;
+    } else if (orientation == UIDeviceOrientationLandscapeRight) {
+        interfaceOrientation = UIInterfaceOrientationLandscapeLeft;
+    } else if(orientation == UIDeviceOrientationPortrait) {
+        interfaceOrientation = UIInterfaceOrientationPortrait;
+    }
+    if (self.videoAd) {
+        [self.videoAd changeOrientation:interfaceOrientation];
+    }
 }
 
 - (void)loadAd {

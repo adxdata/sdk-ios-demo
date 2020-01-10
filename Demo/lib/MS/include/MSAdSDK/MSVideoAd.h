@@ -52,6 +52,11 @@ NS_ASSUME_NONNULL_BEGIN
  */
 - (void)loadAdAndShow:(UIView *)container frame:(CGRect)frame pid:(NSString *)pid;
 
+/**
+ * 切换横竖屏方向
+ */
+- (void)changeOrientation:(UIInterfaceOrientation)orientation;
+
 @end
 
 NS_ASSUME_NONNULL_END
