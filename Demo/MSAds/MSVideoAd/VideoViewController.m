@@ -7,7 +7,7 @@
 //
 
 #import "VideoViewController.h"
-#import <MSAdSDK/MSVideoAd.h>
+#import "MSVideoAd.h"
 #import "IdProviderFactory.h"
 
 @interface VideoViewController () <MSVideoAdDelegate>

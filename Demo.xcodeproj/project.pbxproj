@@ -223,6 +223,7 @@
 		E9C5C0A623C7940500EB6791 /* VideoViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VideoViewController.h; sourceTree = "<group>"; };
 		E9C5C0A723C7940500EB6791 /* VideoViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = VideoViewController.xib; sourceTree = "<group>"; };
 		E9C5C0A823C7940500EB6791 /* VideoViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = VideoViewController.m; sourceTree = "<group>"; };
+		E9C5C0BE23C825A000EB6791 /* MSVideoAd.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MSVideoAd.h; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -509,6 +510,7 @@
 		E986F2C023BDEF1600A5EECA /* MSAdSDK */ = {
 			isa = PBXGroup;
 			children = (
+				E9C5C0BE23C825A000EB6791 /* MSVideoAd.h */,
 				E986F2C123BDEF1600A5EECA /* MSAdModel.h */,
 				E986F2C223BDEF1600A5EECA /* MSRewardVideoAd.h */,
 				E986F2C323BDEF1600A5EECA /* MRApplication.h */,
