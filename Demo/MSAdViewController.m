@@ -10,12 +10,14 @@
 #import <AdSupport/ASIdentifierManager.h>
 #import <objc/runtime.h>
 #import "AlterBaseUrlView.h"
+#import <CoreLocation/CoreLocation.h>
 
 @interface MSAdViewController () <UITableViewDelegate, UITableViewDataSource>
 
 
 @property (nonatomic, strong) UITableView *tableView;
 @property (nonatomic, strong) AlterBaseUrlView* header;
+@property (nonatomic, strong) CLLocationManager *locationManager;
 
 @end
 
@@ -25,6 +27,14 @@
     [super viewDidLoad];
     [self.view addSubview:self.tableView];
     self.tableView.frame = self.view.bounds;
+
+    _locationManager = [[CLLocationManager alloc] init];
+    CLAuthorizationStatus CLstatus = [CLLocationManager authorizationStatus];
+
+    if (CLstatus == kCLAuthorizationStatusNotDetermined) {
+        [_locationManager requestAlwaysAuthorization];
+        [_locationManager requestWhenInUseAuthorization];
+    }
 }
 
 #pragma mark - UITableView

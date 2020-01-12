@@ -51,8 +51,8 @@
 		<string>UIInterfaceOrientationLandscapeRight</string>
 	</array>
 	<key>NSLocationWhenInUseUsageDescription</key>
-	<string></string>
+	<string>允许Demo在应用使用期间访问您的位置,来用于定位功能</string>
 	<key>NSLocationAlwaysAndWhenInUseUsageDescription</key>
-	<string></string>
+	<string>允许Demo访问您的位置,来用于定位功能</string>
 </dict>
 </plist>
