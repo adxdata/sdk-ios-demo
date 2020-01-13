@@ -11,8 +11,8 @@
 #import "MSConfiger.h"
 #import "MSCommCore.h"
 
-static NSString *kVersionName = @"0.0.1";
-static NSInteger kVersionCode = 1;
+static NSString *kVersionName = @"0.0.2";
+static NSInteger kVersionCode = 2;
 
 //是否是竖屏
 #define IsPortrait ([[UIApplication sharedApplication] statusBarOrientation] == UIInterfaceOrientationPortrait || [[UIApplication sharedApplication] statusBarOrientation] == UIInterfaceOrientationPortraitUpsideDown)

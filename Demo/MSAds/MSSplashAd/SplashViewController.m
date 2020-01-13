@@ -49,14 +49,14 @@
  *  开屏广告成功展示
  */
 - (void)splashAdSuccessPresentScreen:(MSSplashAd *)splashAd{
-    
+    NSLog(@"demo 广告加载成功");
 }
 
 /**
  *  开屏广告展示失败
  */
 - (void)splashAdFailToPresent:(MSSplashAd *)splashAd withError:(NSError *)error{
-    
+    NSLog(@"demo 广告加载失败");
 }
 
 
@@ -64,14 +64,14 @@
  *  开屏广告点击回调
  */
 - (void)splashAdClicked:(MSSplashAd *)splashAd{
-    
+    NSLog(@"demo 广告点击");
 }
 
 /**
  *  开屏广告将要关闭回调
  */
 - (void)splashAdWillClosed:(MSSplashAd *)splashAd{
-    
+    NSLog(@"demo 广告即将关闭");
 }
 
 /**
@@ -79,6 +79,7 @@
  */
 - (void)splashAdClosed:(MSSplashAd *)splashAd{
     self.splash = nil;
+    NSLog(@"demo 广告关闭");
 }
 
 
@@ -86,7 +87,7 @@
  *  点击以后全屏广告页已经关闭
  */
 - (void)splashAdDidDismissFullScreenModal:(MSSplashAd *)splashAd{
-    
+    NSLog(@"demo 详情关闭");
 }
 
 - (void)dealloc

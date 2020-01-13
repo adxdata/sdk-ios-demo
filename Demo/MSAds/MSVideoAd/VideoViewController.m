@@ -55,28 +55,28 @@
  *  视频广告成功展示
  */
 - (void)msVideoShow:(MSVideoAd *)videoAd {
-    NSLog(@"视频广告曝光");
+    NSLog(@"demo 视频广告曝光");
 }
 
 /**
  *  视频广告展示失败
  */
 - (void)msVideoError:(MSVideoAd *)videoAd error:(NSError *)error {
-    NSLog(@"视频广告加载失败");
+    NSLog(@"demo 视频广告加载失败");
 }
 
 /**
  *  视频广告点击回调
  */
 - (void)msVideoClick:(MSVideoAd *)splashAd {
-    NSLog(@"视频广告被点击");
+    NSLog(@"demo 视频广告被点击");
 }
 
 /**
  *  视频广告将要关闭回调
  */
 - (void)msVideoCompletion:(MSVideoAd *)splashAd {
-    NSLog(@"视频广告播放完成");
+    NSLog(@"demo 视频广告播放完成");
 }
 
 @end

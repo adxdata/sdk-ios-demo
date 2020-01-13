@@ -59,6 +59,7 @@ static NSString *INTERSTITIAL_STATE_TEXT = @"插屏状态";
  *  详解:当接收服务器返回的广告数据成功且预加载后调用该函数
  */
 - (void)interstitialSuccessToLoadAd:(MSInterstitial *)interstitial{
+    NSLog(@"demo 广告加载成功");
     dispatch_async(dispatch_get_main_queue(), ^{
        self.interstitialStateLabel.text = [NSString stringWithFormat:@"%@:%@",INTERSTITIAL_STATE_TEXT,@"Success Loaded." ];
         });
@@ -69,6 +70,7 @@ static NSString *INTERSTITIAL_STATE_TEXT = @"插屏状态";
  *  详解:当接收服务器返回的广告数据失败后调用该函数
  */
 - (void)interstitialFailToLoadAd:(MSInterstitial *)interstitial error:(NSError *)error{
+    NSLog(@"demo 广告加载失败");
     dispatch_async(dispatch_get_main_queue(), ^{
         self.interstitialStateLabel.text = [NSString stringWithFormat:@"%@:%@,Error : %@",INTERSTITIAL_STATE_TEXT,@"Fail Loaded.",error ];
     });
@@ -80,6 +82,7 @@ static NSString *INTERSTITIAL_STATE_TEXT = @"插屏状态";
  *  详解: 插屏广告展示成功回调该函数
  */
 - (void)interstitialDidPresentScreen:(MSInterstitial *)interstitial{
+    NSLog(@"demo 广告展示成功");
         dispatch_async(dispatch_get_main_queue(), ^{
      self.interstitialStateLabel.text = [NSString stringWithFormat:@"%@:%@",INTERSTITIAL_STATE_TEXT,@"Success Presented." ];
             });
@@ -90,6 +93,7 @@ static NSString *INTERSTITIAL_STATE_TEXT = @"插屏状态";
  *  详解: 插屏广告展示结束回调该函数
  */
 - (void)interstitialDidDismissScreen:(MSInterstitial *)interstitial{
+    NSLog(@"demo 广告关闭");
             dispatch_async(dispatch_get_main_queue(), ^{
       self.interstitialStateLabel.text = [NSString stringWithFormat:@"%@:%@",INTERSTITIAL_STATE_TEXT,@"Finish Presented." ];
                 });
@@ -100,14 +104,14 @@ static NSString *INTERSTITIAL_STATE_TEXT = @"插屏状态";
  *  插屏广告点击回调
  */
 - (void)interstitialClicked:(MSInterstitial *)interstitial{
-    
+    NSLog(@"demo 广告点击");
 }
 
 /**
  *  插屏广告页被关闭
  */
 - (void)interstitialAdDidDismissFullScreenModal:(MSInterstitial *)interstitial{
-    
+    NSLog(@"demo 详情关闭");
 }
 
 - (void)dealloc
