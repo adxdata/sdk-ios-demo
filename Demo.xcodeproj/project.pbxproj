@@ -7,7 +7,6 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		0818F40D238667C2003A8D2B /* iPhoneX@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 0818F40C238667C1003A8D2B /* iPhoneX@2x.png */; };
 		088392BD2398D4E000C0BB1F /* StoreKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 088392BC2398D4E000C0BB1F /* StoreKit.framework */; };
 		088392BF2398D4F200C0BB1F /* MobileCoreServices.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 088392BE2398D4F200C0BB1F /* MobileCoreServices.framework */; };
 		088392C12398D50A00C0BB1F /* MediaPlayer.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 088392C02398D50A00C0BB1F /* MediaPlayer.framework */; };
@@ -96,7 +95,6 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		0818F40C238667C1003A8D2B /* iPhoneX@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "iPhoneX@2x.png"; sourceTree = "<group>"; };
 		088392BC2398D4E000C0BB1F /* StoreKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = StoreKit.framework; path = System/Library/Frameworks/StoreKit.framework; sourceTree = SDKROOT; };
 		088392BE2398D4F200C0BB1F /* MobileCoreServices.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MobileCoreServices.framework; path = System/Library/Frameworks/MobileCoreServices.framework; sourceTree = SDKROOT; };
 		088392C02398D50A00C0BB1F /* MediaPlayer.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MediaPlayer.framework; path = System/Library/Frameworks/MediaPlayer.framework; sourceTree = SDKROOT; };
@@ -329,7 +327,6 @@
 		548F3EC2231F47A4003CE914 /* Demo */ = {
 			isa = PBXGroup;
 			children = (
-				0818F40C238667C1003A8D2B /* iPhoneX@2x.png */,
 				548F3FB6231F4AAA003CE914 /* lib */,
 				548F3FB8231F4AAA003CE914 /* MSAds */,
 				E986F27423BB4AC300A5EECA /* adid */,
@@ -674,7 +671,6 @@
 				548F3FDA231F4AAA003CE914 /* NativeExpressAdViewController.xib in Resources */,
 				E923A63B23CB986500666B47 /* MSBundle.bundle in Resources */,
 				548F3FDE231F4AAA003CE914 /* SplashViewController.xib in Resources */,
-				0818F40D238667C2003A8D2B /* iPhoneX@2x.png in Resources */,
 				548F3ED3231F47A4003CE914 /* LaunchScreen.storyboard in Resources */,
 				548F3FD8231F4AAA003CE914 /* InterstitialViewController.xib in Resources */,
 				548F3FD6231F4AAA003CE914 /* BannerViewController.xib in Resources */,
