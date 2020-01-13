@@ -23,6 +23,8 @@
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     [MSAdSDK setAppId:@"101647"];
+    NSLog(@"美数SDK versionName:%@", [MSAdSDK getVersionName]);
+    NSLog(@"美数SDK versionCode:%d", [MSAdSDK getVersionCode]);
 //    [MSAdSDK setAppId:@"101516"];
     [[IdProviderFactory sharedIdProviderFactory] setDefaultPlatform:PlatformNameMS];
     self.window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];

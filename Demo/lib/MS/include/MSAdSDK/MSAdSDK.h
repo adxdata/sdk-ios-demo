@@ -10,7 +10,15 @@
 #import <UIKit/UIKit.h>
 
 @interface MSAdSDK : NSObject
+
 + (void)setAppId:(NSString *)appId;
+
 + (NSString *)appId;
+
 + (void)setDebug:(BOOL)isDebug;
+
++ (NSString *)getVersionName;
+
++ (NSInteger)getVersionCode;
+
 @end

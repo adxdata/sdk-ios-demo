@@ -11,6 +11,9 @@
 #import "MSConfiger.h"
 #import "MSCommCore.h"
 
+static NSString *kVersionName = @"0.0.1";
+static NSInteger kVersionCode = 1;
+
 //是否是竖屏
 #define IsPortrait ([[UIApplication sharedApplication] statusBarOrientation] == UIInterfaceOrientationPortrait || [[UIApplication sharedApplication] statusBarOrientation] == UIInterfaceOrientationPortraitUpsideDown)
 
@@ -55,7 +58,6 @@ typedef NS_ENUM(NSInteger, MSNativeAdViewShowType) {
 static NSString *kMSGDTMobSDKAppId = @"1105344611";
 
 static NSString *kMSBUMobSDKAppId = @"5000546";
-
 
 #define  BASIC_URL @"http://123.59.48.113/sdk/req_ad"
 //#define  BASIC_URL @"http://47.112.204.11:8080/req_ad_sdk"
