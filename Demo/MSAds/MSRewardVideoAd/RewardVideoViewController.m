@@ -78,6 +78,7 @@
  */
 - (void)rewardVideoAdDidLoad:(MSRewardVideoAd *)rewardedVideoAd{
     self.statusLabel.text = @"广告数据加载成功";
+    NSLog(@"demo 广告数据加载成功");
 }
 
 /**
@@ -87,6 +88,7 @@
  */
 - (void)rewardVideoAdVideoDidLoad:(MSRewardVideoAd *)rewardedVideoAd{
     self.statusLabel.text = @"视频文件加载成功";
+    NSLog(@"demo 视频文件加载成功");
 }
 
 /**
@@ -96,6 +98,7 @@
  */
 - (void)rewardVideoAdWillVisible:(MSRewardVideoAd *)rewardedVideoAd{
 //    NSLog(@"视频播放页即将打开");
+    NSLog(@"demo 视频播放页即将打开");
 }
 
 /**
@@ -105,6 +108,7 @@
  */
 - (void)rewardVideoAdDidExposed:(MSRewardVideoAd *)rewardedVideoAd{
 //    NSLog(@"广告已曝光");
+    NSLog(@"demo 广告已曝光");
 }
 
 /**
@@ -116,6 +120,7 @@
     self.statusLabel.text = @"广告已关闭";
 //    NSLog(@"广告已关闭");
     self.rewardVideoAd = nil;
+    NSLog(@"demo 广告已关闭");
 }
 
 /**
@@ -125,6 +130,7 @@
  */
 - (void)rewardVideoAdDidClicked:(MSRewardVideoAd *)rewardedVideoAd{
 //    NSLog(@"广告已点击");
+    NSLog(@"demo 广告被点击");
 }
 
 /**
@@ -166,7 +172,7 @@
  @param rewardedVideoAd MSRewardVideoAd 实例
  */
 - (void)rewardVideoAdDidRewardEffective:(MSRewardVideoAd *)rewardedVideoAd{
-    NSLog(@"播放达到激励条件");
+    NSLog(@"demo 播放达到激励条件");
 }
 
 /**
@@ -175,7 +181,7 @@
  @param rewardedVideoAd MSRewardVideoAd 实例
  */
 - (void)rewardVideoAdDidPlayFinish:(MSRewardVideoAd *)rewardedVideoAd{
-    NSLog(@"视频播放结束");
+    NSLog(@"demo 视频播放结束");
 }
 
 
