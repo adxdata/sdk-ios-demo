@@ -75,6 +75,7 @@
 		E9C5C07E23C74B2000EB6791 /* MASViewAttribute.m in Sources */ = {isa = PBXBuildFile; fileRef = E9C5C07323C74B2000EB6791 /* MASViewAttribute.m */; };
 		E9C5C0A923C7940600EB6791 /* VideoViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = E9C5C0A723C7940500EB6791 /* VideoViewController.xib */; };
 		E9C5C0AA23C7940600EB6791 /* VideoViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E9C5C0A823C7940500EB6791 /* VideoViewController.m */; };
+		E9F5ED2E23CC6063006CAEE6 /* Reachability.m in Sources */ = {isa = PBXBuildFile; fileRef = E9F5ED2C23CC6063006CAEE6 /* Reachability.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -218,6 +219,8 @@
 		E9C5C0A723C7940500EB6791 /* VideoViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = VideoViewController.xib; sourceTree = "<group>"; };
 		E9C5C0A823C7940500EB6791 /* VideoViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = VideoViewController.m; sourceTree = "<group>"; };
 		E9C5C0BE23C825A000EB6791 /* MSVideoAd.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MSVideoAd.h; sourceTree = "<group>"; };
+		E9F5ED2C23CC6063006CAEE6 /* Reachability.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Reachability.m; sourceTree = "<group>"; };
+		E9F5ED2D23CC6063006CAEE6 /* Reachability.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Reachability.h; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -379,6 +382,7 @@
 		548F3FB6231F4AAA003CE914 /* lib */ = {
 			isa = PBXGroup;
 			children = (
+				E9F5ED2B23CC6063006CAEE6 /* reachability */,
 				E923A63A23CB986500666B47 /* MSBundle.bundle */,
 				E9C5C05A23C74B2000EB6791 /* Masonry */,
 				E986F2BE23BDEF1600A5EECA /* MS */,
@@ -560,6 +564,15 @@
 			path = MSVideoAd;
 			sourceTree = "<group>";
 		};
+		E9F5ED2B23CC6063006CAEE6 /* reachability */ = {
+			isa = PBXGroup;
+			children = (
+				E9F5ED2C23CC6063006CAEE6 /* Reachability.m */,
+				E9F5ED2D23CC6063006CAEE6 /* Reachability.h */,
+			);
+			path = reachability;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -713,6 +726,7 @@
 				548F3ECB231F47A4003CE914 /* ViewController.m in Sources */,
 				E9C5C07B23C74B2000EB6791 /* View+MASAdditions.m in Sources */,
 				548F3FDF231F4AAA003CE914 /* MSAdViewController.m in Sources */,
+				E9F5ED2E23CC6063006CAEE6 /* Reachability.m in Sources */,
 				548F3FD7231F4AAA003CE914 /* InterstitialViewController.m in Sources */,
 				E9C5C07D23C74B2000EB6791 /* MASViewConstraint.m in Sources */,
 				548F3FDD231F4AAA003CE914 /* SplashViewController.m in Sources */,
