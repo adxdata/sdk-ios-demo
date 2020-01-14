@@ -100,6 +100,12 @@
     self.countTimer = [NSTimer scheduledTimerWithTimeInterval:1.0 target:self selector:@selector(countDown) userInfo:nil repeats:YES];
 }
 
+- (void)viewDidDisappear:(BOOL)animated {
+    NSLog(@"%s", __FUNCTION__);
+    [super viewDidDisappear:animated];
+    [self destroyTimer];
+}
+
 /**
  *  视频广告展示失败
  */
