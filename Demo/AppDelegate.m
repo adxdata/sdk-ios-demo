@@ -31,7 +31,7 @@
     MSAdViewController *vc = [[MSAdViewController alloc] init];
     MSNavigationController *nav = [[MSNavigationController alloc] initWithRootViewController:vc];
     nav.navigationBar.barStyle = UIBarStyleBlackOpaque;
-    nav.navigationBar.topItem.title = [NSString stringWithFormat:@"广告形式   ver %@",@"1.0.0"];
+    nav.navigationBar.topItem.title = [NSString stringWithFormat:@"广告形式   ver %@", [MSAdSDK getVersionName]];
     nav.navigationBar.translucent = NO;
     self.window.rootViewController = nav;
     [self.window makeKeyAndVisible];
