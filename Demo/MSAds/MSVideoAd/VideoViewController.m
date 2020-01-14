@@ -14,6 +14,11 @@
 
 @property (strong, nonatomic) MSVideoAd *videoAd;
 @property (weak, nonatomic) IBOutlet UIView *container;
+@property (weak, nonatomic) IBOutlet UIButton *pauseButton;
+@property (weak, nonatomic) IBOutlet UIButton *muteButton;
+@property (weak, nonatomic) IBOutlet UIButton *timeButton;
+@property (nonatomic, assign) BOOL isPlaying;
+@property (nonatomic, strong) NSTimer *countTimer;
 
 @end
 
@@ -24,6 +29,8 @@
     CGRect frame = self.container.frame;
     frame.size.width = [UIScreen mainScreen].bounds.size.width;
     self.container.frame = frame;
+    self.pauseButton.hidden = YES;
+    self.isPlaying = NO;
 
     [self loadAd];
 //    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(handleDeviceOrientationChange) name:UIDeviceOrientationDidChangeNotification object:nil];
@@ -51,11 +58,46 @@
     [self.videoAd loadAdAndShow:self.container frame:self.container.frame pid:pid];
 }
 
+- (IBAction)playOrPause:(id)sender {
+    if (self.isPlaying) {
+        self.isPlaying = NO;
+        [self.videoAd pause];
+        [self.pauseButton setTitle:@"继续" forState:UIControlStateNormal];
+    } else {
+        self.isPlaying = YES;
+        [self.videoAd play];
+        [self.pauseButton setTitle:@"暂停" forState:UIControlStateNormal];
+    }
+}
+- (IBAction)muteOrUnmute:(id)sender {
+    self.videoAd.muted = !self.videoAd.muted;
+    NSString *btnText = self.videoAd.isMuted ? @"恢复音量" : @"静音";
+    [self.muteButton setTitle:btnText forState:UIControlStateNormal];
+}
+- (IBAction)showTime:(id)sender {
+    NSInteger time = [self.videoAd currentTime];
+    NSInteger duration = [self.videoAd duration];
+    NSString *text = [NSString stringWithFormat:@"当前播放时间（秒）:%ld/%ld", time, duration];
+    [self.timeButton setTitle:text forState:UIControlStateNormal];
+    if (time >= duration) {
+        [self destroyTimer];
+    }
+}
+
+- (void)countDown {
+    [self showTime:nil];
+}
+
 /**
  *  视频广告成功展示
  */
 - (void)msVideoShow:(MSVideoAd *)videoAd {
     NSLog(@"demo 视频广告曝光");
+    NSLog(@"demo 视频广告总时长（秒）：%ld", [self.videoAd duration]);
+    self.pauseButton.hidden = NO;
+    self.isPlaying = YES;
+    [self.pauseButton setTitle:@"暂停" forState:UIControlStateNormal];
+    self.countTimer = [NSTimer scheduledTimerWithTimeInterval:1.0 target:self selector:@selector(countDown) userInfo:nil repeats:YES];
 }
 
 /**
@@ -77,6 +119,18 @@
  */
 - (void)msVideoCompletion:(MSVideoAd *)splashAd {
     NSLog(@"demo 视频广告播放完成");
+}
+
+- (void)destroyTimer {
+    if (self.countTimer) {
+        [self.countTimer invalidate];
+        self.countTimer = nil;
+    }
+}
+
+- (void)dealloc {
+    NSLog(@"%s", __FUNCTION__);
+    [self destroyTimer];
 }
 
 @end

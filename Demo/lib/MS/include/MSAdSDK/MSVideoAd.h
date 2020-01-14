@@ -45,6 +45,9 @@ NS_ASSUME_NONNULL_BEGIN
  */
 @property (nonatomic, weak) id<MSVideoAdDelegate> delegate;
 
+/** 是否静音 */
+@property (nonatomic, getter=isMuted) BOOL muted;
+
 /**
  * 获取并展示视频广告
  *  @param container 展示视频的容器
@@ -56,6 +59,22 @@ NS_ASSUME_NONNULL_BEGIN
  * 切换横竖屏方向
  */
 - (void)changeOrientation:(UIInterfaceOrientation)orientation;
+
+/**
+ * 暂停视频
+ */
+- (void)pause;
+
+/**
+ * 播放视频
+ */
+- (void)play;
+
+/** 获取当前播放时间（秒） */
+- (NSInteger)currentTime;
+
+/** 获取总时间（秒） */
+- (NSInteger)duration;
 
 @end
 
