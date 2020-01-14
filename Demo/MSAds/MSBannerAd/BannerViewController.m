@@ -41,7 +41,7 @@
 - (MSBannerView *)bannerView
 {
     if (!_bannerView) {
-        CGRect rect = {CGPointZero, GDTMOB_AD_SUGGEST_SIZE_320x50};
+        CGRect rect = {CGPointZero, [UIScreen mainScreen].bounds.size.width, [UIScreen mainScreen].bounds.size.width * 100 / 640};
 //        __weak __typeof__(self) weakSelf = self;
         _bannerView = [[MSBannerView alloc] initWithFrame:rect curController:self];
 //        _bannerView.currentViewController = self;
