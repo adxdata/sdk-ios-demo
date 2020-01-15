@@ -16,7 +16,7 @@ NS_ASSUME_NONNULL_BEGIN
 @protocol MSNativeAdDelegate <NSObject>
 
 /**
- *  原生广告加载广告数据成功回调，返回为GDTNativeAdData对象的数组
+ *  原生广告加载广告数据成功回调，返回为MSAdModel对象的数组
  */
 - (void)nativeAdSuccessToLoad:(NSArray *)nativeAdDataArray;
 
@@ -26,11 +26,16 @@ NS_ASSUME_NONNULL_BEGIN
 - (void)nativeAdFailToLoad:(NSError *)error;
 
 @optional
+
+/**
+ *  原生广告即将展现
+ */
+- (void)nativeAdShow:(MSAdModel *)model;
+
 /**
  *  原生广告点击之后将要展示内嵌浏览器或应用内AppStore回调
  */
 - (void)nativeAdWillPresentScreen;
-
 
 /**
  * 原生广告点击以后，内置AppStore或是内置浏览器被关闭时回调
@@ -68,7 +73,7 @@ NS_ASSUME_NONNULL_BEGIN
  *      @param nativeAdData 广告渲染的数据对象
  *      @param view         渲染出的广告结果页面
  */
-- (void)attachAd:(MSAdModel *)nativeAdData toView:(UIView *)view indexPath:(NSIndexPath*)indexPath;
+- (void)attachAd:(MSAdModel *)nativeAdData toView:(UIView *)view;
 - (void)reloadAd;
 
 @end

@@ -16,6 +16,10 @@ NS_ASSUME_NONNULL_BEGIN
 
 @optional
 /**
+ *  视频广告加载成功
+ */
+- (void)msVideoLoad:(MSVideoAd *)videoAd;
+/**
  *  视频广告成功展示
  */
 - (void)msVideoShow:(MSVideoAd *)videoAd;

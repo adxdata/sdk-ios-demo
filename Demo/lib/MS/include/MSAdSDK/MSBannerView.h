@@ -34,6 +34,11 @@ NS_ASSUME_NONNULL_BEGIN
  */
 - (void)bannerViewFailToReceived:(NSError *)error;
 
+/**
+ *  banner广告曝光
+ */
+- (void)bannerViewShow;
+
 
 /**
  *  banner条点击回调

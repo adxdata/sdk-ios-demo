@@ -45,11 +45,16 @@
     [splash loadAdAndShowInWindow:window pid:pid];
 }
 
+
+- (void)splashAdSuccessLoad:(MSSplashAd *)splashAd {
+    NSLog(@"demo 广告加载成功");
+}
+
 /**
  *  开屏广告成功展示
  */
 - (void)splashAdSuccessPresentScreen:(MSSplashAd *)splashAd{
-    NSLog(@"demo 广告加载成功");
+    NSLog(@"demo 广告曝光");
 }
 
 /**

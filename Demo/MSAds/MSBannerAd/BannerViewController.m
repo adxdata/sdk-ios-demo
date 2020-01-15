@@ -81,6 +81,12 @@
     NSLog(@"demo 广告加载失败");
 }
 
+/**
+ * banner广告曝光
+ */
+- (void)bannerViewShow {
+    NSLog(@"demo 广告曝光");
+}
 
 /**
  *  banner条点击回调

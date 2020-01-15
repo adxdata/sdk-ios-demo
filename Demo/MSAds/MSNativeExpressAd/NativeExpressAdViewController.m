@@ -156,13 +156,13 @@
     [cell addSubview:ativeAdView];
     cell.userInteractionEnabled = YES;
     //要加载的数据
-    [self.nativeAd attachAd:model toView:ativeAdView indexPath:indexPath];
+    [self.nativeAd attachAd:model toView:ativeAdView];
     cell.accessibilityIdentifier = @"nativeTemp_ad";
     return cell;
 }
 
 /**
- *  原生广告加载广告数据成功回调，返回为GDTNativeAdData对象的数组
+ *  原生广告加载广告数据成功回调，返回为MSAdModel对象的数组
  */
 - (void)nativeAdSuccessToLoad:(NSArray *)nativeAdDataArray{
     NSLog(@"demo 加载成功");
@@ -191,6 +191,13 @@
  */
 - (void)nativeAdFailToLoad:(NSError *)error{
     NSLog(@"demo 加载失败");
+}
+
+/**
+ * 原生广告曝光
+ */
+- (void)nativeAdShow:(MSAdModel *)model {
+    NSLog(@"demo 广告曝光");
 }
 
 /**

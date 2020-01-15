@@ -17,6 +17,11 @@ NS_ASSUME_NONNULL_BEGIN
 
 @optional
 /**
+ * 开屏广告加载成功
+ */
+- (void)splashAdSuccessLoad:(MSSplashAd *)splashAd;
+
+/**
  *  开屏广告成功展示
  */
 - (void)splashAdSuccessPresentScreen:(MSSplashAd *)splashAd;

@@ -102,6 +102,10 @@
     [self showTime:nil];
 }
 
+- (void)msVideoLoad:(MSVideoAd *)videoAd {
+    NSLog(@"demo 视频广告加载成功");
+}
+
 /**
  *  视频广告成功展示
  */
