@@ -47,6 +47,7 @@ NS_ASSUME_NONNULL_BEGIN
 
 /** 是否静音 */
 @property (nonatomic, getter=isMuted) BOOL muted;
+@property (nonatomic) CGRect frame;
 
 /**
  * 获取并展示视频广告

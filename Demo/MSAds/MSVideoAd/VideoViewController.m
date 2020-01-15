@@ -69,11 +69,13 @@
         [self.pauseButton setTitle:@"暂停" forState:UIControlStateNormal];
     }
 }
+
 - (IBAction)muteOrUnmute:(id)sender {
     self.videoAd.muted = !self.videoAd.muted;
     NSString *btnText = self.videoAd.isMuted ? @"恢复音量" : @"静音";
     [self.muteButton setTitle:btnText forState:UIControlStateNormal];
 }
+
 - (IBAction)showTime:(id)sender {
     NSInteger time = [self.videoAd currentTime];
     NSInteger duration = [self.videoAd duration];
@@ -81,6 +83,18 @@
     [self.timeButton setTitle:text forState:UIControlStateNormal];
     if (time >= duration) {
         [self destroyTimer];
+    }
+}
+
+- (IBAction)updateSize:(id)sender {
+    if (self.videoAd) {
+        CGRect frame = self.videoAd.frame;
+        frame.size.width = frame.size.width - 10;
+        frame.size.height = frame.size.height - 10;
+        if (frame.size.width < 100 || frame.size.height < 100) {
+            return;
+        }
+        self.videoAd.frame = frame;
     }
 }
 
