@@ -42,7 +42,9 @@
 
 - (void)viewDidAppear:(BOOL)animated {
     [super viewDidAppear:animated];
-    [self loadAd];
+    if (!self.videoAd) {
+        [self loadAd];
+    }
 }
 
 //- (void)handleDeviceOrientationChange {
