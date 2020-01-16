@@ -7,16 +7,19 @@
 //
 
 #import "VideoViewController.h"
-#import "MSVideoAd.h"
+#import <MSAdSDK/MSVideoAd.h>
 #import "IdProviderFactory.h"
+#import "Masonry.h"
 
 @interface VideoViewController () <MSVideoAdDelegate>
 
 @property (strong, nonatomic) MSVideoAd *videoAd;
-@property (weak, nonatomic) IBOutlet UIView *container;
-@property (weak, nonatomic) IBOutlet UIButton *pauseButton;
-@property (weak, nonatomic) IBOutlet UIButton *muteButton;
-@property (weak, nonatomic) IBOutlet UIButton *timeButton;
+@property (strong, nonatomic) UIView *container;
+@property (strong, nonatomic) UIButton *pauseButton;
+@property (strong, nonatomic) UIButton *muteButton;
+@property (strong, nonatomic) UIButton *sizeButton;
+@property (strong, nonatomic) UIButton *timeButton;
+
 @property (nonatomic, assign) BOOL isPlaying;
 @property (nonatomic, strong) NSTimer *countTimer;
 
@@ -26,14 +29,20 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    CGRect frame = self.container.frame;
-    frame.size.width = [UIScreen mainScreen].bounds.size.width;
-    self.container.frame = frame;
-    self.pauseButton.hidden = YES;
     self.isPlaying = NO;
+    self.view.backgroundColor = [UIColor whiteColor];
+    [self initContainer];
+    [self initPauseButton];
+    [self initMuteButton];
+    [self initSizeButton];
+    [self initTimeButton];
 
-    [self loadAd];
 //    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(handleDeviceOrientationChange) name:UIDeviceOrientationDidChangeNotification object:nil];
+}
+
+- (void)viewDidAppear:(BOOL)animated {
+    [super viewDidAppear:animated];
+    [self loadAd];
 }
 
 //- (void)handleDeviceOrientationChange {
@@ -50,6 +59,67 @@
 //        [self.videoAd changeOrientation:interfaceOrientation];
 //    }
 //}
+
+- (void)initContainer {
+    self.container = [[UIView alloc] init];
+    [self.view addSubview:self.container];
+    [self.container mas_makeConstraints:^(MASConstraintMaker *make) {
+        make.size.mas_equalTo(CGSizeMake(400, 300));
+        make.centerX.equalTo(self.view.mas_centerX);
+    }];
+}
+
+- (void)initPauseButton {
+    self.pauseButton = [[UIButton alloc] init];
+    [self.pauseButton setTitle:@"暂停" forState:UIControlStateNormal];
+    [self.view addSubview:self.pauseButton];
+    [self.pauseButton setTitleColor:[UIColor blueColor] forState:UIControlStateNormal];
+    self.pauseButton.hidden = YES;
+    [self.pauseButton mas_makeConstraints:^(MASConstraintMaker *make) {
+        make.centerX.equalTo(self.view.mas_centerX);
+        make.top.equalTo(self.container.mas_bottom);
+        make.size.mas_equalTo(CGSizeMake(80, 40));
+    }];
+    [self.pauseButton addTarget:self action:@selector(playOrPause:) forControlEvents:UIControlEventTouchUpInside];
+}
+
+- (void)initMuteButton {
+    self.muteButton = [[UIButton alloc] init];
+    [self.muteButton setTitle:@"静音" forState:UIControlStateNormal];
+    [self.muteButton setTitleColor:[UIColor blueColor] forState:UIControlStateNormal];
+    [self.view addSubview:self.muteButton];
+    [self.muteButton mas_makeConstraints:^(MASConstraintMaker *make) {
+        make.top.equalTo(self.pauseButton.mas_bottom);
+        make.centerX.equalTo(self.view.mas_centerX);
+        make.size.mas_equalTo(CGSizeMake(80, 40));
+    }];
+    [self.muteButton addTarget:self action:@selector(muteOrUnmute:) forControlEvents:UIControlEventTouchUpInside];
+}
+
+- (void)initSizeButton {
+    self.sizeButton = [[UIButton alloc] init];
+    [self.sizeButton setTitle:@"修改大小" forState:UIControlStateNormal];
+    [self.sizeButton setTitleColor:[UIColor blueColor] forState:UIControlStateNormal];
+    [self.view addSubview:self.sizeButton];
+    [self.sizeButton mas_makeConstraints:^(MASConstraintMaker *make) {
+        make.top.equalTo(self.muteButton.mas_bottom);
+        make.centerX.equalTo(self.view.mas_centerX);
+        make.size.mas_equalTo(CGSizeMake(80, 40));
+    }];
+    [self.sizeButton addTarget:self action:@selector(updateSize:) forControlEvents:UIControlEventTouchUpInside];
+}
+
+- (void)initTimeButton {
+    self.timeButton = [[UIButton alloc] init];
+    [self.view addSubview:self.timeButton];
+    [self.timeButton setTitleColor:[UIColor blueColor] forState:UIControlStateNormal];
+    [self.timeButton mas_makeConstraints:^(MASConstraintMaker *make) {
+        make.top.equalTo(self.sizeButton.mas_bottom);
+        make.centerX.equalTo(self.view.mas_centerX);
+        make.size.mas_equalTo(CGSizeMake(200, 40));
+    }];
+    [self.timeButton addTarget:self action:@selector(showTime:) forControlEvents:UIControlEventTouchUpInside];
+}
 
 - (void)loadAd {
     self.videoAd = [[MSVideoAd alloc]init];
