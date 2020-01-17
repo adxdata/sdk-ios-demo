@@ -49,5 +49,7 @@
 
 + (UIViewController *)getCurrentVC;
 
++ (void)adClicked:(MSAdModel *)adModel vc:(UIViewController *)vc point:(CGPoint)point;
+
 @end
 
