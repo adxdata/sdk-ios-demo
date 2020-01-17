@@ -66,7 +66,7 @@
     self.container = [[UIView alloc] init];
     [self.view addSubview:self.container];
     [self.container mas_makeConstraints:^(MASConstraintMaker *make) {
-        make.size.mas_equalTo(CGSizeMake(400, 300));
+        make.size.mas_equalTo(CGSizeMake(300, 300));
         make.centerX.equalTo(self.view.mas_centerX);
     }];
 }
