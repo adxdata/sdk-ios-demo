@@ -46,5 +46,8 @@
 + (void)openDetail:(UIViewController *)vc adModel:(MSAdModel*)adModel complete:(void (^)(void))complete close:(void (^)(void))close;
 
 + (NSString *)urlConversionFromOriginalURL:(NSString *)originalURL;
+
++ (UIViewController *)getCurrentVC;
+
 @end
 
