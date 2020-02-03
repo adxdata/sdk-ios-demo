@@ -23,6 +23,7 @@
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     [MSAdSDK setAppId:@"101647"];
+    [MSAdSDK setDebug:true];
     NSLog(@"美数SDK versionName:%@", [MSAdSDK getVersionName]);
     NSLog(@"美数SDK versionCode:%d", [MSAdSDK getVersionCode]);
 //    [MSAdSDK setAppId:@"101516"];
