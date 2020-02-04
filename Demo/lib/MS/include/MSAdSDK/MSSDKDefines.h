@@ -11,8 +11,8 @@
 #import "MSConfiger.h"
 #import "MSCommCore.h"
 
-static NSString *kMSVersionName = @"0.0.12";
-static NSInteger kMSVersionCode = 12;
+static NSString *kMSVersionName = @"0.0.13";
+static NSInteger kMSVersionCode = 13;
 
 //是否是竖屏
 #define IsPortrait ([[UIApplication sharedApplication] statusBarOrientation] == UIInterfaceOrientationPortrait || [[UIApplication sharedApplication] statusBarOrientation] == UIInterfaceOrientationPortraitUpsideDown)
@@ -60,6 +60,12 @@ typedef NS_ENUM(NSInteger, MSNativeAdViewShowType) {
     MSLeftImage= 0, // 展示左图右文+下载按钮
     MSLeftImageNoButton = 1, // 展示左图右文
     MSBottomImage = 2, // 展示上文下大图
+};
+
+
+typedef NS_ENUM(NSInteger, MSDetailType) {
+    MSDetailPage = 0, // 详情页
+    MSDetailApp = 1, // 跳转app
 };
 
 static NSString *kMSGDTMobSDKAppId = @"1105344611";

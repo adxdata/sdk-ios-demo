@@ -208,6 +208,7 @@
  */
 - (void)msVideoClick:(MSVideoAd *)splashAd {
     NSLog(@"demo 视频广告被点击");
+    [self.videoAd destroy];
 }
 
 /**
