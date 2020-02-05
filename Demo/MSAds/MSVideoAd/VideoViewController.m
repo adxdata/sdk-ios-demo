@@ -37,7 +37,7 @@
     [self initSizeButton];
     [self initTimeButton];
 
-//    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(handleDeviceOrientationChange) name:UIDeviceOrientationDidChangeNotification object:nil];
+    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(handleDeviceOrientationChange) name:UIDeviceOrientationDidChangeNotification object:nil];
 }
 
 - (void)viewDidAppear:(BOOL)animated {
@@ -47,8 +47,18 @@
     }
 }
 
-//- (void)handleDeviceOrientationChange {
-//    UIDeviceOrientation orientation = [UIDevice currentDevice].orientation;
+- (void)handleDeviceOrientationChange {
+    UIDeviceOrientation orientation = [UIDevice currentDevice].orientation;
+    if (orientation == UIDeviceOrientationLandscapeLeft || orientation == UIDeviceOrientationLandscapeRight) {
+        CGRect hFrame = CGRectMake(0, 0, [UIScreen mainScreen].bounds.size.width, [UIScreen mainScreen].bounds.size.height);
+        self.videoAd.frame = hFrame;
+        self.container.frame = hFrame;
+    } else {
+        CGRect vFrame = CGRectMake(0, 0, [UIScreen mainScreen].bounds.size.width, 300);
+        self.videoAd.frame = vFrame;
+        self.container.frame = vFrame;
+    }
+
 //    NSInteger interfaceOrientation = UIDeviceOrientationPortrait;
 //    if (orientation == UIDeviceOrientationLandscapeLeft) {
 //        interfaceOrientation = UIInterfaceOrientationLandscapeRight;
@@ -60,15 +70,12 @@
 //    if (self.videoAd) {
 //        [self.videoAd changeOrientation:interfaceOrientation];
 //    }
-//}
+}
 
 - (void)initContainer {
     self.container = [[UIView alloc] init];
     [self.view addSubview:self.container];
-    [self.container mas_makeConstraints:^(MASConstraintMaker *make) {
-        make.size.mas_equalTo(CGSizeMake(300, 300));
-        make.centerX.equalTo(self.view.mas_centerX);
-    }];
+    [self handleDeviceOrientationChange];
 }
 
 - (void)initPauseButton {
@@ -208,7 +215,7 @@
  */
 - (void)msVideoClick:(MSVideoAd *)splashAd {
     NSLog(@"demo 视频广告被点击");
-    [self.videoAd destroy];
+//    [self.videoAd destroy];
 }
 
 /**
