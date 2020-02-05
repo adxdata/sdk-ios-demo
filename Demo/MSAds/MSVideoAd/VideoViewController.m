@@ -132,6 +132,7 @@
 
 - (void)loadAd {
     self.videoAd = [[MSVideoAd alloc]init];
+    self.videoAd.viewController = self;
     self.videoAd.delegate = self;
     NSString *pid = [[[IdProviderFactory sharedIdProviderFactory] getDefaultProvider] video];
     [self.videoAd loadAdAndShow:self.container frame:self.container.frame pid:pid];
