@@ -201,6 +201,9 @@
 - (void)viewDidDisappear:(BOOL)animated {
     NSLog(@"%s", __FUNCTION__);
     [super viewDidDisappear:animated];
+
+    self.videoAd.delegate = nil;
+    self.videoAd = nil;
     [self destroyTimer];
 }
 
@@ -235,7 +238,7 @@
 
 - (void)dealloc {
     NSLog(@"%s", __FUNCTION__);
-    [self destroyTimer];
+    [[NSNotificationCenter defaultCenter] removeObserver:self];
 }
 
 @end
