@@ -164,7 +164,7 @@
 /**
  *  原生广告加载广告数据成功回调，返回为MSAdModel对象的数组
  */
-- (void)nativeAdSuccessToLoad:(NSArray *)nativeAdDataArray{
+- (void)msNativeLoaded:(NSArray *)nativeAdDataArray{
     NSLog(@"demo 加载成功");
     MSWS(ws);
     if (nativeAdDataArray.count>0) {
@@ -189,34 +189,18 @@
 /**
  *  原生广告加载广告数据失败回调
  */
-- (void)nativeAdFailToLoad:(NSError *)error{
+- (void)msNativeError:(NSError *)error{
     NSLog(@"demo 加载失败");
 }
 
 /**
  * 原生广告曝光
  */
-- (void)nativeAdShow:(MSAdModel *)model {
+- (void)msNativeShow:(MSAdModel *)model {
     NSLog(@"demo 广告曝光");
 }
 
-/**
- *  原生广告点击之后将要展示内嵌浏览器或应用内AppStore回调
- */
-- (void)nativeAdWillPresentScreen{
-    NSLog(@"demo 广告详情展示");
-}
-
-
-/**
- * 原生广告点击以后，内置AppStore或是内置浏览器被关闭时回调
- */
-- (void)nativeAdClosed{
-    NSLog(@"demo 广告详情关闭");
-}
-
-- (void)dealloc
-{
+- (void)dealloc {
     
 }
 @end

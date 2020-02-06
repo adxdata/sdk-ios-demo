@@ -19,35 +19,41 @@
  *  广告预加载成功回调
  *  详解:当接收服务器返回的广告数据成功且预加载后调用该函数
  */
-- (void)interstitialSuccessToLoadAd:(MSInterstitial *)interstitial;
+- (void)interstitialSuccessToLoadAd:(MSInterstitial *)interstitial DEPRECATED_MSG_ATTRIBUTE("use msInterstitialLoaded: instead");
+- (void)msInterstitialLoaded:(MSInterstitial *)msInterstitialAd;
 
 /**
  *  广告预加载失败回调
  *  详解:当接收服务器返回的广告数据失败后调用该函数
  */
-- (void)interstitialFailToLoadAd:(MSInterstitial *)interstitial error:(NSError *)error;
+- (void)interstitialFailToLoadAd:(MSInterstitial *)interstitial error:(NSError *)error DEPRECATED_MSG_ATTRIBUTE("use msInterstitialError: instead");
+- (void)msInterstitialError:(MSInterstitial *)msInterstitialAd error:(NSError *)error;
 
 /**
  *  插屏广告视图展示成功回调
  *  详解: 插屏广告展示成功回调该函数
  */
-- (void)interstitialDidPresentScreen:(MSInterstitial *)interstitial;
+- (void)interstitialDidPresentScreen:(MSInterstitial *)interstitial DEPRECATED_MSG_ATTRIBUTE("use msInterstitialShow: instead");
+- (void)msInterstitialShow:(MSInterstitial *)msInterstitialAd;
 
 /**
  *  插屏广告展示结束回调
  *  详解: 插屏广告展示结束回调该函数
  */
-- (void)interstitialDidDismissScreen:(MSInterstitial *)interstitial;
+- (void)interstitialDidDismissScreen:(MSInterstitial *)interstitial DEPRECATED_MSG_ATTRIBUTE("use msInterstitialClosed: instead");
+- (void)msInterstitialClosed:(MSInterstitial *)msInterstitialAd;
 
 /**
  *  插屏广告点击回调
  */
-- (void)interstitialClicked:(MSInterstitial *)interstitial;
+- (void)interstitialClicked:(MSInterstitial *)interstitial DEPRECATED_MSG_ATTRIBUTE("use msInterstitialClicked: instead");
+- (void)msInterstitialClicked:(MSInterstitial *)msInterstitialAd;
 
 /**
  *  全屏广告页被关闭
  */
-- (void)interstitialAdDidDismissFullScreenModal:(MSInterstitial *)interstitial;
+- (void)interstitialAdDidDismissFullScreenModal:(MSInterstitial *)interstitial DEPRECATED_MSG_ATTRIBUTE("use msInterstitialDetailClosed: instead");
+- (void)msInterstitialDetailClosed:(MSInterstitial *)msInterstitialAd;
 
 @end
 

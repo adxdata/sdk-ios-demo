@@ -217,7 +217,7 @@
 /**
  *  视频广告点击回调
  */
-- (void)msVideoClick:(MSVideoAd *)splashAd {
+- (void)msVideoClick:(MSVideoAd *)videoAd {
     NSLog(@"demo 视频广告被点击");
 //    [self.videoAd destroy];
 }
@@ -225,7 +225,7 @@
 /**
  *  视频广告将要关闭回调
  */
-- (void)msVideoCompletion:(MSVideoAd *)splashAd {
+- (void)msVideoCompletion:(MSVideoAd *)videoAd {
     NSLog(@"demo 视频广告播放完成");
 }
 

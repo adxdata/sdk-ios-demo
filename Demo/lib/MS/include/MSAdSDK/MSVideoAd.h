@@ -32,12 +32,12 @@ NS_ASSUME_NONNULL_BEGIN
 /**
  *  视频广告点击回调
  */
-- (void)msVideoClick:(MSVideoAd *)splashAd;
+- (void)msVideoClick:(MSVideoAd *)videoAd;
 
 /**
  *  视频广告将要关闭回调
  */
-- (void)msVideoCompletion:(MSVideoAd *)splashAd;
+- (void)msVideoCompletion:(MSVideoAd *)videoAd;
 
 
 @end

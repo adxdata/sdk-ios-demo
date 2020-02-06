@@ -64,12 +64,11 @@
     _bannerView = nil;
 }
 
-
 /**
  *  请求广告条数据成功后调用
  *  详解:当接收服务器返回的广告数据成功后调用该函数
  */
-- (void)bannerViewDidReceived{
+- (void)msBannerLoaded:(MSBannerView *)msBannerAd{
     NSLog(@"demo 广告加载成功");
 }
 
@@ -77,21 +76,21 @@
  *  请求广告条数据失败后调用
  *  详解:当接收服务器返回的广告数据失败后调用该函数
  */
-- (void)bannerViewFailToReceived:(NSError *)error{
+- (void)msBannerError:(MSBannerView *)msBannerAd error:(NSError *)error{
     NSLog(@"demo 广告加载失败");
 }
 
 /**
  * banner广告曝光
  */
-- (void)bannerViewShow {
+- (void)msBannerShow:(MSBannerView *)msBannerAd {
     NSLog(@"demo 广告曝光");
 }
 
 /**
  *  banner条点击回调
  */
-- (void)bannerViewClicked{
+- (void)msBannerClicked:(MSBannerView *)msBannerAd{
     NSLog(@"demo 广告点击");
 }
 
@@ -99,22 +98,8 @@
  *  banner条被用户关闭时调用
  *  详解:当打开showCloseBtn开关时，用户有可能点击关闭按钮从而把广告条关闭
  */
-- (void)bannerViewWillClose{
+- (void)msBannerClosed:(MSBannerView *)msBannerAd{
     NSLog(@"demo 广告关闭");
-}
-
-/**
- *  banner广告点击以后弹出全屏广告页完毕
- */
-- (void)bannerViewDidPresentFullScreenModal{
-    NSLog(@"demo 详情展示");
-}
-
-/**
- *  全屏广告页已经被关闭
- */
-- (void)bannerViewDidDismissFullScreenModal{
-    NSLog(@"demo 详情关闭");
 }
 
 - (void)dealloc

@@ -74,9 +74,9 @@
 /**
  广告数据加载成功回调
  
- @param rewardedVideoAd MSRewardVideoAd 实例
+ @param msRewardVideoAd MSRewardVideoAd 实例
  */
-- (void)rewardVideoAdDidLoad:(MSRewardVideoAd *)rewardedVideoAd{
+- (void)msRewardVideoLoaded:(MSRewardVideoAd *)msRewardVideoAd{
     self.statusLabel.text = @"广告数据加载成功";
     NSLog(@"demo 广告数据加载成功");
 }
@@ -84,29 +84,19 @@
 /**
  视频数据下载成功回调，已经下载过的视频会直接回调
  
- @param rewardedVideoAd MSRewardVideoAd 实例
+ @param msRewardVideoAd MSRewardVideoAd 实例
  */
-- (void)rewardVideoAdVideoDidLoad:(MSRewardVideoAd *)rewardedVideoAd{
+- (void)msRewardVideoCached:(MSRewardVideoAd *)msRewardVideoAd{
     self.statusLabel.text = @"视频文件加载成功";
     NSLog(@"demo 视频文件加载成功");
 }
 
 /**
- 视频播放页即将展示回调
- 
- @param rewardedVideoAd MSRewardVideoAd 实例
- */
-- (void)rewardVideoAdWillVisible:(MSRewardVideoAd *)rewardedVideoAd{
-//    NSLog(@"视频播放页即将打开");
-    NSLog(@"demo 视频播放页即将打开");
-}
-
-/**
  视频广告曝光回调
  
- @param rewardedVideoAd MSRewardVideoAd 实例
+ @param msRewardVideoAd MSRewardVideoAd 实例
  */
-- (void)rewardVideoAdDidExposed:(MSRewardVideoAd *)rewardedVideoAd{
+- (void)msRewardVideoShow:(MSRewardVideoAd *)msRewardVideoAd{
 //    NSLog(@"广告已曝光");
     NSLog(@"demo 广告已曝光");
 }
@@ -114,9 +104,9 @@
 /**
  视频播放页关闭回调
  
- @param rewardedVideoAd MSRewardVideoAd 实例
+ @param msRewardVideoAd MSRewardVideoAd 实例
  */
-- (void)rewardVideoAdDidClose:(MSRewardVideoAd *)rewardedVideoAd{
+- (void)msRewardVideoClosed:(MSRewardVideoAd *)msRewardVideoAd{
     self.statusLabel.text = @"广告已关闭";
 //    NSLog(@"广告已关闭");
     self.rewardVideoAd = nil;
@@ -126,9 +116,9 @@
 /**
  视频广告信息点击回调
  
- @param rewardedVideoAd MSRewardVideoAd 实例
+ @param msRewardVideoAd MSRewardVideoAd 实例
  */
-- (void)rewardVideoAdDidClicked:(MSRewardVideoAd *)rewardedVideoAd{
+- (void)msRewardVideoClicked:(MSRewardVideoAd *)msRewardVideoAd{
 //    NSLog(@"广告已点击");
     NSLog(@"demo 广告被点击");
 }
@@ -136,10 +126,10 @@
 /**
  视频广告各种错误信息回调
  
- @param rewardedVideoAd MSRewardVideoAd 实例
+ @param msRewardVideoAd MSRewardVideoAd 实例
  @param error 具体错误信息
  */
-- (void)rewardVideoAd:(MSRewardVideoAd *)rewardedVideoAd didFailWithError:(NSError *)error{
+- (void)msRewardVideoError:(MSRewardVideoAd *)msRewardVideoAd error:(NSError *)error{
     if (error.code == 4014) {
 //        NSLog(@"请拉取到广告后再调用展示接口");
         self.statusLabel.text = @"请拉取到广告后再调用展示接口";
@@ -169,24 +159,22 @@
 /**
  视频广告播放达到激励条件回调
  
- @param rewardedVideoAd MSRewardVideoAd 实例
+ @param msRewardVideoAd MSRewardVideoAd 实例
  */
-- (void)rewardVideoAdDidRewardEffective:(MSRewardVideoAd *)rewardedVideoAd{
+- (void)msRewardVideoReward:(MSRewardVideoAd *)msRewardVideoAd{
     NSLog(@"demo 播放达到激励条件");
 }
 
 /**
  视频广告视频播放完成
  
- @param rewardedVideoAd MSRewardVideoAd 实例
+ @param msRewardVideoAd MSRewardVideoAd 实例
  */
-- (void)rewardVideoAdDidPlayFinish:(MSRewardVideoAd *)rewardedVideoAd{
+- (void)msRewardVideoFinish:(MSRewardVideoAd *)msRewardVideoAd{
     NSLog(@"demo 视频播放结束");
 }
 
-
-- (void)dealloc
-{
+- (void)dealloc {
     
 }
 

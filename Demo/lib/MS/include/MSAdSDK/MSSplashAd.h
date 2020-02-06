@@ -19,38 +19,44 @@ NS_ASSUME_NONNULL_BEGIN
 /**
  * 开屏广告加载成功
  */
-- (void)splashAdSuccessLoad:(MSSplashAd *)splashAd;
+- (void)splashAdSuccessLoad:(MSSplashAd *)splashAd DEPRECATED_MSG_ATTRIBUTE("use msSplashLoaded: instead");
+- (void)msSplashLoaded:(MSSplashAd *)splashAd;
 
 /**
  *  开屏广告成功展示
  */
-- (void)splashAdSuccessPresentScreen:(MSSplashAd *)splashAd;
+- (void)splashAdSuccessPresentScreen:(MSSplashAd *)splashAd DEPRECATED_MSG_ATTRIBUTE("use msSplashShow: instead");
+- (void)msSplashShow:(MSSplashAd *)splashAd;
 
 /**
  *  开屏广告展示失败
  */
-- (void)splashAdFailToPresent:(MSSplashAd *)splashAd withError:(NSError *)error;
+- (void)splashAdFailToPresent:(MSSplashAd *)splashAd withError:(NSError *)error DEPRECATED_MSG_ATTRIBUTE("use msSplashError: instead");
+- (void)msSplashError:(MSSplashAd *)splashAd withError:(NSError *)error;
 
 /**
  *  开屏广告点击回调
  */
-- (void)splashAdClicked:(MSSplashAd *)splashAd;
+- (void)splashAdClicked:(MSSplashAd *)splashAd DEPRECATED_MSG_ATTRIBUTE("use msSplashClicked: instead");
+- (void)msSplashClicked:(MSSplashAd *)splashAd;
 
 /**
  *  开屏广告将要关闭回调
  */
-- (void)splashAdWillClosed:(MSSplashAd *)splashAd;
+- (void)splashAdWillClosed:(MSSplashAd *)splashAd DEPRECATED_MSG_ATTRIBUTE("use msSplashWillClosed: instead");
+- (void)msSplashWillClosed:(MSSplashAd *)splashAd;
 
 /**
  *  开屏广告关闭回调
  */
-- (void)splashAdClosed:(MSSplashAd *)splashAd;
+- (void)splashAdClosed:(MSSplashAd *)splashAd DEPRECATED_MSG_ATTRIBUTE("use msSplashClosed: instead");
+- (void)msSplashClosed:(MSSplashAd *)splashAd;
 
 /**
  *  点击以后全屏广告页已经关闭
  */
-- (void)splashAdDidDismissFullScreenModal:(MSSplashAd *)splashAd;
-
+- (void)splashAdDidDismissFullScreenModal:(MSSplashAd *)splashAd DEPRECATED_MSG_ATTRIBUTE("use msSplashDetailClosed: instead");
+- (void)msSplashDetailClosed:(MSSplashAd *)splashAd;
 
 @end
 

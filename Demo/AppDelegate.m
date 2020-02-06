@@ -78,14 +78,14 @@
 /**
  *  开屏广告成功展示
  */
-- (void)splashAdSuccessPresentScreen:(MSSplashAd *)splashAd{
+- (void)msSplashShow:(MSSplashAd *)splashAd{
     
 }
 
 /**
  *  开屏广告展示失败
  */
-- (void)splashAdFailToPresent:(MSSplashAd *)splashAd withError:(NSError *)error{
+- (void)msSplashError:(MSSplashAd *)splashAd withError:(NSError *)error{
 
 }
 
@@ -93,30 +93,15 @@
 /**
  *  开屏广告点击回调
  */
-- (void)splashAdClicked:(MSSplashAd *)splashAd{
-    
-}
-
-/**
- *  开屏广告将要关闭回调
- */
-- (void)splashAdWillClosed:(MSSplashAd *)splashAd{
+- (void)msSplashClicked:(MSSplashAd *)splashAd{
     
 }
 
 /**
  *  开屏广告关闭回调
  */
-- (void)splashAdClosed:(MSSplashAd *)splashAd{
+- (void)msSplashClosed:(MSSplashAd *)splashAd{
 //    self.splash = nil;
-}
-
-
-/**
- *  点击以后全屏广告页已经关闭
- */
-- (void)splashAdDidDismissFullScreenModal:(MSSplashAd *)splashAd{
-
 }
 
 @end

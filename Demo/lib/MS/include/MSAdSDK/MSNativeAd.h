@@ -15,32 +15,37 @@ NS_ASSUME_NONNULL_BEGIN
 
 @protocol MSNativeAdDelegate <NSObject>
 
+@optional
+
 /**
  *  原生广告加载广告数据成功回调，返回为MSAdModel对象的数组
  */
-- (void)nativeAdSuccessToLoad:(NSArray *)nativeAdDataArray;
+- (void)nativeAdSuccessToLoad:(NSArray *)nativeAdDataArray DEPRECATED_MSG_ATTRIBUTE("use msNativeLoaded: instead");
+- (void)msNativeLoaded:(NSArray *)nativeAdDataArray;
 
 /**
  *  原生广告加载广告数据失败回调
  */
-- (void)nativeAdFailToLoad:(NSError *)error;
-
-@optional
+- (void)nativeAdFailToLoad:(NSError *)error DEPRECATED_MSG_ATTRIBUTE("use msNativeError: instead");
+- (void)msNativeError:(NSError *)error;
 
 /**
  *  原生广告即将展现
  */
-- (void)nativeAdShow:(MSAdModel *)model;
+- (void)nativeAdShow:(MSAdModel *)model DEPRECATED_MSG_ATTRIBUTE("use msNativeShow: instead");
+- (void)msNativeShow:(MSAdModel *)model;
 
 /**
  *  原生广告点击之后将要展示内嵌浏览器或应用内AppStore回调
  */
-- (void)nativeAdWillPresentScreen;
+- (void)nativeAdWillPresentScreen DEPRECATED_MSG_ATTRIBUTE("use msNativeDetailShow: instead");
+- (void)msNativeDetailShow;
 
 /**
  * 原生广告点击以后，内置AppStore或是内置浏览器被关闭时回调
  */
-- (void)nativeAdClosed;
+- (void)nativeAdClosed DEPRECATED_MSG_ATTRIBUTE("use msNativeDetailClosed: instead");
+- (void)msNativeDetailClosed;
 
 @end
 

@@ -18,6 +18,8 @@ NS_ASSUME_NONNULL_BEGIN
 #define GDTMOB_AD_SUGGEST_SIZE_468x60    CGSizeMake(468, 60) //For iPad
 #define GDTMOB_AD_SUGGEST_SIZE_728x90    CGSizeMake(728, 90) //For iPad
 
+@class MSBannerView;
+
 @protocol MSBannerViewDelegate <NSObject>
 
 @optional
@@ -26,40 +28,46 @@ NS_ASSUME_NONNULL_BEGIN
  *  请求广告条数据成功后调用
  *  详解:当接收服务器返回的广告数据成功后调用该函数
  */
-- (void)bannerViewDidReceived;
+- (void)bannerViewDidReceived DEPRECATED_MSG_ATTRIBUTE("use msBannerLoaded instead");
+- (void)msBannerLoaded:(MSBannerView *)msBannerAd;
 
 /**
  *  请求广告条数据失败后调用
  *  详解:当接收服务器返回的广告数据失败后调用该函数
  */
-- (void)bannerViewFailToReceived:(NSError *)error;
+- (void)bannerViewFailToReceived:(NSError *)error DEPRECATED_MSG_ATTRIBUTE("use msBannerError: instead");
+- (void)msBannerError:(MSBannerView *)msBannerAd error:(NSError *)error;
 
 /**
  *  banner广告曝光
  */
-- (void)bannerViewShow;
-
+- (void)bannerViewShow DEPRECATED_MSG_ATTRIBUTE("use msBannerShow instead");
+- (void)msBannerShow:(MSBannerView *)msBannerAd;
 
 /**
  *  banner条点击回调
  */
-- (void)bannerViewClicked;
+- (void)bannerViewClicked DEPRECATED_MSG_ATTRIBUTE("use msBannerClicked instead");
+- (void)msBannerClicked:(MSBannerView *)msBannerAd;
 
 /**
  *  banner条被用户关闭时调用
  *  详解:用户有可能点击关闭按钮从而把广告条关闭
  */
-- (void)bannerViewWillClose;
+- (void)bannerViewWillClose DEPRECATED_MSG_ATTRIBUTE("use msBannerClosed instead");
+- (void)msBannerClosed:(MSBannerView *)msBannerAd;
 
 /**
  *  banner广告点击以后弹出全屏广告页完毕
  */
-- (void)bannerViewDidPresentFullScreenModal;
+- (void)bannerViewDidPresentFullScreenModal DEPRECATED_MSG_ATTRIBUTE("use msBannerDetailShow instead");
+- (void)msBannerDetailShow:(MSBannerView *)msBannerAd;
 
 /**
  *  全屏广告页已经被关闭
  */
-- (void)bannerViewDidDismissFullScreenModal;
+- (void)bannerViewDidDismissFullScreenModal DEPRECATED_MSG_ATTRIBUTE("use msBannerDetailClosed instead");
+- (void)msBannerDetailClosed:(MSBannerView *)msBannerAd;
 @end
 
 @interface MSBannerView : UIView
