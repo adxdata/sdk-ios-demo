@@ -1,0 +1,6 @@
+framework module MSAdSDK {
+  umbrella header "MSAdSDK.h"
+
+  export *
+  module * { export * }
+}

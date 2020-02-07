@@ -7,7 +7,7 @@
 //
 
 #import "AlterBaseUrlView.h"
-#import "MSConfiger.h"
+#import <MSAdSDK/MSAdSDK.h>
 
 @implementation AlterBaseUrlView{
     UITextView* tv_;

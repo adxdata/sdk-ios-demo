@@ -7,7 +7,7 @@
 //
 
 #import "VideoViewController.h"
-#import "MSVideoAd.h"
+#import <MSAdSDK/MSAdSDK.h>
 #import "IdProviderFactory.h"
 #import "Masonry.h"
 

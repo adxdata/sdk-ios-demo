@@ -7,8 +7,7 @@
 //
 
 #import "NativeExpressAdViewController.h"
-#import "MSNativeAdView.h"
-#import "MSNativeAd.h"
+#import <MSAdSDK/MSAdSDK.h>
 #import "IdProviderFactory.h"
 
 @interface NativeExpressAdViewController ()<MSNativeAdDelegate,UITableViewDelegate,UITableViewDataSource,MSNativeAdDelegate>

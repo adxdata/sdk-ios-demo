@@ -7,8 +7,7 @@
 //
 
 #import "AppDelegate.h"
-#import "MSSplashAd.h"
-#import "MSAdSDK.h"
+#import <MSAdSDK/MSAdSDK.h>
 #import "IdProviderFactory.h"
 
 #import "MSNavigationController.h"

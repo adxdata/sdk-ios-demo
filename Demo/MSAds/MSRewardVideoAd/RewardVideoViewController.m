@@ -7,7 +7,7 @@
 //
 
 #import "RewardVideoViewController.h"
-#import "MSRewardVideoAd.h"
+#import <MSAdSDK/MSAdSDK.h>
 #import "IdProviderFactory.h"
 
 @interface RewardVideoViewController () <MSRewardedVideoAdDelegate>

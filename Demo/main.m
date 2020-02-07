@@ -8,7 +8,7 @@
 
 #import <UIKit/UIKit.h>
 #import "AppDelegate.h"
-#import "MRApplication.h"
+#import <MSAdSDK/MSAdSDK.h>
 int main(int argc, char * argv[]) {
     @autoreleasepool {
         return UIApplicationMain(argc, argv, NSStringFromClass([MRApplication class]), NSStringFromClass([AppDelegate class]));
