@@ -3,7 +3,7 @@
 #### 1.嵌入广告SDK
 将 sdk-ios-demo/demo/lib 中的 MSAdSDK.framework、MSBundle.bundle、Masonry、reachability 
 
-#### 2.添加权限
+#### 2.允许http请求
 info.plist里添加
 
     <key>NSAppTransportSecurity</key>

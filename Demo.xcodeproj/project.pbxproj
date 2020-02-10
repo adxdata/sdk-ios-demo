@@ -62,6 +62,10 @@
 		E986F28123BB627A00A5EECA /* IdProviderFactory.m in Sources */ = {isa = PBXBuildFile; fileRef = E986F28023BB627A00A5EECA /* IdProviderFactory.m */; };
 		E986F28723BD94DB00A5EECA /* IAdIdProvider.m in Sources */ = {isa = PBXBuildFile; fileRef = E986F28623BD94DB00A5EECA /* IAdIdProvider.m */; };
 		E994793823ED052900F75214 /* MSAdSDK.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E994793723ED052900F75214 /* MSAdSDK.framework */; };
+		E9B3E52623F110CD0074BDF1 /* BaiduMobAdSDK.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E9B3E52523F110CD0074BDF1 /* BaiduMobAdSDK.framework */; };
+		E9B3E53D23F110D70074BDF1 /* libGDTMobSDK.a in Frameworks */ = {isa = PBXBuildFile; fileRef = E9B3E53823F110D70074BDF1 /* libGDTMobSDK.a */; };
+		E9B3E53E23F110D70074BDF1 /* BUAdSDK.bundle in Resources */ = {isa = PBXBuildFile; fileRef = E9B3E53B23F110D70074BDF1 /* BUAdSDK.bundle */; };
+		E9B3E53F23F110D70074BDF1 /* BUAdSDK.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E9B3E53C23F110D70074BDF1 /* BUAdSDK.framework */; };
 		E9C5C07523C74B2000EB6791 /* NSLayoutConstraint+MASDebugAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = E9C5C05C23C74B2000EB6791 /* NSLayoutConstraint+MASDebugAdditions.m */; };
 		E9C5C07623C74B2000EB6791 /* ViewController+MASAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = E9C5C06523C74B2000EB6791 /* ViewController+MASAdditions.m */; };
 		E9C5C07723C74B2000EB6791 /* MASCompositeConstraint.m in Sources */ = {isa = PBXBuildFile; fileRef = E9C5C06923C74B2000EB6791 /* MASCompositeConstraint.m */; };
@@ -173,6 +177,28 @@
 		E986F28523BB66BA00A5EECA /* BDIdProvider.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BDIdProvider.h; sourceTree = "<group>"; };
 		E986F28623BD94DB00A5EECA /* IAdIdProvider.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = IAdIdProvider.m; sourceTree = "<group>"; };
 		E994793723ED052900F75214 /* MSAdSDK.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = MSAdSDK.framework; sourceTree = "<group>"; };
+		E9B3E52523F110CD0074BDF1 /* BaiduMobAdSDK.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = BaiduMobAdSDK.framework; sourceTree = "<group>"; };
+		E9B3E52823F110D70074BDF1 /* GDTNativeExpressAdView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GDTNativeExpressAdView.h; sourceTree = "<group>"; };
+		E9B3E52923F110D70074BDF1 /* GDTMobBannerView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GDTMobBannerView.h; sourceTree = "<group>"; };
+		E9B3E52A23F110D70074BDF1 /* GDTUnifiedBannerView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GDTUnifiedBannerView.h; sourceTree = "<group>"; };
+		E9B3E52B23F110D70074BDF1 /* GDTNativeAd.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GDTNativeAd.h; sourceTree = "<group>"; };
+		E9B3E52C23F110D70074BDF1 /* GDTSDKConfig.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GDTSDKConfig.h; sourceTree = "<group>"; };
+		E9B3E52D23F110D70074BDF1 /* GDTMobInterstitial.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GDTMobInterstitial.h; sourceTree = "<group>"; };
+		E9B3E52E23F110D70074BDF1 /* GDTRewardVideoAd.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GDTRewardVideoAd.h; sourceTree = "<group>"; };
+		E9B3E52F23F110D70074BDF1 /* GDTSplashAd.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GDTSplashAd.h; sourceTree = "<group>"; };
+		E9B3E53023F110D70074BDF1 /* GDTNativeExpressAd.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GDTNativeExpressAd.h; sourceTree = "<group>"; };
+		E9B3E53123F110D70074BDF1 /* GDTLogoView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GDTLogoView.h; sourceTree = "<group>"; };
+		E9B3E53223F110D70074BDF1 /* GDTMediaView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GDTMediaView.h; sourceTree = "<group>"; };
+		E9B3E53323F110D70074BDF1 /* GDTUnifiedNativeAdView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GDTUnifiedNativeAdView.h; sourceTree = "<group>"; };
+		E9B3E53423F110D70074BDF1 /* GDTHybridAd.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GDTHybridAd.h; sourceTree = "<group>"; };
+		E9B3E53523F110D70074BDF1 /* GDTUnifiedNativeAdDataObject.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GDTUnifiedNativeAdDataObject.h; sourceTree = "<group>"; };
+		E9B3E53623F110D70074BDF1 /* GDTSDKDefines.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GDTSDKDefines.h; sourceTree = "<group>"; };
+		E9B3E53723F110D70074BDF1 /* GDTUnifiedInterstitialAd.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GDTUnifiedInterstitialAd.h; sourceTree = "<group>"; };
+		E9B3E53823F110D70074BDF1 /* libGDTMobSDK.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = libGDTMobSDK.a; sourceTree = "<group>"; };
+		E9B3E53923F110D70074BDF1 /* GDTUnifiedNativeAd.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GDTUnifiedNativeAd.h; sourceTree = "<group>"; };
+		E9B3E53A23F110D70074BDF1 /* GDTVideoConfig.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GDTVideoConfig.h; sourceTree = "<group>"; };
+		E9B3E53B23F110D70074BDF1 /* BUAdSDK.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = BUAdSDK.bundle; sourceTree = "<group>"; };
+		E9B3E53C23F110D70074BDF1 /* BUAdSDK.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = BUAdSDK.framework; sourceTree = "<group>"; };
 		E9C5C05B23C74B2000EB6791 /* MASCompositeConstraint.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MASCompositeConstraint.h; sourceTree = "<group>"; };
 		E9C5C05C23C74B2000EB6791 /* NSLayoutConstraint+MASDebugAdditions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSLayoutConstraint+MASDebugAdditions.m"; sourceTree = "<group>"; };
 		E9C5C05D23C74B2000EB6791 /* MASConstraint+Private.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "MASConstraint+Private.h"; sourceTree = "<group>"; };
@@ -217,6 +243,7 @@
 				088392C72398D56600C0BB1F /* Accelerate.framework in Frameworks */,
 				088392C52398D53F00C0BB1F /* CoreTelephony.framework in Frameworks */,
 				E994793823ED052900F75214 /* MSAdSDK.framework in Frameworks */,
+				E9B3E53F23F110D70074BDF1 /* BUAdSDK.framework in Frameworks */,
 				088392C32398D51900C0BB1F /* CoreMedia.framework in Frameworks */,
 				088392C12398D50A00C0BB1F /* MediaPlayer.framework in Frameworks */,
 				088392BF2398D4F200C0BB1F /* MobileCoreServices.framework in Frameworks */,
@@ -229,12 +256,14 @@
 				2F2520CE231F5C32003212B0 /* QuartzCore.framework in Frameworks */,
 				2F2520CC231F5C2A003212B0 /* SystemConfiguration.framework in Frameworks */,
 				2F2520CA231F5C22003212B0 /* CoreGraphics.framework in Frameworks */,
+				E9B3E52623F110CD0074BDF1 /* BaiduMobAdSDK.framework in Frameworks */,
 				2F2520C8231F5C16003212B0 /* UIKit.framework in Frameworks */,
 				2F2520C6231F5C10003212B0 /* Foundation.framework in Frameworks */,
 				2F2520C4231F5C08003212B0 /* Photos.framework in Frameworks */,
 				2F2520C2231F5BFF003212B0 /* CoreMotion.framework in Frameworks */,
 				2F2520C0231F5BF6003212B0 /* libresolv.9.tbd in Frameworks */,
 				2F2520BE231F5BEA003212B0 /* libc++.tbd in Frameworks */,
+				E9B3E53D23F110D70074BDF1 /* libGDTMobSDK.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -362,6 +391,10 @@
 		548F3FB6231F4AAA003CE914 /* lib */ = {
 			isa = PBXGroup;
 			children = (
+				E9B3E53B23F110D70074BDF1 /* BUAdSDK.bundle */,
+				E9B3E53C23F110D70074BDF1 /* BUAdSDK.framework */,
+				E9B3E52723F110D70074BDF1 /* GDT */,
+				E9B3E52523F110CD0074BDF1 /* BaiduMobAdSDK.framework */,
 				E994793723ED052900F75214 /* MSAdSDK.framework */,
 				E9F5ED2B23CC6063006CAEE6 /* reachability */,
 				E923A63A23CB986500666B47 /* MSBundle.bundle */,
@@ -461,6 +494,32 @@
 				E986F28023BB627A00A5EECA /* IdProviderFactory.m */,
 			);
 			path = adid;
+			sourceTree = "<group>";
+		};
+		E9B3E52723F110D70074BDF1 /* GDT */ = {
+			isa = PBXGroup;
+			children = (
+				E9B3E52823F110D70074BDF1 /* GDTNativeExpressAdView.h */,
+				E9B3E52923F110D70074BDF1 /* GDTMobBannerView.h */,
+				E9B3E52A23F110D70074BDF1 /* GDTUnifiedBannerView.h */,
+				E9B3E52B23F110D70074BDF1 /* GDTNativeAd.h */,
+				E9B3E52C23F110D70074BDF1 /* GDTSDKConfig.h */,
+				E9B3E52D23F110D70074BDF1 /* GDTMobInterstitial.h */,
+				E9B3E52E23F110D70074BDF1 /* GDTRewardVideoAd.h */,
+				E9B3E52F23F110D70074BDF1 /* GDTSplashAd.h */,
+				E9B3E53023F110D70074BDF1 /* GDTNativeExpressAd.h */,
+				E9B3E53123F110D70074BDF1 /* GDTLogoView.h */,
+				E9B3E53223F110D70074BDF1 /* GDTMediaView.h */,
+				E9B3E53323F110D70074BDF1 /* GDTUnifiedNativeAdView.h */,
+				E9B3E53423F110D70074BDF1 /* GDTHybridAd.h */,
+				E9B3E53523F110D70074BDF1 /* GDTUnifiedNativeAdDataObject.h */,
+				E9B3E53623F110D70074BDF1 /* GDTSDKDefines.h */,
+				E9B3E53723F110D70074BDF1 /* GDTUnifiedInterstitialAd.h */,
+				E9B3E53823F110D70074BDF1 /* libGDTMobSDK.a */,
+				E9B3E53923F110D70074BDF1 /* GDTUnifiedNativeAd.h */,
+				E9B3E53A23F110D70074BDF1 /* GDTVideoConfig.h */,
+			);
+			path = GDT;
 			sourceTree = "<group>";
 		};
 		E9C5C05A23C74B2000EB6791 /* Masonry */ = {
@@ -626,6 +685,7 @@
 				E923A63B23CB986500666B47 /* MSBundle.bundle in Resources */,
 				548F3FDE231F4AAA003CE914 /* SplashViewController.xib in Resources */,
 				548F3ED3231F47A4003CE914 /* LaunchScreen.storyboard in Resources */,
+				E9B3E53E23F110D70074BDF1 /* BUAdSDK.bundle in Resources */,
 				548F3FD8231F4AAA003CE914 /* InterstitialViewController.xib in Resources */,
 				548F3FD6231F4AAA003CE914 /* BannerViewController.xib in Resources */,
 				548F3ED0231F47A4003CE914 /* Assets.xcassets in Resources */,
