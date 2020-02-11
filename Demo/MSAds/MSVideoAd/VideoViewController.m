@@ -38,6 +38,25 @@
     [self initTimeButton];
 
     [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(handleDeviceOrientationChange) name:UIDeviceOrientationDidChangeNotification object:nil];
+
+    [[NSNotificationCenter defaultCenter] addObserver:self
+                                             selector:@selector(appDidEnterBackground:)
+                                                 name:UIApplicationDidEnterBackgroundNotification
+                                               object:nil];
+    [[NSNotificationCenter defaultCenter] addObserver:self
+                                             selector:@selector(appDidEnterPlayground:)
+                                                 name:UIApplicationWillEnterForegroundNotification
+                                               object:nil];
+}
+
+/** 应用进入后台 */
+- (void)appDidEnterBackground:(NSNotification *)notify {
+    [self.videoAd pause];
+}
+
+/** 应用进入前台 */
+- (void)appDidEnterPlayground:(NSNotification *)notify {
+    [self.videoAd play];
 }
 
 - (void)viewDidAppear:(BOOL)animated {
