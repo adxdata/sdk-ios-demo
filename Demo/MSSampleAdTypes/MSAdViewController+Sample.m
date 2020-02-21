@@ -18,7 +18,8 @@
                         @[@"插屏", @"InterstitialViewController"],
                         @[@"激励视频广告", @"RewardVideoViewController"],
                         @[@"信息流", @"MSNativeAdController"],
-                        @[@"视频广告", @"VideoViewController"]
+                        @[@"视频广告", @"VideoViewController"],
+                        @[@"模板信息流广告", @"PreRenderViewController"]
                         ] mutableCopy];
 }
 

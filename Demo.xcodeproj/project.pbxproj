@@ -53,6 +53,7 @@
 		548F3FE4231F4AFD003CE914 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 548F3FE3231F4AFD003CE914 /* AppDelegate.m */; };
 		5490C624238CC9120050DCDD /* MSNativeAdController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5490C623238CC9120050DCDD /* MSNativeAdController.m */; };
 		E923A63B23CB986500666B47 /* MSBundle.bundle in Resources */ = {isa = PBXBuildFile; fileRef = E923A63A23CB986500666B47 /* MSBundle.bundle */; };
+		E930D73A23FFC55E000B41EE /* PreRenderViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E930D73823FFC55E000B41EE /* PreRenderViewController.m */; };
 		E98605BC23BEEBC000A5EECA /* SafariServices.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E98605BB23BEEBC000A5EECA /* SafariServices.framework */; };
 		E98605BE23BEEBD000A5EECA /* MessageUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E98605BD23BEEBD000A5EECA /* MessageUI.framework */; };
 		E986F27823BB508F00A5EECA /* MSIdProvider.m in Sources */ = {isa = PBXBuildFile; fileRef = E986F27723BB508F00A5EECA /* MSIdProvider.m */; };
@@ -162,6 +163,8 @@
 		5490C622238CC9120050DCDD /* MSNativeAdController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MSNativeAdController.h; sourceTree = "<group>"; };
 		5490C623238CC9120050DCDD /* MSNativeAdController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MSNativeAdController.m; sourceTree = "<group>"; };
 		E923A63A23CB986500666B47 /* MSBundle.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = MSBundle.bundle; sourceTree = "<group>"; };
+		E930D73823FFC55E000B41EE /* PreRenderViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PreRenderViewController.m; sourceTree = "<group>"; };
+		E930D73923FFC55E000B41EE /* PreRenderViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PreRenderViewController.h; sourceTree = "<group>"; };
 		E98605BB23BEEBC000A5EECA /* SafariServices.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SafariServices.framework; path = System/Library/Frameworks/SafariServices.framework; sourceTree = SDKROOT; };
 		E98605BD23BEEBD000A5EECA /* MessageUI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MessageUI.framework; path = System/Library/Frameworks/MessageUI.framework; sourceTree = SDKROOT; };
 		E986F27623BB4CC800A5EECA /* IAdIdProvider.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = IAdIdProvider.h; sourceTree = "<group>"; };
@@ -406,6 +409,7 @@
 		548F3FB8231F4AAA003CE914 /* MSAds */ = {
 			isa = PBXGroup;
 			children = (
+				E930D73723FFC55E000B41EE /* MSPreRenderAd */,
 				E9C5C0A523C7940500EB6791 /* MSVideoAd */,
 				548F3FB9231F4AAA003CE914 /* MSBannerAd */,
 				548F3FBD231F4AAA003CE914 /* MSInterstitialAd */,
@@ -475,6 +479,15 @@
 				548F3FD3231F4AAA003CE914 /* MSAdViewController+Sample.m */,
 			);
 			path = MSSampleAdTypes;
+			sourceTree = "<group>";
+		};
+		E930D73723FFC55E000B41EE /* MSPreRenderAd */ = {
+			isa = PBXGroup;
+			children = (
+				E930D73823FFC55E000B41EE /* PreRenderViewController.m */,
+				E930D73923FFC55E000B41EE /* PreRenderViewController.h */,
+			);
+			path = MSPreRenderAd;
 			sourceTree = "<group>";
 		};
 		E986F27423BB4AC300A5EECA /* adid */ = {
@@ -741,6 +754,7 @@
 				548F3FD9231F4AAA003CE914 /* NativeExpressAdViewController.m in Sources */,
 				E9C5C07C23C74B2000EB6791 /* MASConstraint.m in Sources */,
 				E9C5C07723C74B2000EB6791 /* MASCompositeConstraint.m in Sources */,
+				E930D73A23FFC55E000B41EE /* PreRenderViewController.m in Sources */,
 				548F3FDB231F4AAA003CE914 /* RewardVideoViewController.m in Sources */,
 				548F3FD5231F4AAA003CE914 /* BannerViewController.m in Sources */,
 				548F3EC5231F47A4003CE914 /* main.m in Sources */,

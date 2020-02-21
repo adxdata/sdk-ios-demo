@@ -20,6 +20,7 @@
 #import <MSAdSDK/MRApplication.h>
 #import <MSAdSDK/MSNativeAd.h>
 #import <MSAdSDK/MSVideoAd.h>
+#import <MSAdSDK/MSPrerenderAd.h>
 
 @interface MSAdSDK : NSObject
 
