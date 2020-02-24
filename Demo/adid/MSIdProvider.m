@@ -53,7 +53,8 @@
 }
 /** 纯视频 */
 -(NSString *) video {
-    return @"1006736";
+    return @"100424037";
+//    return @"1006736";
 }
 /** 视频暂停贴片 */
 -(NSString *) videoImg {

@@ -11,8 +11,8 @@
 #import "MSConfiger.h"
 #import "MSCommCore.h"
 
-static NSString *kMSVersionName = @"0.1.1";
-static NSInteger kMSVersionCode = 23;
+static NSString *kMSVersionName = @"0.1.2";
+static NSInteger kMSVersionCode = 24;
 
 //是否是竖屏
 #define IsPortrait ([[UIApplication sharedApplication] statusBarOrientation] == UIInterfaceOrientationPortrait || [[UIApplication sharedApplication] statusBarOrientation] == UIInterfaceOrientationPortraitUpsideDown)
@@ -53,6 +53,12 @@ typedef NS_ENUM(NSInteger, MSReportType) {
 typedef NS_ENUM(NSInteger, MSOrientation) {
     MSOrientationPortrait = 0, // 展示竖屏
     MSOrientationLandscapeRight = 1, // 展示横屏
+};
+
+typedef NS_ENUM(NSInteger, MSSecure) {
+    MSSecureHttp = 0,   // 仅支持http
+    MSSecureHttps = 1,  // 仅支持https
+    MSSecureAll = 2,    // 仅支持https
 };
 
 
