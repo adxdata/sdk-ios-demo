@@ -16,6 +16,8 @@ NS_ASSUME_NONNULL_BEGIN
 @property (nonatomic, strong) NSString* baseUrl;
 @property (nonatomic) BOOL isDebug;
 @property (nonatomic) BOOL isIpad;
+@property (nonatomic) NSInteger secure;
+@property (nonatomic) BOOL isSupportHttps;
 
 + (instancetype)share;
 
