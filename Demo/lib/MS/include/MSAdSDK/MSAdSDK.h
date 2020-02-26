@@ -15,7 +15,7 @@
 
 + (NSString *)appId;
 
-+ (void)setDebug:(BOOL)isDebug;
++ (void)setTestMode:(BOOL)isTestMode;
 
 + (NSString *)getVersionName;
 
