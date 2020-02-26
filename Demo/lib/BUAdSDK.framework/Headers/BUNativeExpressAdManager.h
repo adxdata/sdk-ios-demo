@@ -9,8 +9,10 @@
 #import <Foundation/Foundation.h>
 #import <UIKit/UIKit.h>
 #import "BUAdSlot.h"
+#import "BUMaterialMeta.h"
 #import "BUNativeExpressAdView.h"
 #import "BUDislikeWords.h"
+#import "BUPlayerPublicDefine.h"
 
 NS_ASSUME_NONNULL_BEGIN
 
@@ -50,6 +52,12 @@ NS_ASSUME_NONNULL_BEGIN
 - (void)nativeExpressAdViewDidClick:(BUNativeExpressAdView *)nativeExpressAdView;
 
 /**
+Sent when a playerw playback status changed.
+@param playerState : player state after changed
+*/
+- (void)nativeExpressAdView:(BUNativeExpressAdView *)nativeExpressAdView stateDidChanged:(BUPlayerPlayState)playerState;
+
+/**
  * Sent when a player finished
  * @param error : error of player
  */
@@ -65,6 +73,12 @@ NS_ASSUME_NONNULL_BEGIN
  * Sent after an ad view is clicked, a ad landscape view will present modal content
  */
 - (void)nativeExpressAdViewWillPresentScreen:(BUNativeExpressAdView *)nativeExpressAdView;
+
+/**
+ This method is called when another controller has been closed.
+ @param interactionType : open appstore in app or open the webpage or view video ad details page.
+ */
+- (void)nativeExpressAdViewDidCloseOtherController:(BUNativeExpressAdView *)nativeExpressAdView interactionType:(BUInteractionType)interactionType;
 
 @end
 

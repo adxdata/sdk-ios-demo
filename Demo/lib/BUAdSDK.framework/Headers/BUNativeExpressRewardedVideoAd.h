@@ -7,11 +7,20 @@
 
 #import <UIKit/UIKit.h>
 #import "BUAdSDKDefines.h"
+#import "BUMaterialMeta.h"
 
 @class BUNativeExpressRewardedVideoAd;
 @class BURewardedVideoModel;
 
 NS_ASSUME_NONNULL_BEGIN
+
+/// define the type of  native express rewarded video Ad
+typedef NS_ENUM(NSUInteger, BUNativeExpressRewardedVideoAdType) {
+    BUNativeExpressRewardedVideoAdTypeEndcard         = 0,  // video + endcard
+    BUNativeExpressRewardedVideoAdTypeVideoPlayable   = 1,  // video + playable
+    BUNativeExpressRewardedVideoAdTypePurePlayable    = 2,  // pure playable
+};
+
 @protocol BUNativeExpressRewardedVideoAdDelegate <NSObject>
 
 @optional
@@ -25,6 +34,10 @@ NS_ASSUME_NONNULL_BEGIN
  @param error : the reason of error
  */
 - (void)nativeExpressRewardedVideoAd:(BUNativeExpressRewardedVideoAd *)rewardedVideoAd didFailWithError:(NSError *_Nullable)error;
+/**
+  this methods is to tell delegate the type of native express rewarded video Ad
+ */
+- (void)nativeExpressRewardedVideoAdCallback:(BUNativeExpressRewardedVideoAd *)rewardedVideoAd withType:(BUNativeExpressRewardedVideoAdType)nativeExpressVideoType;
 
 /**
  This method is called when cached successfully.
@@ -79,7 +92,8 @@ NS_ASSUME_NONNULL_BEGIN
 - (void)nativeExpressRewardedVideoAdDidPlayFinish:(BUNativeExpressRewardedVideoAd *)rewardedVideoAd didFailWithError:(NSError *_Nullable)error;
 
 /**
- Server verification which is requested asynchronously is succeeded.
+ Server verification which is requested asynchronously is succeeded. now include two v erify methods:
+      1. C2C need  server verify  2. S2S don't need server verify
  @param verify :return YES when return value is 2000.
  */
 - (void)nativeExpressRewardedVideoAdServerRewardDidSucceed:(BUNativeExpressRewardedVideoAd *)rewardedVideoAd verify:(BOOL)verify;
@@ -90,12 +104,20 @@ NS_ASSUME_NONNULL_BEGIN
  */
 - (void)nativeExpressRewardedVideoAdServerRewardDidFail:(BUNativeExpressRewardedVideoAd *)rewardedVideoAd;
 
+/**
+ This method is called when another controller has been closed.
+ @param interactionType : open appstore in app or open the webpage or view video ad details page.
+ */
+- (void)nativeExpressRewardedVideoAdDidCloseOtherController:(BUNativeExpressRewardedVideoAd *)rewardedVideoAd interactionType:(BUInteractionType)interactionType;
+
 @end
 
 
 @interface BUNativeExpressRewardedVideoAd : NSObject
 @property (nonatomic, strong) BURewardedVideoModel *rewardedVideoModel;
 @property (nonatomic, weak, nullable) id<BUNativeExpressRewardedVideoAdDelegate> delegate;
+/// media configuration parameters.
+@property (nonatomic, copy, readonly) NSDictionary *mediaExt;
 
 /**
  Whether material is effective.

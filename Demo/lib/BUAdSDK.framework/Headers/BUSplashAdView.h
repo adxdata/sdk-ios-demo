@@ -46,6 +46,8 @@ The unique identifier of splash ad.
  */
 @property (nonatomic, getter=isAdValid, readonly) BOOL adValid;
 
+/// media configuration parameters.
+@property (nonatomic, copy, readonly) NSDictionary *mediaExt;
 
 /**
  Initializes splash ad with slot id and frame.
@@ -103,6 +105,16 @@ The unique identifier of splash ad.
  @param interactionType : open appstore in app or open the webpage or view video ad details page.
  */
 - (void)splashAdDidCloseOtherController:(BUSplashAdView *)splashAd interactionType:(BUInteractionType)interactionType;
+
+/**
+ This method is called when spalashAd skip button  is clicked.
+ */
+- (void)splashAdDidClickSkip:(BUSplashAdView *)splashAd;
+
+/**
+ This method is called when spalashAd countdown equals to zero
+ */
+- (void)splashAdCountdownToZero:(BUSplashAdView *)splashAd;
 
 @end
 

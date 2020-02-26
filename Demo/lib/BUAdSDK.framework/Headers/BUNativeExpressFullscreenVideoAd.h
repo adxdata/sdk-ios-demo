@@ -6,7 +6,16 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "BUMaterialMeta.h"
+
 @class BUNativeExpressFullscreenVideoAd;
+
+//define the type of native express video ad
+typedef NS_ENUM(NSUInteger, BUNativeExpressFullScreenAdType) {
+    BUNativeExpressFullScreenAdTypeEndcard              = 0,        // video + endcard
+    BUNativeExpressFullScreenAdTypeVideoPlayable        = 1,        // video + playable
+    BUNativeExpressFullScreenAdTypePurePlayable         = 2         // pure playable
+};
 
 NS_ASSUME_NONNULL_BEGIN
 @protocol BUNativeExpressFullscreenVideoAdDelegate <NSObject>
@@ -75,6 +84,17 @@ NS_ASSUME_NONNULL_BEGIN
  */
 - (void)nativeExpressFullscreenVideoAdDidPlayFinish:(BUNativeExpressFullscreenVideoAd *)fullscreenVideoAd didFailWithError:(NSError *_Nullable)error;
 
+/**
+This method is used to get the type of nativeExpressFullScreenVideo ad
+ */
+- (void)nativeExpressFullscreenVideoAdCallback:(BUNativeExpressFullscreenVideoAd *)fullscreenVideoAd withType:(BUNativeExpressFullScreenAdType) nativeExpressVideoAdType;
+
+/**
+ This method is called when another controller has been closed.
+ @param interactionType : open appstore in app or open the webpage or view video ad details page.
+ */
+- (void)nativeExpressFullscreenVideoAdDidCloseOtherController:(BUNativeExpressFullscreenVideoAd *)fullscreenVideoAd interactionType:(BUInteractionType)interactionType;
+
 @end
 
 
@@ -82,6 +102,9 @@ NS_ASSUME_NONNULL_BEGIN
 
 @property (nonatomic, weak, nullable) id<BUNativeExpressFullscreenVideoAdDelegate> delegate;
 @property (nonatomic, getter=isAdValid, readonly) BOOL adValid;
+
+/// media configuration parameters.
+@property (nonatomic, copy, readonly) NSDictionary *mediaExt;
 
 /**
  Initializes video ad with slot id.

@@ -10,6 +10,13 @@
 
 NS_ASSUME_NONNULL_BEGIN
 
+/// define the type of rewarded video ad
+typedef NS_ENUM(NSUInteger, BURewardedVideoAdType) {
+    BURewardedVideoAdTypeEndcard        = 0,    // video + endcard
+    BURewardedVideoAdTypeVideoPlayable  = 1,    // video + playable
+    BURewardedVideoAdTypePurePlayable   = 2     // pure playable
+};
+
 @protocol BURewardedVideoAdDelegate;
 @class BURewardedVideoModel;
 
@@ -23,6 +30,9 @@ NS_ASSUME_NONNULL_BEGIN
  Repeated display is not billed.
  */
 @property (nonatomic, getter=isAdValid, readonly) BOOL adValid;
+
+/// media configuration parameters.
+@property (nonatomic, copy, readonly) NSDictionary *mediaExt;
 
 - (instancetype)initWithSlotID:(NSString *)slotID rewardedVideoModel:(BURewardedVideoModel *)model;
 - (void)loadAdData;
@@ -105,10 +115,17 @@ NS_ASSUME_NONNULL_BEGIN
  Return value is not 2000.
  */
 - (void)rewardedVideoAdServerRewardDidFail:(BURewardedVideoAd *)rewardedVideoAd;
+
 /**
  This method is called when the user clicked skip button.
  */
 - (void)rewardedVideoAdDidClickSkip:(BURewardedVideoAd *)rewardedVideoAd;
+
+/**
+ this method is used to get type of rewarded video Ad
+ */
+- (void)rewardedVideoAdCallback:(BURewardedVideoAd *)rewardedVideoAd withType:(BURewardedVideoAdType)rewardedVideoAdType;
+
 @end
 
 NS_ASSUME_NONNULL_END

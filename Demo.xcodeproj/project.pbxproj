@@ -54,6 +54,7 @@
 		5490C624238CC9120050DCDD /* MSNativeAdController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5490C623238CC9120050DCDD /* MSNativeAdController.m */; };
 		E923A63B23CB986500666B47 /* MSBundle.bundle in Resources */ = {isa = PBXBuildFile; fileRef = E923A63A23CB986500666B47 /* MSBundle.bundle */; };
 		E930D73A23FFC55E000B41EE /* PreRenderViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E930D73823FFC55E000B41EE /* PreRenderViewController.m */; };
+		E9318F8E2406239F009FEC6F /* BUFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E9318F8D2406239F009FEC6F /* BUFoundation.framework */; };
 		E98605BC23BEEBC000A5EECA /* SafariServices.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E98605BB23BEEBC000A5EECA /* SafariServices.framework */; };
 		E98605BE23BEEBD000A5EECA /* MessageUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E98605BD23BEEBD000A5EECA /* MessageUI.framework */; };
 		E986F27823BB508F00A5EECA /* MSIdProvider.m in Sources */ = {isa = PBXBuildFile; fileRef = E986F27723BB508F00A5EECA /* MSIdProvider.m */; };
@@ -165,6 +166,7 @@
 		E923A63A23CB986500666B47 /* MSBundle.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = MSBundle.bundle; sourceTree = "<group>"; };
 		E930D73823FFC55E000B41EE /* PreRenderViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PreRenderViewController.m; sourceTree = "<group>"; };
 		E930D73923FFC55E000B41EE /* PreRenderViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PreRenderViewController.h; sourceTree = "<group>"; };
+		E9318F8D2406239F009FEC6F /* BUFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = BUFoundation.framework; sourceTree = "<group>"; };
 		E98605BB23BEEBC000A5EECA /* SafariServices.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SafariServices.framework; path = System/Library/Frameworks/SafariServices.framework; sourceTree = SDKROOT; };
 		E98605BD23BEEBD000A5EECA /* MessageUI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MessageUI.framework; path = System/Library/Frameworks/MessageUI.framework; sourceTree = SDKROOT; };
 		E986F27623BB4CC800A5EECA /* IAdIdProvider.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = IAdIdProvider.h; sourceTree = "<group>"; };
@@ -263,6 +265,7 @@
 				2F2520C8231F5C16003212B0 /* UIKit.framework in Frameworks */,
 				2F2520C6231F5C10003212B0 /* Foundation.framework in Frameworks */,
 				2F2520C4231F5C08003212B0 /* Photos.framework in Frameworks */,
+				E9318F8E2406239F009FEC6F /* BUFoundation.framework in Frameworks */,
 				2F2520C2231F5BFF003212B0 /* CoreMotion.framework in Frameworks */,
 				2F2520C0231F5BF6003212B0 /* libresolv.9.tbd in Frameworks */,
 				2F2520BE231F5BEA003212B0 /* libc++.tbd in Frameworks */,
@@ -394,6 +397,7 @@
 		548F3FB6231F4AAA003CE914 /* lib */ = {
 			isa = PBXGroup;
 			children = (
+				E9318F8D2406239F009FEC6F /* BUFoundation.framework */,
 				E9B3E53B23F110D70074BDF1 /* BUAdSDK.bundle */,
 				E9B3E53C23F110D70074BDF1 /* BUAdSDK.framework */,
 				E9B3E52723F110D70074BDF1 /* GDT */,

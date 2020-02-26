@@ -16,6 +16,15 @@ NS_ASSUME_NONNULL_BEGIN
  */
 @property (nonatomic, assign, readonly) BOOL isReady;
 
+/// media configuration parameters.
+@property (nonatomic, copy, readonly) NSDictionary *mediaExt;
+
+/// video duration.
+@property (nonatomic,assign, readonly) NSInteger videoDuration;
+
+/// Get the already played time.
+@property (nonatomic,assign, readonly) CGFloat currentPlayedTime;
+
 /*
  required.
  Root view controller for handling ad actions.

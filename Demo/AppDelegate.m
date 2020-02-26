@@ -12,6 +12,10 @@
 
 #import "MSNavigationController.h"
 #import "MSAdViewController.h"
+#import <BUAdSDK/BUAdSDKManager.h>
+#import <BaiduMobAdSDK/BaiduMobAdCommonConfig.h>
+#import "GDTSDKConfig.h"
+
 @interface AppDelegate ()<MSSplashAdDelegate>
 @property (strong, nonatomic) MSSplashAd *splash;
 
@@ -26,6 +30,10 @@
     [MSAdSDK setHttpsSupport:YES];
     NSLog(@"美数SDK versionName:%@", [MSAdSDK getVersionName]);
     NSLog(@"美数SDK versionCode:%ld", [MSAdSDK getVersionCode]);
+    NSLog(@"穿山甲SDK versionName:%@", [BUAdSDKManager SDKVersion]);
+    NSLog(@"百度白青藤SDK versionName:%@", SDK_VERSION_IN_MSSP);
+    NSLog(@"优量汇SDK versionName:%@", [GDTSDKConfig sdkVersion]);
+
 //    [MSAdSDK setAppId:@"101516"];
     [[IdProviderFactory sharedIdProviderFactory] setDefaultPlatform:PlatformNameMS];
     self.window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];

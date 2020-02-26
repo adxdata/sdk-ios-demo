@@ -7,6 +7,7 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "BUMaterialMeta.h"
 
 NS_ASSUME_NONNULL_BEGIN
 
@@ -56,6 +57,12 @@ NS_ASSUME_NONNULL_BEGIN
  */
 - (void)nativeExpressBannerAdView:(BUNativeExpressBannerView *)bannerAdView dislikeWithReason:(NSArray<BUDislikeWords *> *_Nullable)filterwords;
 
+/**
+ This method is called when another controller has been closed.
+ @param interactionType : open appstore in app or open the webpage or view video ad details page.
+ */
+- (void)nativeExpressBannerAdViewDidCloseOtherController:(BUNativeExpressBannerView *)bannerAdView interactionType:(BUInteractionType)interactionType;
+
 @end
 
 @interface BUNativeExpressBannerView : UIView
@@ -67,15 +74,16 @@ NS_ASSUME_NONNULL_BEGIN
  */
 @property (nonatomic, assign, readonly) NSInteger interval;
 
+/// media configuration parameters.
+@property (nonatomic, copy, readonly) NSDictionary *mediaExt;
+
 - (instancetype)initWithSlotID:(NSString *)slotID
             rootViewController:(UIViewController *)rootViewController
-                       imgSize:(BUSize * __nullable )expectSize
                         adSize:(CGSize)adsize
              IsSupportDeepLink:(BOOL)isSupportDeepLink;
 
 - (instancetype)initWithSlotID:(NSString *)slotID
             rootViewController:(UIViewController *)rootViewController
-                       imgSize:(BUSize * __nullable )expectSize
                         adSize:(CGSize)adsize
              IsSupportDeepLink:(BOOL)isSupportDeepLink
                       interval:(NSInteger)interval;

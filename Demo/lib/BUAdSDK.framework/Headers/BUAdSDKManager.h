@@ -6,7 +6,10 @@
 //
 
 #import <Foundation/Foundation.h>
+#import <UIKit/UIKit.h>
 #import "BUAdSDKDefines.h"
+
+typedef void (^BUConfirmGDPR)(BOOL isAgreed);
 
 @interface BUAdSDKManager : NSObject
 
@@ -17,18 +20,11 @@
  @param appID : the unique identifier of the App
  */
 + (void)setAppID:(NSString *)appID;
-
 /**
  Configure development mode.
  @param level : default BUAdSDKLogLevelNone
  */
 + (void)setLoglevel:(BUAdSDKLogLevel)level;
-
-/// Set the gender of the user.
-+ (void)setUserGender:(BUUserGender)userGender;
-
-/// Set the age of the user.
-+ (void)setUserAge:(NSUInteger)userAge;
 
 /* Set the COPPA of the user, COPPA is the short of Children's Online Privacy Protection Rule, the interface only works in the United States.
  * @params Coppa 0 adult, 1 child
@@ -36,16 +32,34 @@
 + (void)setCoppa:(NSUInteger)Coppa;
 
 /// Set the user's keywords, such as interests and hobbies, etc.
+/// Must obtain the consent of the user before incoming.
 + (void)setUserKeywords:(NSString *)keywords;
 
 /// set additional user information.
 + (void)setUserExtData:(NSString *)data;
 
-/// Set whether the app is a paid app, the default is a non-paid app
+/// Set whether the app is a paid app, the default is a non-paid app.
+/// Must obtain the consent of the user before incoming
 + (void)setIsPaidApp:(BOOL)isPaidApp;
 
+/// Solve the problem when your WKWebview post message empty,default is BUOfflineTypeWebview
++ (void)setOfflineType:(BUOfflineType)type;
+
+/// Custom set the GDPR of the user,GDPR is the short of General Data Protection Regulation,the interface only works in The European.
+/// @params GDPR 0 close privacy protection, 1 open privacy protection
++ (void)setGDPR:(NSInteger)GDPR;
+
+/// Open GDPR Privacy for the user to choose before setAppID.
++ (void)openGDPRPrivacyFromRootViewController:(UIViewController *)rootViewController confirm:(BUConfirmGDPR)confirm;
+
+/// get appID
 + (NSString *)appID;
+
+/// get isPaidApp
 + (BOOL)isPaidApp;
+
+/// get GDPR
++ (NSInteger)GDPR;
 
 @end
 

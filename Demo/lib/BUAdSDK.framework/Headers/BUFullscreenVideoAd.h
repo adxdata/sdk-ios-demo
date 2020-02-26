@@ -9,6 +9,12 @@
 #import <UIKit/UIKit.h>
 #import "BUAdSlot.h"
 
+typedef NS_ENUM(NSUInteger, BUFullScreenVideoAdType) {
+    BUFullScreenAdTypeEndcard        = 0,    // video + endcard
+    BUFullScreenAdTypeVideoPlayable  = 1,    // video + playable
+    BUFullScreenAdTypePurePlayable   = 2     // pure playable
+};
+
 NS_ASSUME_NONNULL_BEGIN
 
 @class BUFullscreenVideoAd;
@@ -70,12 +76,20 @@ NS_ASSUME_NONNULL_BEGIN
  */
 - (void)fullscreenVideoAdDidClickSkip:(BUFullscreenVideoAd *)fullscreenVideoAd;
 
+/**
+this method is used to get the type of fullscreen video ad
+ */
+- (void)fullscreenVideoAdCallback:(BUFullscreenVideoAd *)fullscreenVideoAd withType:(BUFullScreenVideoAdType)fullscreenVideoAdType;
+
 @end
 
 @interface BUFullscreenVideoAd : NSObject
 
 @property (nonatomic, weak, nullable) id<BUFullscreenVideoAdDelegate> delegate;
 @property (nonatomic, getter=isAdValid, readonly) BOOL adValid;
+
+/// media configuration parameters.
+@property (nonatomic, copy, readonly) NSDictionary *mediaExt;
 
 /**
  Initializes video ad with slot id.
