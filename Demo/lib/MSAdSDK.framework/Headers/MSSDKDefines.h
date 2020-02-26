@@ -68,7 +68,6 @@ typedef NS_ENUM(NSInteger, MSNativeAdViewShowType) {
     MSBottomImage = 2, // 展示上文下大图
 };
 
-
 typedef NS_ENUM(NSInteger, MSDetailType) {
     MSDetailPage = 0, // 详情页
     MSDetailApp = 1, // 跳转app
