@@ -10,12 +10,21 @@
 #import "MSSDKModel.h"
 NS_ASSUME_NONNULL_BEGIN
 
+typedef NS_ENUM(NSInteger, MSCreativeType) {
+    MSCreativeTypeImage = 1, // 图片
+    MSCreativeTypeVideo = 2, // 视频
+    MSCreativeTypeSmallImage = 11, // 小图
+    MSCreativeTypeLargeImage = 12, // 大图
+    MSCreativeTypeThreeImage = 13, // 三图
+    MSCreativeTypePrerender = 100000, // 预渲染
+};
+
 @interface MSAdModel : NSObject
 @property (nonatomic , copy) NSString              * req_id;
 @property (nonatomic , copy) NSString              * ader_id;
 @property (nonatomic , copy) NSString              * cid;
 @property (nonatomic , strong) NSArray <NSString *>              * clickUrl;
-@property (nonatomic , assign) NSInteger              creative_type;//创意类型(1:图片、2:视频、3:音频 )默认 1
+@property (nonatomic , assign) MSCreativeType              creative_type;   //创意类型
 @property (nonatomic , strong) NSArray <NSString *>              * dUrl;
 @property (nonatomic , assign) NSInteger              height;
 @property (nonatomic , strong) NSArray <NSString *>              * monitorUrl;
