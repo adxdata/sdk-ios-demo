@@ -56,7 +56,7 @@
     [self.view addSubview:self.bannerView];
 //    NSString *pid = @"100424146";
     NSString *pid = [[[IdProviderFactory sharedIdProviderFactory] getDefaultProvider] banner];
-    [_bannerView loadAdAndShow:self pid:pid];
+    [_bannerView loadAd:self pid:pid];
 }
 
 - (IBAction)clickRemoveAd:(id)sender {
@@ -70,6 +70,7 @@
  */
 - (void)msBannerLoaded:(MSBannerView *)msBannerAd{
     NSLog(@"demo 广告加载成功");
+    [_bannerView showAd];
 }
 
 /**
