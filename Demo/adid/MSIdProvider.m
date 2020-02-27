@@ -29,8 +29,7 @@
 }
 /** 信息流三图一文 */
 -(NSString *) feedThreeImgs {
-    //return @"100424262";
-    return @"100424027";
+    return @"100424262";
 }
 /** 信息流上图下文 */
 -(NSString *) feedImageVertical {
@@ -39,13 +38,11 @@
 }
 /** 信息流左图右文 */
 -(NSString *) feedImageHorizon {
-    //return @"100424256";
-    return @"100424027";
+    return @"100424256";
 }
 /** 信息流左图右文图文摘要 */
 -(NSString *) feedImageHorizonDesc {
-    //return @"100424258";
-    return @"100424027";
+    return @"100424258";
 }
 /** 信息流预渲染 */
 -(NSString *) feedPreRender {
