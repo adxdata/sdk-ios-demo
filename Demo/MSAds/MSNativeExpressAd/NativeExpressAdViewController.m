@@ -13,6 +13,7 @@
 @interface NativeExpressAdViewController ()<MSNativeAdDelegate,UITableViewDelegate,UITableViewDataSource,MSNativeAdDelegate>
 
 @property (nonatomic, strong) NSMutableArray *expressAdViews;
+@property (nonatomic, strong) NSMutableArray *datas;
 
 @property (nonatomic, strong) MSNativeAd *nativeAd;
 
@@ -32,6 +33,8 @@
 @property (assign, nonatomic) CGFloat height3;
 
 @property (assign, nonatomic) CGFloat heightThreeImage;
+
+@property (assign, nonatomic) CGFloat heightVideo;
 
 
 @end
@@ -65,6 +68,7 @@
     self.tableView.delegate = self;
     self.tableView.dataSource = self;
     [self.tableView registerClass:[UITableViewCell class] forCellReuseIdentifier:@"nativeexpresscell"];
+    [self.tableView registerClass:[UITableViewCell class] forCellReuseIdentifier:@"testdatacell"];
     
     NSString *placementId = self.placementIdTextField.text.length > 0? self.placementIdTextField.text: self.placementIdTextField.placeholder;
     MSWS(ws);
@@ -84,6 +88,8 @@
         pid = [[[IdProviderFactory sharedIdProviderFactory] getDefaultProvider] feedImageVertical];
     } else if (self.showType == MSThreeImage) {
         pid = [[[IdProviderFactory sharedIdProviderFactory] getDefaultProvider] feedThreeImgs];
+    } else if (self.showType == MSVideo) {
+        pid = [[[IdProviderFactory sharedIdProviderFactory] getDefaultProvider] video];
     }
     /*
      * 拉取广告,传入参数为拉取个数。
@@ -115,6 +121,9 @@
 
 #pragma mark - UITableViewDelegate
 - (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath {
+    if ([self.expressAdViews[indexPath.row] isKindOfClass:[NSString class]]) {
+        return 70;
+    }
     if (self.showType == MSLeftImage) {
         return self.height1;
     } else if (self.showType == MSLeftImageNoButton){
@@ -123,6 +132,8 @@
         return self.height3;
     } else if (self.showType == MSThreeImage) {
         return self.heightThreeImage;
+    } else if (self.showType == MSVideo) {
+        return self.heightVideo;
     }
     
     return 100;
@@ -139,6 +150,13 @@
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
+    if ([self.expressAdViews[indexPath.row] isKindOfClass:[NSString class]]) {
+        UITableViewCell * cell = [tableView dequeueReusableCellWithIdentifier: @"testdatacell"
+                                                                 forIndexPath:indexPath];
+        NSString *data = self.expressAdViews[indexPath.row];
+        [cell.textLabel setText:data];
+        return cell;
+    }
     UITableViewCell * cell = [tableView dequeueReusableCellWithIdentifier: @"nativeexpresscell"
                                                              forIndexPath:indexPath];
     // Configure the cell...
@@ -151,14 +169,21 @@
         [view removeFromSuperview];
     }
     MSAdModel *model = self.expressAdViews[indexPath.row];
-    MSNativeAdView *ativeAdView = [[MSNativeAdView alloc]initWithFrame:CGRectMake(0, 0, self.view.frame.size.width, 100) adModel:model];
-
-    ativeAdView.nativeAdViewShowType = self.showType;
-
-    [cell addSubview:ativeAdView];
+    if (model.creative_type == MSCreativeTypeVideo) {
+        MSFeedVideoView *ativeAdView = [[MSFeedVideoView alloc]initWithFrame:CGRectMake(0, 0, self.view.frame.size.width, 100) adModel:model];
+        [cell addSubview:ativeAdView];
+        //要加载的数据
+        [self.nativeAd attachAd:model toView:ativeAdView];
+    } else {
+        MSNativeAdView *ativeAdView = [[MSNativeAdView alloc]initWithFrame:CGRectMake(0, 0, self.view.frame.size.width, 100) adModel:model];
+        
+        ativeAdView.nativeAdViewShowType = self.showType;
+        
+        [cell addSubview:ativeAdView];
+        //要加载的数据
+        [self.nativeAd attachAd:model toView:ativeAdView];
+    }
     cell.userInteractionEnabled = YES;
-    //要加载的数据
-    [self.nativeAd attachAd:model toView:ativeAdView];
     cell.accessibilityIdentifier = @"nativeTemp_ad";
     return cell;
 }
@@ -171,18 +196,26 @@
     MSWS(ws);
     if (nativeAdDataArray.count > 0) {
         MSAdModel *adModel = nativeAdDataArray[0];
-        CGFloat tmp = [MSNativeAdView heightCellForRow:adModel nativeAdViewShowType:ws.showType];
-        if (ws.showType == MSLeftImage) {
-            ws.height1 = tmp;
-        } else if (ws.showType == MSLeftImageNoButton) {
-            ws.height2 = tmp;
-        } else if (ws.showType == MSBottomImage) {
-            ws.height3 = tmp;
-        } else if (ws.showType == MSThreeImage) {
-            ws.heightThreeImage = tmp;
+        if (adModel.creative_type != MSCreativeTypeVideo) {
+            CGFloat tmp = [MSNativeAdView heightCellForRow:adModel nativeAdViewShowType:ws.showType];
+            if (ws.showType == MSLeftImage) {
+                ws.height1 = tmp;
+            } else if (ws.showType == MSLeftImageNoButton) {
+                ws.height2 = tmp;
+            } else if (ws.showType == MSBottomImage) {
+                ws.height3 = tmp;
+            } else if (ws.showType == MSThreeImage) {
+                ws.heightThreeImage = tmp;
+            }
+        } else {
+            ws.heightVideo = [MSFeedVideoView heightCellForRow:adModel width:self.view.frame.size.width];
         }
 
         [ws.expressAdViews addObjectsFromArray:nativeAdDataArray];
+        for (NSInteger i = 0; i < 10; i++) {
+//            [ws.expressAdViews addObject:[[NSString alloc] initWithFormat:@"测试数据 %d" arguments:ws.expressAdViews.count]];
+            [ws.expressAdViews addObject:@"测试数据"];
+        }
         //主线程刷新页面
         dispatch_async(dispatch_get_main_queue(), ^{
             [ws.tableView reloadData];
