@@ -158,6 +158,7 @@
 		5490C622238CC9120050DCDD /* MSNativeAdController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MSNativeAdController.h; sourceTree = "<group>"; };
 		5490C623238CC9120050DCDD /* MSNativeAdController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MSNativeAdController.m; sourceTree = "<group>"; };
 		E923A63A23CB986500666B47 /* MSBundle.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = MSBundle.bundle; sourceTree = "<group>"; };
+		E931901B240832EA009FEC6F /* MSFeedVideoView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MSFeedVideoView.h; sourceTree = "<group>"; };
 		E98605BB23BEEBC000A5EECA /* SafariServices.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SafariServices.framework; path = System/Library/Frameworks/SafariServices.framework; sourceTree = SDKROOT; };
 		E98605BD23BEEBD000A5EECA /* MessageUI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MessageUI.framework; path = System/Library/Frameworks/MessageUI.framework; sourceTree = SDKROOT; };
 		E986F27623BB4CC800A5EECA /* IAdIdProvider.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = IAdIdProvider.h; sourceTree = "<group>"; };
@@ -497,6 +498,7 @@
 		E986F2C023BDEF1600A5EECA /* MSAdSDK */ = {
 			isa = PBXGroup;
 			children = (
+				E931901B240832EA009FEC6F /* MSFeedVideoView.h */,
 				E9C5C0BE23C825A000EB6791 /* MSVideoAd.h */,
 				E986F2C123BDEF1600A5EECA /* MSAdModel.h */,
 				E986F2C223BDEF1600A5EECA /* MSRewardVideoAd.h */,

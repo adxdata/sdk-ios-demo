@@ -21,7 +21,7 @@
 
 - (NSMutableArray *)demoArray{
     if (!_demoArray) {
-        _demoArray = [NSMutableArray arrayWithObjects:@"左图右文字带按钮", @"左图右文字", @"上文字下图", @"三图", nil];
+        _demoArray = [NSMutableArray arrayWithObjects:@"左图右文字带按钮", @"左图右文字", @"上文字下图", @"上文字下三图", @"上文字下视频", nil];
     }
     return _demoArray;
 }

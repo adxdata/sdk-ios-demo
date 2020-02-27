@@ -11,8 +11,8 @@
 #import "MSConfiger.h"
 #import "MSCommCore.h"
 
-static NSString *kMSVersionName = @"0.8.1";
-static NSInteger kMSVersionCode = 26;
+static NSString *kMSVersionName = @"0.8.3";
+static NSInteger kMSVersionCode = 28;
 
 //是否是竖屏
 #define IsPortrait ([[UIApplication sharedApplication] statusBarOrientation] == UIInterfaceOrientationPortrait || [[UIApplication sharedApplication] statusBarOrientation] == UIInterfaceOrientationPortraitUpsideDown)
@@ -63,9 +63,11 @@ typedef NS_ENUM(NSInteger, MSSecure) {
 
 
 typedef NS_ENUM(NSInteger, MSNativeAdViewShowType) {
-    MSLeftImage= 0, // 展示左图右文+下载按钮
+    MSLeftImage= 0,     // 展示左图右文+下载按钮
     MSLeftImageNoButton = 1, // 展示左图右文
-    MSBottomImage = 2, // 展示上文下大图
+    MSBottomImage = 2,  // 展示上文下大图
+    MSThreeImage = 3,   // 三图
+    MSVideo = 4,        // 视频
 };
 
 typedef NS_ENUM(NSInteger, MSDetailType) {
