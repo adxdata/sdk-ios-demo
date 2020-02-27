@@ -31,6 +31,8 @@
 
 @property (assign, nonatomic) CGFloat height3;
 
+@property (assign, nonatomic) CGFloat heightThreeImage;
+
 
 @end
 
@@ -74,7 +76,15 @@
 
 - (IBAction)refreshButton:(id)sender {
 //    NSString *pid = @"100424153";
-    NSString *pid = [[[IdProviderFactory sharedIdProviderFactory] getDefaultProvider] feedImageVertical];
+    NSString *pid = nil;
+
+    if (self.showType == MSLeftImage || self.showType == MSLeftImageNoButton) {
+        pid = [[[IdProviderFactory sharedIdProviderFactory] getDefaultProvider] feedImageHorizon];
+    } else if (self.showType == MSBottomImage) {
+        pid = [[[IdProviderFactory sharedIdProviderFactory] getDefaultProvider] feedImageVertical];
+    } else if (self.showType == MSThreeImage) {
+        pid = [[[IdProviderFactory sharedIdProviderFactory] getDefaultProvider] feedThreeImgs];
+    }
     /*
      * 拉取广告,传入参数为拉取个数。
      * 发起拉取广告请求,在获得广告数据后回调delegate
@@ -104,16 +114,15 @@
 
 
 #pragma mark - UITableViewDelegate
-- (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath
-{
-    if (self.showType == 0) {
+- (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath {
+    if (self.showType == MSLeftImage) {
         return self.height1;
-    }
-    else if (self.showType == 1){
+    } else if (self.showType == MSLeftImageNoButton){
         return self.height2;
-    }
-    else if (self.showType == 2){
+    } else if (self.showType == MSBottomImage){
         return self.height3;
+    } else if (self.showType == MSThreeImage) {
+        return self.heightThreeImage;
     }
     
     return 100;
@@ -143,15 +152,9 @@
     }
     MSAdModel *model = self.expressAdViews[indexPath.row];
     MSNativeAdView *ativeAdView = [[MSNativeAdView alloc]initWithFrame:CGRectMake(0, 0, self.view.frame.size.width, 100) adModel:model];
-    if (self.showType == 0) {
-        ativeAdView.nativeAdViewShowType = MSLeftImage;
-    }
-    else if (self.showType == 1){
-        ativeAdView.nativeAdViewShowType = MSLeftImageNoButton;
-    }
-    else if (self.showType == 2){
-        ativeAdView.nativeAdViewShowType = MSBottomImage;
-    }
+
+    ativeAdView.nativeAdViewShowType = self.showType;
+
     [cell addSubview:ativeAdView];
     cell.userInteractionEnabled = YES;
     //要加载的数据
@@ -166,17 +169,19 @@
 - (void)msNativeLoaded:(NSArray *)nativeAdDataArray{
     NSLog(@"demo 加载成功");
     MSWS(ws);
-    if (nativeAdDataArray.count>0) {
+    if (nativeAdDataArray.count > 0) {
         MSAdModel *adModel = nativeAdDataArray[0];
-        if (ws.showType == 0) {
-            ws.height1 = [MSNativeAdView heightCellForRow:adModel nativeAdViewShowType:MSLeftImage];
+        CGFloat tmp = [MSNativeAdView heightCellForRow:adModel nativeAdViewShowType:ws.showType];
+        if (ws.showType == MSLeftImage) {
+            ws.height1 = tmp;
+        } else if (ws.showType == MSLeftImageNoButton) {
+            ws.height2 = tmp;
+        } else if (ws.showType == MSBottomImage) {
+            ws.height3 = tmp;
+        } else if (ws.showType == MSThreeImage) {
+            ws.heightThreeImage = tmp;
         }
-        else if (ws.showType == 1){
-            ws.height2 = [MSNativeAdView heightCellForRow:adModel nativeAdViewShowType:MSLeftImageNoButton];
-        }
-        else if (ws.showType == 2){
-            ws.height3 = [MSNativeAdView heightCellForRow:adModel nativeAdViewShowType:MSBottomImage];
-        }
+
         [ws.expressAdViews addObjectsFromArray:nativeAdDataArray];
         //主线程刷新页面
         dispatch_async(dispatch_get_main_queue(), ^{

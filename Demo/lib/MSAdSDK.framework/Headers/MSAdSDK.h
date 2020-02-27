@@ -35,9 +35,9 @@
 + (NSInteger)getVersionCode;
 
 /**
- * 1 - 只支持 http 协议
- * 2 - 只支持 https 协议
- * 3 - http、https 协议都支持（默认值）
+ * 0 - 只支持 http 协议
+ * 1 - 只支持 https 协议
+ * 2 - http、https 协议都支持（默认值）
  */
 + (void)setSecure:(NSInteger)secure;
 
