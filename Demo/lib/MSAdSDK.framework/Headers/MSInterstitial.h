@@ -66,9 +66,15 @@
 
 /**
  *  构造方法
- *  详解：frame - banner 展示的位置和大小
+ *  详解：controller - 当前界面
  */
-- (instancetype)initWithCurController:(UIViewController*)controller pid:(NSString *)pid;
+- (instancetype)initWithCurController:(UIViewController*)controller;
+
+/**
+ *  加载广告
+ *  详解：pid - 广告位 id
+ */
+- (void)loadAd:(NSString *)pid;
 
 /**
  *  显示广告
