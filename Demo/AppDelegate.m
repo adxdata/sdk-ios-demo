@@ -26,7 +26,7 @@
     [MSAdSDK setAppId:@"101647"];       // 设置应用id
     [MSAdSDK setTestMode:YES];          // 切换测试服务器，默认为生产服务器
     //    [MSAdSDK setHttpsSupport:YES];    // 请求广告服务器，默认用http协议，此接口用来切换是否使用https协议
-    //    [MSAdSDK setSecure:1];            // 修改secure参数，1 - 只支持 http 协议, 2 - 只支持 https 协议, 3 - http、https 协议都支持（默认值）
+    //    [MSAdSDK setSecure:1];            // 修改secure参数，0 - 只支持 http 协议, 1 - 只支持 https 协议, 2 - http、https 协议都支持（默认值）
 
     NSLog(@"美数SDK versionName:%@", [MSAdSDK getVersionName]);
     NSLog(@"美数SDK versionCode:%ld", [MSAdSDK getVersionCode]);
