@@ -43,7 +43,8 @@ static NSString *INTERSTITIAL_STATE_TEXT = @"插屏状态";
     }
 //    NSString *pid = @"100424148";
     NSString *pid = [[[IdProviderFactory sharedIdProviderFactory] getDefaultProvider] insertScreen];
-    self.interstitial = [[MSInterstitial alloc] initWithCurController:self pid:pid];
+    self.interstitial = [[MSInterstitial alloc] initWithCurController:self];
+    [self.interstitial loadAd:pid];
     self.interstitial.delegate = self;
 }
 
