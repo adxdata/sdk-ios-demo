@@ -154,7 +154,8 @@
     } else if (error.code == 5013) {
 //        NSLog(@"请求太频繁，请稍后再试");
     }
-//    NSLog(@"ERROR: %@", error);
+    self.statusLabel.text = @"视频文件加载失败";
+    NSLog(@"demo 广告加载失败: %@", error);
 }
 /**
  视频广告播放达到激励条件回调
