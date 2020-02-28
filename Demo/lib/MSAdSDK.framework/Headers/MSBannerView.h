@@ -107,14 +107,9 @@ NS_ASSUME_NONNULL_BEGIN
 - (instancetype)initWithFrame:(CGRect)frame curController:(UIViewController*)controller;
 
 /**
- *  加载广告
+ *  拉取并展示广告
  */
-- (void)loadAd:(UIViewController*)currentViewController pid:(NSString *)pid;
-
-/**
- *  展示广告
- */
-- (void)showAd;
+- (void)loadAdAndShow:(UIViewController*)currentViewController pid:(NSString *)pid;
 
 @end
 
