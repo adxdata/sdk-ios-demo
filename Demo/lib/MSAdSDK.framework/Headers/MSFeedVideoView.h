@@ -10,7 +10,23 @@
 #import "MSAdModel.h"
 #import "MSSDKDefines.h"
 
+@protocol MSFeedVideoDelegate <NSObject>
+
+@optional
+
+- (void)msFeedVideoFinish;
+
+- (void)msFeedVideoStart;
+
+- (void)msFeedVideoPause;
+
+- (void)msFeedVideoError:(NSError *)error;
+
+@end
+
 @interface MSFeedVideoView : UIView
+
+@property (nonatomic, weak) id<MSFeedVideoDelegate> delegate;
 
 /**
  *  构造方法
@@ -18,6 +34,24 @@
  */
 - (instancetype)initWithFrame:(CGRect)frame adModel:(MSAdModel*)adModel;
 
-+ (CGFloat)heightCellForRow:(MSAdModel*)adModel width:(CGFloat)width ;
+/**
+ * 播放视频
+ */
+- (void)play;
+
+/**
+ * 暂停视频
+ */
+- (void)pause;
+
+/**
+ * 静音
+ */
+- (void)mute;
+
+/**
+ * 取消静音
+ */
+- (void)unmute;
 
 @end
