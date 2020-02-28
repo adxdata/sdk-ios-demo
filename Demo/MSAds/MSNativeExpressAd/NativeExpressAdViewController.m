@@ -9,6 +9,7 @@
 #import "NativeExpressAdViewController.h"
 #import <MSAdSDK/MSAdSDK.h>
 #import "IdProviderFactory.h"
+#import "FeedVideoView.h"
 
 @interface NativeExpressAdViewController ()<MSNativeAdDelegate,UITableViewDelegate,UITableViewDataSource,MSNativeAdDelegate>
 
@@ -170,7 +171,7 @@
     }
     MSAdModel *model = self.expressAdViews[indexPath.row];
     if (model.creative_type == MSCreativeTypeVideo) {
-        MSFeedVideoView *ativeAdView = [[MSFeedVideoView alloc]initWithFrame:CGRectMake(0, 0, self.view.frame.size.width, 100) adModel:model];
+        MSFeedVideoView *ativeAdView = [[FeedVideoView alloc]initWithWidth:self.view.frame.size.width adModel:model];
         [cell addSubview:ativeAdView];
         //要加载的数据
         [self.nativeAd attachAd:model toView:ativeAdView];
@@ -208,7 +209,7 @@
                 ws.heightThreeImage = tmp;
             }
         } else {
-            ws.heightVideo = [MSFeedVideoView heightCellForRow:adModel width:self.view.frame.size.width];
+            ws.heightVideo = [FeedVideoView heightCellForRow:adModel width:self.view.frame.size.width];
         }
 
         [ws.expressAdViews addObjectsFromArray:nativeAdDataArray];
