@@ -62,6 +62,7 @@
 		E986F28123BB627A00A5EECA /* IdProviderFactory.m in Sources */ = {isa = PBXBuildFile; fileRef = E986F28023BB627A00A5EECA /* IdProviderFactory.m */; };
 		E986F28723BD94DB00A5EECA /* IAdIdProvider.m in Sources */ = {isa = PBXBuildFile; fileRef = E986F28623BD94DB00A5EECA /* IAdIdProvider.m */; };
 		E986F2CF23BDEF1600A5EECA /* libMSAdSDK.a in Frameworks */ = {isa = PBXBuildFile; fileRef = E986F2CE23BDEF1600A5EECA /* libMSAdSDK.a */; };
+		E9B9499F2408F73F001C95DA /* FeedVideoView.m in Sources */ = {isa = PBXBuildFile; fileRef = E9B9499E2408F73F001C95DA /* FeedVideoView.m */; };
 		E9C5C07523C74B2000EB6791 /* NSLayoutConstraint+MASDebugAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = E9C5C05C23C74B2000EB6791 /* NSLayoutConstraint+MASDebugAdditions.m */; };
 		E9C5C07623C74B2000EB6791 /* ViewController+MASAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = E9C5C06523C74B2000EB6791 /* ViewController+MASAdditions.m */; };
 		E9C5C07723C74B2000EB6791 /* MASCompositeConstraint.m in Sources */ = {isa = PBXBuildFile; fileRef = E9C5C06923C74B2000EB6791 /* MASCompositeConstraint.m */; };
@@ -176,6 +177,8 @@
 		E986F2C123BDEF1600A5EECA /* MSAdModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MSAdModel.h; sourceTree = "<group>"; };
 		E986F2C223BDEF1600A5EECA /* MSRewardVideoAd.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MSRewardVideoAd.h; sourceTree = "<group>"; };
 		E986F2C323BDEF1600A5EECA /* MRApplication.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MRApplication.h; sourceTree = "<group>"; };
+		E9B9499D2408F73F001C95DA /* FeedVideoView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FeedVideoView.h; sourceTree = "<group>"; };
+		E9B9499E2408F73F001C95DA /* FeedVideoView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FeedVideoView.m; sourceTree = "<group>"; };
 		E986F2C423BDEF1600A5EECA /* MSSDKDefines.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MSSDKDefines.h; sourceTree = "<group>"; };
 		E986F2C523BDEF1600A5EECA /* MSSplashAd.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MSSplashAd.h; sourceTree = "<group>"; };
 		E986F2C623BDEF1600A5EECA /* MSCommCore.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MSCommCore.h; sourceTree = "<group>"; };
@@ -426,6 +429,8 @@
 				548F3FC4231F4AAA003CE914 /* NativeExpressAdViewController.xib */,
 				5490C622238CC9120050DCDD /* MSNativeAdController.h */,
 				5490C623238CC9120050DCDD /* MSNativeAdController.m */,
+				E9B9499D2408F73F001C95DA /* FeedVideoView.h */,
+				E9B9499E2408F73F001C95DA /* FeedVideoView.m */,
 			);
 			path = MSNativeExpressAd;
 			sourceTree = "<group>";
@@ -725,6 +730,7 @@
 				E9C5C07D23C74B2000EB6791 /* MASViewConstraint.m in Sources */,
 				548F3FDD231F4AAA003CE914 /* SplashViewController.m in Sources */,
 				E9C5C07823C74B2000EB6791 /* MASConstraintMaker.m in Sources */,
+				E9B9499F2408F73F001C95DA /* FeedVideoView.m in Sources */,
 				E9C5C07A23C74B2000EB6791 /* NSArray+MASAdditions.m in Sources */,
 				E986F28123BB627A00A5EECA /* IdProviderFactory.m in Sources */,
 				E9C5C07623C74B2000EB6791 /* ViewController+MASAdditions.m in Sources */,
