@@ -196,6 +196,9 @@
     NSLog(@"demo 加载成功");
     MSWS(ws);
     if (nativeAdDataArray.count > 0) {
+        [ws.tableView beginUpdates];
+        NSInteger count = ws.expressAdViews.count;
+
         MSAdModel *adModel = nativeAdDataArray[0];
         if (adModel.creative_type != MSCreativeTypeVideo) {
             CGFloat tmp = [MSNativeAdView heightCellForRow:adModel nativeAdViewShowType:ws.showType];
@@ -212,15 +215,22 @@
             ws.heightVideo = [FeedVideoView heightCellForRow:adModel width:self.view.frame.size.width];
         }
 
+        NSMutableArray<NSIndexPath *> *paths = [NSMutableArray new];
         [ws.expressAdViews addObjectsFromArray:nativeAdDataArray];
+
+        for (NSInteger i = 0; i < nativeAdDataArray.count; i++) {
+            [paths addObject:[NSIndexPath indexPathForItem:(count + i) inSection:0]];
+        }
+        count += nativeAdDataArray.count;
+
         for (NSInteger i = 0; i < 10; i++) {
 //            [ws.expressAdViews addObject:[[NSString alloc] initWithFormat:@"测试数据 %d" arguments:ws.expressAdViews.count]];
             [ws.expressAdViews addObject:@"测试数据"];
+            [paths addObject:[NSIndexPath indexPathForItem:(count + i) inSection:0]];
         }
-        //主线程刷新页面
-        dispatch_async(dispatch_get_main_queue(), ^{
-            [ws.tableView reloadData];
-        });
+        [ws.tableView insertRowsAtIndexPaths:paths withRowAnimation:false];
+
+        [ws.tableView endUpdates];
     }
 }
 
