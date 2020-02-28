@@ -67,14 +67,6 @@
     self.frame = CGRectMake(0, 0, self.frame.size.width, [FeedVideoView heightCellForRow:self.adModel width:self.frame.size.width]);
 }
 
-//- (UIView *)endView {
-//    if (!_endView) {
-//        _endView = [[UIView alloc] initWithFrame:self.videoView.frame];
-//        _endView.hidden = YES;
-//    }
-//    return _endView;
-//}
-
 + (CGFloat)heightCellForRow:(MSAdModel*)adModel width:(CGFloat)width {
     
     CGFloat textMargin = 20;
