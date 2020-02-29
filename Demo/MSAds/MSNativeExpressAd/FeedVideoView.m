@@ -9,7 +9,6 @@
 
 #import "FeedVideoView.h"
 #import <StoreKit/StoreKit.h>
-#import <MSAdSDK/MSAdSDK.h>
 
 @interface FeedVideoView() <MSFeedVideoDelegate>
 @property (nonatomic, strong) UILabel *titleLabel;//标题

@@ -8,7 +8,8 @@
 
 
 #import <UIKit/UIKit.h>
-#import <MSAdSDK/MSAdSDK.h>
+#import "MSFeedVideoView.h"
+#import "MSAdModel.h"
 
 @interface FeedVideoView : UIView
 
