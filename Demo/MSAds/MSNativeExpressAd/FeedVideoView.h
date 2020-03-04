@@ -11,7 +11,9 @@
 #import "MSFeedVideoView.h"
 #import "MSAdModel.h"
 
-@interface FeedVideoView : UIView
+@interface FeedVideoView : UIView <MSFeedVideoDelegate>
+
+@property (nonatomic, strong)MSFeedVideoView *mediaView;
 
 /**
  *  构造方法
@@ -19,6 +21,8 @@
  */
 - (instancetype)initWithWidth:(CGFloat)width adModel:(MSAdModel*)adModel;
 
-+ (CGFloat)heightCellForRow:(MSAdModel*)adModel width:(CGFloat)width ;
++ (CGFloat)heightCellForRow:(MSAdModel*)adModel width:(CGFloat)width;
+
+- (UIView *)getMediaViewContainer;
 
 @end

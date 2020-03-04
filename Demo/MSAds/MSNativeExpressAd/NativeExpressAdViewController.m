@@ -94,6 +94,7 @@
     } else if (self.showType == MSVideo) {
         pid = [[[IdProviderFactory sharedIdProviderFactory] getDefaultProvider] video];
     }
+    self.nativeAd.showVideoDetail = YES;
     /*
      * 拉取广告,传入参数为拉取个数。
      * 发起拉取广告请求,在获得广告数据后回调delegate
@@ -173,10 +174,13 @@
     }
     MSAdModel *model = self.expressAdViews[indexPath.row];
     if (model.creative_type == MSCreativeTypeVideo) {
-        MSFeedVideoView *ativeAdView = [[FeedVideoView alloc]initWithWidth:self.view.frame.size.width adModel:model];
+        FeedVideoView *ativeAdView = [[FeedVideoView alloc]initWithWidth:self.view.frame.size.width adModel:model];
         [cell addSubview:ativeAdView];
         //要加载的数据
-        [self.nativeAd attachAd:model toView:ativeAdView];
+        MSFeedVideoView *mediaView = [model registerMediaView:[ativeAdView getMediaViewContainer] clickView:ativeAdView vc:self];
+        ativeAdView.mediaView = mediaView;
+        mediaView.delegate = ativeAdView;
+//        [self.nativeAd attachAd:model toView:ativeAdView];
     } else {
         MSNativeAdView *ativeAdView = [[MSNativeAdView alloc]initWithFrame:CGRectMake(0, 0, self.view.frame.size.width, 100) adModel:model];
         
