@@ -58,6 +58,11 @@ NS_ASSUME_NONNULL_BEGIN
 @property (nonatomic, weak) id<MSNativeAdDelegate> delegate;
 
 /**
+ * 视频广告是否显示视频详情页面，默认为 NO，点击直接跳转网页，设置为YES时，点击后显示视频详情页面
+ */
+@property (nonatomic, assign) BOOL showVideoDetail;
+
+/**
  *  构造方法
  *  详解：appId - 媒体 ID
  *       placementId - 广告位 ID
@@ -80,6 +85,11 @@ NS_ASSUME_NONNULL_BEGIN
  */
 - (void)attachAd:(MSAdModel *)nativeAdData toView:(UIView *)view;
 - (void)reloadAd;
+
+/**
+ * 当广告被点击时触发
+ */
+- (void)onAdClicked:(UIGestureRecognizer *)gesture;
 
 @end
 
