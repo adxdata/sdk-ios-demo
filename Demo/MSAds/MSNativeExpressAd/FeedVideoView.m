@@ -11,12 +11,13 @@
 #import <StoreKit/StoreKit.h>
 #import <MSAdSDK/MSAdSDK.h>
 
-@interface FeedVideoView() <MSFeedVideoDelegate>
+@interface FeedVideoView()
 @property (nonatomic, strong) UILabel *titleLabel;//标题
 @property (nonatomic, strong) UILabel *contentLabel;//描述
 @property (strong, nonatomic)MSAdModel *adModel;
 //@property (strong, nonatomic)UIView *endView;
 @property (strong, nonatomic)MSFeedVideoView *videoView;
+@property (strong, nonatomic)UIView *mediaViewContainer;
 
 @end
 
@@ -61,10 +62,13 @@
     self.contentLabel.frame = CGRectMake(CGRectGetMinX(self.titleLabel.frame), CGRectGetMaxY(self.titleLabel.frame) + 5, CGRectGetWidth(self.titleLabel.frame), contentSize.height);
 
     CGRect frame = CGRectMake(20, CGRectGetMaxY(self.contentLabel.frame) + 5, CGRectGetWidth(self.titleLabel.frame), 190);
-    self.videoView = [[MSFeedVideoView alloc] initWithFrame:frame adModel:self.adModel];
-    self.videoView.delegate = self;
-    [self addSubview:self.videoView];
+    self.mediaViewContainer = [[UIView alloc] initWithFrame:frame];
+    [self addSubview:self.mediaViewContainer];
     self.frame = CGRectMake(0, 0, self.frame.size.width, [FeedVideoView heightCellForRow:self.adModel width:self.frame.size.width]);
+}
+
+- (UIView *)getMediaViewContainer {
+    return self.mediaViewContainer;
 }
 
 + (CGFloat)heightCellForRow:(MSAdModel*)adModel width:(CGFloat)width {
