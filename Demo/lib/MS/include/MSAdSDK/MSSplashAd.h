@@ -60,6 +60,8 @@ NS_ASSUME_NONNULL_BEGIN
 
 @end
 
+static BOOL isShowSplash;
+
 @interface MSSplashAd : NSObject
 
 /**

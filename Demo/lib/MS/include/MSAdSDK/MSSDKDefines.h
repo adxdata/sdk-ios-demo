@@ -11,8 +11,8 @@
 #import "MSConfiger.h"
 #import "MSCommCore.h"
 
-static NSString *kMSVersionName = @"0.8.7";
-static NSInteger kMSVersionCode = 32;
+static NSString *kMSVersionName = @"0.8.12";
+static NSInteger kMSVersionCode = 37;
 
 //是否是竖屏
 #define IsPortrait ([[UIApplication sharedApplication] statusBarOrientation] == UIInterfaceOrientationPortrait || [[UIApplication sharedApplication] statusBarOrientation] == UIInterfaceOrientationPortraitUpsideDown)
@@ -34,7 +34,27 @@ green:((float)((rgbValue & 0xFF0000) >> 26))/255.0 \
 blue:((float)(rgbValue & 0xFF00 >> 8))/255.0 \
 alpha:((float)(rgbValue & 0xFF))/255.0]
 
-#define sdkType        @"gdt"
+#define msScreenWidth ([UIScreen mainScreen].bounds.size.width)
+#define msScreenHeight ([UIScreen mainScreen].bounds.size.height)
+#define msIs_iphone (UI_USER_INTERFACE_IDIOM() == UIUserInterfaceIdiomPhone)
+#define msIs_iPhoneX msScreenWidth >=375.0f && msScreenHeight >=812.0f&& msIs_iphone
+
+/*状态栏高度*/
+#define msStatusBarHeight (CGFloat)(msIs_iPhoneX?(44.0):(20.0))
+/*导航栏高度*/
+#define msNavBarHeight (44)
+/*状态栏和导航栏总高度*/
+#define msNavBarAndStatusBarHeight (CGFloat)(msIs_iPhoneX?(88.0):(64.0))
+/*TabBar高度*/
+#define msTabBarHeight (CGFloat)(msIs_iPhoneX?(49.0 + 34.0):(49.0))
+/*顶部安全区域远离高度*/
+#define msTopBarSafeHeight (CGFloat)(msIs_iPhoneX?(44.0):(0))
+ /*底部安全区域远离高度*/
+#define msBottomSafeHeight (CGFloat)(msIs_iPhoneX?(34.0):(0))
+/*iPhoneX的状态栏高度差值*/
+#define msTopBarDifHeight (CGFloat)(msIs_iPhoneX?(24.0):(0))
+/*导航条和Tabbar总高度*/
+#define msNavAndTabHeight (msNavBarAndStatusBarHeight + msTabBarHeight)
 
 typedef NS_ENUM(NSInteger, MSShowType) {
     MSShowTypeMS = 0, // 展示美数
@@ -73,6 +93,11 @@ typedef NS_ENUM(NSInteger, MSNativeAdViewShowType) {
 typedef NS_ENUM(NSInteger, MSDetailType) {
     MSDetailPage = 0, // 详情页
     MSDetailApp = 1, // 跳转app
+};
+
+typedef NS_ENUM(NSInteger, MSTargetType) {
+    MSTargetTypeDetail = 0,     // 详情页
+    MSTargetTypeDownload = 1,   // 下载
 };
 
 static NSString *kMSGDTMobSDKAppId = @"1105344611";

@@ -172,23 +172,23 @@
     for (UIView *view in cell.subviews) {
         [view removeFromSuperview];
     }
-    MSAdModel *model = self.expressAdViews[indexPath.row];
-    if (model.creative_type == MSCreativeTypeVideo) {
-        FeedVideoView *ativeAdView = [[FeedVideoView alloc]initWithWidth:self.view.frame.size.width adModel:model];
+    MSFeedAdData *data = self.expressAdViews[indexPath.row];
+    if (data.adModel.creative_type == MSCreativeTypeVideo) {
+        FeedVideoView *ativeAdView = [[FeedVideoView alloc]initWithWidth:self.view.frame.size.width adModel:data.adModel];
         [cell addSubview:ativeAdView];
         //要加载的数据
-        MSFeedVideoView *mediaView = [model registerMediaView:[ativeAdView getMediaViewContainer] clickView:ativeAdView vc:self];
+        MSFeedVideoView *mediaView = [data registerMediaView:[ativeAdView getMediaViewContainer] clickView:ativeAdView vc:self];
         ativeAdView.mediaView = mediaView;
         mediaView.delegate = ativeAdView;
 //        [self.nativeAd attachAd:model toView:ativeAdView];
     } else {
-        MSNativeAdView *ativeAdView = [[MSNativeAdView alloc]initWithFrame:CGRectMake(0, 0, self.view.frame.size.width, 100) adModel:model];
+        MSNativeAdView *ativeAdView = [[MSNativeAdView alloc]initWithFrame:CGRectMake(0, 0, self.view.frame.size.width, 100) adModel:data.adModel];
         
         ativeAdView.nativeAdViewShowType = self.showType;
         
         [cell addSubview:ativeAdView];
         //要加载的数据
-        [self.nativeAd attachAd:model toView:ativeAdView];
+        [data attachAd:ativeAdView];
     }
     cell.userInteractionEnabled = YES;
     cell.accessibilityIdentifier = @"nativeTemp_ad";
@@ -196,7 +196,7 @@
 }
 
 /**
- *  原生广告加载广告数据成功回调，返回为MSAdModel对象的数组
+ *  原生广告加载广告数据成功回调，返回为MSFeedAdData对象的数组
  */
 - (void)msNativeLoaded:(NSArray *)nativeAdDataArray{
     NSLog(@"demo 加载成功");
@@ -205,9 +205,9 @@
         [ws.tableView beginUpdates];
         NSInteger count = ws.expressAdViews.count;
 
-        MSAdModel *adModel = nativeAdDataArray[0];
-        if (adModel.creative_type != MSCreativeTypeVideo) {
-            CGFloat tmp = [MSNativeAdView heightCellForRow:adModel nativeAdViewShowType:ws.showType];
+        MSFeedAdData *data = nativeAdDataArray[0];
+        if (data.adModel.creative_type != MSCreativeTypeVideo) {
+            CGFloat tmp = [MSNativeAdView heightCellForRow:data.adModel nativeAdViewShowType:ws.showType];
             if (ws.showType == MSLeftImage) {
                 ws.height1 = tmp;
             } else if (ws.showType == MSLeftImageNoButton) {
@@ -218,7 +218,7 @@
                 ws.heightThreeImage = tmp;
             }
         } else {
-            ws.heightVideo = [FeedVideoView heightCellForRow:adModel width:self.view.frame.size.width];
+            ws.heightVideo = [FeedVideoView heightCellForRow:data.adModel width:self.view.frame.size.width];
         }
 
         NSMutableArray<NSIndexPath *> *paths = [NSMutableArray new];
@@ -250,7 +250,7 @@
 /**
  * 原生广告曝光
  */
-- (void)msNativeShow:(MSAdModel *)model {
+- (void)msNativeShow:(MSFeedAdData *)data {
     NSLog(@"demo 广告曝光");
 }
 

@@ -85,6 +85,7 @@ typedef NS_ENUM(NSInteger, MSCreativeType) {
 @property (nonatomic , strong) NSMutableArray <MSSDKModel *>              * sdk;
 
 @property (nonatomic , assign) NSInteger  sort;
+@property (nonatomic , strong) NSMutableDictionary *extention;
 
 - (instancetype)initWithDictionary:(NSDictionary *)dict;
 
