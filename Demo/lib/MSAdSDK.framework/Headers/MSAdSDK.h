@@ -21,7 +21,7 @@
 #import <MSAdSDK/MSNativeAd.h>
 #import <MSAdSDK/MSVideoAd.h>
 #import <MSAdSDK/MSFeedVideoView.h>
-#import <MSAdSDK/MSAdModel+VideoFeed.h>
+#import <MSAdSDK/MSFeedAdData.h>
 
 @interface MSAdSDK : NSObject
 
