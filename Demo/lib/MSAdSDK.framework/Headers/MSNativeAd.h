@@ -8,7 +8,7 @@
 
 #import <Foundation/Foundation.h>
 #import <StoreKit/StoreKit.h>
-#import "MSAdModel.h"
+#import "MSFeedAdData.h"
 
 NS_ASSUME_NONNULL_BEGIN
 @class MSNativeAd;
@@ -18,7 +18,7 @@ NS_ASSUME_NONNULL_BEGIN
 @optional
 
 /**
- *  原生广告加载广告数据成功回调，返回为MSAdModel对象的数组
+ *  原生广告加载广告数据成功回调，返回为MSFeedAdData对象的数组
  */
 - (void)nativeAdSuccessToLoad:(NSArray *)nativeAdDataArray DEPRECATED_MSG_ATTRIBUTE("use msNativeLoaded: instead");
 - (void)msNativeLoaded:(NSArray *)nativeAdDataArray;
@@ -32,8 +32,8 @@ NS_ASSUME_NONNULL_BEGIN
 /**
  *  原生广告即将展现
  */
-- (void)nativeAdShow:(MSAdModel *)model DEPRECATED_MSG_ATTRIBUTE("use msNativeShow: instead");
-- (void)msNativeShow:(MSAdModel *)model;
+- (void)nativeAdShow:(MSFeedAdData *)model DEPRECATED_MSG_ATTRIBUTE("use msNativeShow: instead");
+- (void)msNativeShow:(MSFeedAdData *)model;
 
 /**
  *  原生广告点击之后将要展示内嵌浏览器或应用内AppStore回调
@@ -83,13 +83,9 @@ NS_ASSUME_NONNULL_BEGIN
  *      @param nativeAdData 广告渲染的数据对象
  *      @param view         渲染出的广告结果页面
  */
-- (void)attachAd:(MSAdModel *)nativeAdData toView:(UIView *)view;
+- (void)attachAd:(MSFeedAdData *)nativeAdData toView:(UIView *)view;
 - (void)reloadAd;
 
-/**
- * 当广告被点击时触发
- */
-- (void)onAdClicked:(UIGestureRecognizer *)gesture;
 
 @end
 
