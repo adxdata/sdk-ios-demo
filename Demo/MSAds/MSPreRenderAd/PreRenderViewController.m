@@ -41,7 +41,8 @@
 - (void)loadData {
     self.prerenderAd = [[MSPrerenderAd alloc] initWithCurController:self];
     self.prerenderAd.delegate = self;
-    [self.prerenderAd loadAd:@"123456"];
+    NSString *pid = [[[IdProviderFactory sharedIdProviderFactory] getDefaultProvider] feedPreRender];
+    [self.prerenderAd loadAd:pid];
 }
 
 #pragma mark - UITableViewDelegate && UITableViewDataSource

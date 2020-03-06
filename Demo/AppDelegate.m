@@ -38,7 +38,7 @@
     NSLog(@"优量汇SDK versionName:%@", [GDTSDKConfig sdkVersion]);
 
 //    [MSAdSDK setAppId:@"101516"];
-    [[IdProviderFactory sharedIdProviderFactory] setDefaultPlatform:PlatformNameMS];
+    [[IdProviderFactory sharedIdProviderFactory] setDefaultPlatform:PlatformNameGDT];
     self.window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
     MSAdViewController *vc = [[MSAdViewController alloc] init];
     MSNavigationController *nav = [[MSNavigationController alloc] initWithRootViewController:vc];
