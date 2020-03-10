@@ -32,7 +32,6 @@
 		2F2520DC231F5C63003212B0 /* libxml2.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 2F2520DB231F5C63003212B0 /* libxml2.tbd */; };
 		5409F028237CDC1300776571 /* RewardVideoViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5409F027237CDC1300776571 /* RewardVideoViewController.xib */; };
 		548F3EC5231F47A4003CE914 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 548F3EC4231F47A4003CE914 /* main.m */; };
-		548F3ECB231F47A4003CE914 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 548F3ECA231F47A4003CE914 /* ViewController.m */; };
 		548F3ECE231F47A4003CE914 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 548F3ECC231F47A4003CE914 /* Main.storyboard */; };
 		548F3ED0231F47A4003CE914 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 548F3ECF231F47A4003CE914 /* Assets.xcassets */; };
 		548F3ED3231F47A4003CE914 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 548F3ED1231F47A4003CE914 /* LaunchScreen.storyboard */; };
@@ -65,10 +64,10 @@
 		E986F28723BD94DB00A5EECA /* IAdIdProvider.m in Sources */ = {isa = PBXBuildFile; fileRef = E986F28623BD94DB00A5EECA /* IAdIdProvider.m */; };
 		E994793823ED052900F75214 /* MSAdSDK.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E994793723ED052900F75214 /* MSAdSDK.framework */; };
 		E9B3E52623F110CD0074BDF1 /* BaiduMobAdSDK.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E9B3E52523F110CD0074BDF1 /* BaiduMobAdSDK.framework */; };
-		E9B9499F2408F73F001C95DA /* FeedVideoView.m in Sources */ = {isa = PBXBuildFile; fileRef = E9B9499E2408F73F001C95DA /* FeedVideoView.m */; };
 		E9B3E53D23F110D70074BDF1 /* libGDTMobSDK.a in Frameworks */ = {isa = PBXBuildFile; fileRef = E9B3E53823F110D70074BDF1 /* libGDTMobSDK.a */; };
 		E9B3E53E23F110D70074BDF1 /* BUAdSDK.bundle in Resources */ = {isa = PBXBuildFile; fileRef = E9B3E53B23F110D70074BDF1 /* BUAdSDK.bundle */; };
 		E9B3E53F23F110D70074BDF1 /* BUAdSDK.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E9B3E53C23F110D70074BDF1 /* BUAdSDK.framework */; };
+		E9B9499F2408F73F001C95DA /* FeedVideoView.m in Sources */ = {isa = PBXBuildFile; fileRef = E9B9499E2408F73F001C95DA /* FeedVideoView.m */; };
 		E9C5C07523C74B2000EB6791 /* NSLayoutConstraint+MASDebugAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = E9C5C05C23C74B2000EB6791 /* NSLayoutConstraint+MASDebugAdditions.m */; };
 		E9C5C07623C74B2000EB6791 /* ViewController+MASAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = E9C5C06523C74B2000EB6791 /* ViewController+MASAdditions.m */; };
 		E9C5C07723C74B2000EB6791 /* MASCompositeConstraint.m in Sources */ = {isa = PBXBuildFile; fileRef = E9C5C06923C74B2000EB6791 /* MASCompositeConstraint.m */; };
@@ -128,8 +127,6 @@
 		5409F027237CDC1300776571 /* RewardVideoViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = RewardVideoViewController.xib; sourceTree = "<group>"; };
 		548F3EC0231F47A4003CE914 /* Demo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Demo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		548F3EC4231F47A4003CE914 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
-		548F3EC9231F47A4003CE914 /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
-		548F3ECA231F47A4003CE914 /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
 		548F3ECD231F47A4003CE914 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		548F3ECF231F47A4003CE914 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		548F3ED2231F47A4003CE914 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -185,8 +182,6 @@
 		E994793723ED052900F75214 /* MSAdSDK.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = MSAdSDK.framework; sourceTree = "<group>"; };
 		E9B3E52523F110CD0074BDF1 /* BaiduMobAdSDK.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = BaiduMobAdSDK.framework; sourceTree = "<group>"; };
 		E9B3E52823F110D70074BDF1 /* GDTNativeExpressAdView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GDTNativeExpressAdView.h; sourceTree = "<group>"; };
-		E9B9499D2408F73F001C95DA /* FeedVideoView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FeedVideoView.h; sourceTree = "<group>"; };
-		E9B9499E2408F73F001C95DA /* FeedVideoView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FeedVideoView.m; sourceTree = "<group>"; };
 		E9B3E52923F110D70074BDF1 /* GDTMobBannerView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GDTMobBannerView.h; sourceTree = "<group>"; };
 		E9B3E52A23F110D70074BDF1 /* GDTUnifiedBannerView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GDTUnifiedBannerView.h; sourceTree = "<group>"; };
 		E9B3E52B23F110D70074BDF1 /* GDTNativeAd.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GDTNativeAd.h; sourceTree = "<group>"; };
@@ -207,6 +202,8 @@
 		E9B3E53A23F110D70074BDF1 /* GDTVideoConfig.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GDTVideoConfig.h; sourceTree = "<group>"; };
 		E9B3E53B23F110D70074BDF1 /* BUAdSDK.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = BUAdSDK.bundle; sourceTree = "<group>"; };
 		E9B3E53C23F110D70074BDF1 /* BUAdSDK.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = BUAdSDK.framework; sourceTree = "<group>"; };
+		E9B9499D2408F73F001C95DA /* FeedVideoView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FeedVideoView.h; sourceTree = "<group>"; };
+		E9B9499E2408F73F001C95DA /* FeedVideoView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FeedVideoView.m; sourceTree = "<group>"; };
 		E9C5C05B23C74B2000EB6791 /* MASCompositeConstraint.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MASCompositeConstraint.h; sourceTree = "<group>"; };
 		E9C5C05C23C74B2000EB6791 /* NSLayoutConstraint+MASDebugAdditions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSLayoutConstraint+MASDebugAdditions.m"; sourceTree = "<group>"; };
 		E9C5C05D23C74B2000EB6791 /* MASConstraint+Private.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "MASConstraint+Private.h"; sourceTree = "<group>"; };
@@ -356,8 +353,6 @@
 				548F3FCF231F4AAA003CE914 /* MSNavigationController.h */,
 				548F3FD0231F4AAA003CE914 /* MSNavigationController.m */,
 				548F3FD1231F4AAA003CE914 /* MSSampleAdTypes */,
-				548F3EC9231F47A4003CE914 /* ViewController.h */,
-				548F3ECA231F47A4003CE914 /* ViewController.m */,
 				548F3FE2231F4AFD003CE914 /* AppDelegate.h */,
 				548F3FE3231F4AFD003CE914 /* AppDelegate.m */,
 				0885B199238D059C009A8B8E /* AlterBaseUrlView.h */,
@@ -745,7 +740,6 @@
 				E9C5C07923C74B2000EB6791 /* MASLayoutConstraint.m in Sources */,
 				E986F27C23BB529300A5EECA /* GDTIdProvider.m in Sources */,
 				E986F27A23BB51CF00A5EECA /* CSJIdProvider.m in Sources */,
-				548F3ECB231F47A4003CE914 /* ViewController.m in Sources */,
 				E9C5C07B23C74B2000EB6791 /* View+MASAdditions.m in Sources */,
 				548F3FDF231F4AAA003CE914 /* MSAdViewController.m in Sources */,
 				E9F5ED2E23CC6063006CAEE6 /* Reachability.m in Sources */,
