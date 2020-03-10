@@ -32,7 +32,6 @@
 		2F2520DC231F5C63003212B0 /* libxml2.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 2F2520DB231F5C63003212B0 /* libxml2.tbd */; };
 		5409F028237CDC1300776571 /* RewardVideoViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5409F027237CDC1300776571 /* RewardVideoViewController.xib */; };
 		548F3EC5231F47A4003CE914 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 548F3EC4231F47A4003CE914 /* main.m */; };
-		548F3ECB231F47A4003CE914 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 548F3ECA231F47A4003CE914 /* ViewController.m */; };
 		548F3ECE231F47A4003CE914 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 548F3ECC231F47A4003CE914 /* Main.storyboard */; };
 		548F3ED0231F47A4003CE914 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 548F3ECF231F47A4003CE914 /* Assets.xcassets */; };
 		548F3ED3231F47A4003CE914 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 548F3ED1231F47A4003CE914 /* LaunchScreen.storyboard */; };
@@ -122,8 +121,6 @@
 		5409F027237CDC1300776571 /* RewardVideoViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = RewardVideoViewController.xib; sourceTree = "<group>"; };
 		548F3EC0231F47A4003CE914 /* Demo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Demo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		548F3EC4231F47A4003CE914 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
-		548F3EC9231F47A4003CE914 /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
-		548F3ECA231F47A4003CE914 /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
 		548F3ECD231F47A4003CE914 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		548F3ECF231F47A4003CE914 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		548F3ED2231F47A4003CE914 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -316,13 +313,11 @@
 				548F3FB6231F4AAA003CE914 /* lib */,
 				548F3FB8231F4AAA003CE914 /* MSAds */,
 				E986F27423BB4AC300A5EECA /* adid */,
+				548F3FD1231F4AAA003CE914 /* MSSampleAdTypes */,
 				548F3FCD231F4AAA003CE914 /* MSAdViewController.h */,
 				548F3FCE231F4AAA003CE914 /* MSAdViewController.m */,
 				548F3FCF231F4AAA003CE914 /* MSNavigationController.h */,
 				548F3FD0231F4AAA003CE914 /* MSNavigationController.m */,
-				548F3FD1231F4AAA003CE914 /* MSSampleAdTypes */,
-				548F3EC9231F47A4003CE914 /* ViewController.h */,
-				548F3ECA231F47A4003CE914 /* ViewController.m */,
 				548F3FE2231F4AFD003CE914 /* AppDelegate.h */,
 				548F3FE3231F4AFD003CE914 /* AppDelegate.m */,
 				0885B199238D059C009A8B8E /* AlterBaseUrlView.h */,
@@ -668,7 +663,6 @@
 				E9C5C07923C74B2000EB6791 /* MASLayoutConstraint.m in Sources */,
 				E986F27C23BB529300A5EECA /* GDTIdProvider.m in Sources */,
 				E986F27A23BB51CF00A5EECA /* CSJIdProvider.m in Sources */,
-				548F3ECB231F47A4003CE914 /* ViewController.m in Sources */,
 				E9C5C07B23C74B2000EB6791 /* View+MASAdditions.m in Sources */,
 				548F3FDF231F4AAA003CE914 /* MSAdViewController.m in Sources */,
 				E9F5ED2E23CC6063006CAEE6 /* Reachability.m in Sources */,
