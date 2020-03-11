@@ -11,8 +11,8 @@
 #import "MSConfiger.h"
 #import "MSCommCore.h"
 
-static NSString *kMSVersionName = @"0.8.16";
-static NSInteger kMSVersionCode = 41;
+static NSString *kMSVersionName = @"0.8.17";
+static NSInteger kMSVersionCode = 42;
 
 //是否是竖屏
 #define IsPortrait ([[UIApplication sharedApplication] statusBarOrientation] == UIInterfaceOrientationPortrait || [[UIApplication sharedApplication] statusBarOrientation] == UIInterfaceOrientationPortraitUpsideDown)
@@ -56,6 +56,9 @@ alpha:((float)(rgbValue & 0xFF))/255.0]
 /*导航条和Tabbar总高度*/
 #define msNavAndTabHeight (msNavBarAndStatusBarHeight + msTabBarHeight)
 
+/**
+ 广告平台
+ */
 typedef NS_ENUM(NSInteger, MSShowType) {
     MSShowTypeMS = 0, // 展示美数
     MSShowTypeGDT = 1, // 展示广点通
@@ -63,6 +66,9 @@ typedef NS_ENUM(NSInteger, MSShowType) {
     MSShowTypeBD = 3, // 展示百度
 };
 
+/**
+ 监测上报类型
+ */
 typedef NS_ENUM(NSInteger, MSReportType) {
     MSReportLB = 0, // 加载广告前
     MSReportLS = 1, // 加载广告成功
@@ -70,18 +76,26 @@ typedef NS_ENUM(NSInteger, MSReportType) {
     MSReportClick = 3, // 点击
 };
 
+/**
+ 屏幕横竖屏
+ */
 typedef NS_ENUM(NSInteger, MSOrientation) {
     MSOrientationPortrait = 0, // 展示竖屏
     MSOrientationLandscapeRight = 1, // 展示横屏
 };
 
+/**
+ 请求广告参数secure值
+ */
 typedef NS_ENUM(NSInteger, MSSecure) {
     MSSecureHttp = 0,   // 仅支持http
     MSSecureHttps = 1,  // 仅支持https
     MSSecureAll = 2,    // 仅支持https
 };
 
-
+/**
+ 信息流布局类型
+ */
 typedef NS_ENUM(NSInteger, MSNativeAdViewShowType) {
     MSLeftImage= 0,     // 展示左图右文+下载按钮
     MSLeftImageNoButton = 1, // 展示左图右文
@@ -90,25 +104,28 @@ typedef NS_ENUM(NSInteger, MSNativeAdViewShowType) {
     MSVideo = 4,        // 视频
 };
 
+/**
+ 广告跳转类型，是否deeplink
+ */
 typedef NS_ENUM(NSInteger, MSDetailType) {
     MSDetailPage = 0, // 详情页
     MSDetailApp = 1, // 跳转app
 };
 
+/**
+ 广告点击类型
+ */
 typedef NS_ENUM(NSInteger, MSTargetType) {
     MSTargetTypeDetail = 0,     // 详情页
     MSTargetTypeDownload = 1,   // 下载
 };
 
-static NSString *kMSGDTMobSDKAppId = @"1105344611";
-
-static NSString *kMSBUMobSDKAppId = @"5000546";
-
-#define  BASIC_URL @"http://123.59.48.113/sdk/req_ad"
-//#define  BASIC_URL @"http://47.112.204.11:8080/req_ad_sdk"
-//#define  BASIC_URL @"http://47.112.204.11:8080/ios_req_ad_sdk"
-//#define  BASIC_URL @"http://47.112.204.11:8080/ios_req_ad_only_sdk"
-//#define  BASIC_URL @"http://47.112.204.11:8080/ios_req_ad_sdk?sdk=csj"
-//#define  BASIC_URL [MSConfiger share].baseUrl
-
+/**
+ 性别
+ */
+typedef NS_ENUM(NSInteger, MSGender) {
+    MSGenderUnknown = -1,   // 未知
+    MSGenderMale = 1,       // 男性
+    MSGenderFemale = 10,    // 女性
+};
 
