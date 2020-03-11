@@ -28,6 +28,7 @@ typedef NS_ENUM(NSInteger, MSCreativeType) {
 @property (nonatomic , strong) NSArray <NSString *>              * dUrl;
 @property (nonatomic , assign) NSInteger              height;
 @property (nonatomic , strong) NSArray <NSString *>              * monitorUrl;
+@property (nonatomic , strong) NSArray <NSString *>              * responUrl;
 @property (nonatomic , copy) NSString              * pid;
 @property (nonatomic , strong) NSArray <NSString *>              * srcUrls;
 @property (nonatomic , assign) NSInteger              target_type;//广告交互类型(0:网页跳转,1:下载) 默认 值:0
