@@ -23,6 +23,9 @@
 
     [MSAdSDK setAppId:@"101647"];       // 设置应用id
     [MSAdSDK setTestMode:YES];          // 切换测试服务器，默认为生产服务器
+    [MSConfig setGender:1];
+    [MSConfig setYob:@"1999"];
+    [MSConfig setKeywords:@"movie,game,internet"];
     //    [MSAdSDK setHttpsSupport:YES];    // 请求广告服务器，默认用http协议，此接口用来切换是否使用https协议
     //    [MSAdSDK setSecure:1];            // 修改secure参数，0 - 只支持 http 协议, 1 - 只支持 https 协议, 2 - http、https 协议都支持（默认值）
 
