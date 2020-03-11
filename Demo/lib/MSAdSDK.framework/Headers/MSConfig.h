@@ -11,9 +11,9 @@
 /**
  性别:(-1:未知、男:01、女:10)
  */
-+ (void)setGender:(NSInteger)gender;
++ (void)setGender:(MSGender)gender;
 
-+ (NSInteger)getGender;
++ (MSGender)getGender;
 
 /**
  4 位数字出生年
