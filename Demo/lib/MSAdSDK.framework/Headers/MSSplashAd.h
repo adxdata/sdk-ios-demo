@@ -8,6 +8,7 @@
 
 #import <Foundation/Foundation.h>
 #import <UIKit/UIKit.h>
+#import "MSAdLoader.h"
 
 NS_ASSUME_NONNULL_BEGIN
 
@@ -60,15 +61,7 @@ NS_ASSUME_NONNULL_BEGIN
 
 @end
 
-static BOOL isShowSplash;
-
-@interface MSSplashAd : NSObject
-
-/**
- @par needCustom: 是否需要自定义广告界面,默认是NO.如果想自定义就传YES
- @par drawCustomView: 自定义广告界面的回调 ,把所有自定义的的view都添加到adView , adView的高度占屏幕的四分之一 注意循环引用
- */
-- (instancetype)initWithNeedCustom:(NSInteger)needCustom drawCustomView:(void(^)(UIView* adView))drawCustomView;
+@interface MSSplashAd : MSAdLoader
 
 @property (nonatomic, strong) UIImage* backgroundImage;
 

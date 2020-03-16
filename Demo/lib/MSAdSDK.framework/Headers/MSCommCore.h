@@ -43,6 +43,10 @@
 
 + (NSError *)createError:(NSInteger)code desc:(NSString *)desc reason:(NSString *)reason recovery:(NSString *)recovery;
 
++ (NSError *)createNoAdError;
+
++ (NSError *)createAdLoaderError;
+
 + (void)openDetail:(UIViewController *)vc adModel:(MSAdModel*)adModel complete:(void (^)(NSInteger type))complete close:(void (^)(void))close;
 
 + (NSString *)urlConversionFromOriginalURL:(NSString *)originalURL;
@@ -50,6 +54,8 @@
 + (UIViewController *)getCurrentVC;
 
 + (void)adClicked:(MSAdModel *)adModel vc:(UIViewController *)vc point:(CGPoint)point;
+
++ (NSInteger)getSDKType:(NSString *)sdk;
 
 @end
 

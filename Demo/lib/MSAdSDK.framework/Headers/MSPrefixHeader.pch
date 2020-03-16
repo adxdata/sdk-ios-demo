@@ -10,5 +10,6 @@
 #import "MSAdSDK.h"
 #import "MSCommCore.h"
 #import "MSAdModel.h"
+#import "MSSDKModel.h"
 #import "MSSDKNetSession.h"
 #import "MSAdService.h"
