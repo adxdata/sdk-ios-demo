@@ -5,8 +5,14 @@
 //  Created by zzq on 2020/3/13.
 //  Copyright © 2020 yang. All rights reserved.
 //
+#import "MSAdLoader.h"
+
+@class MSAdLoader;
 
 @interface MSPlatformLoader : NSObject
+
+/** 广告加载器 */
+@property (nonatomic, weak)MSAdLoader *adLoader;
 
 /** 下一个优先级广告平台加载器 */
 @property (nonatomic, strong)MSPlatformLoader *next;
@@ -19,6 +25,9 @@
 
 /** 平台广告数据 */
 @property (nonatomic, assign)MSShowType showType;
+
+/** 广告是否正在显示 */
+@property (nonatomic, assign) BOOL adShow;
 
 /** 构造方法 */
 - (instancetype) initWithModel:(MSAdModel *)adModel sdkModel:(MSSDKModel *)sdkModel;

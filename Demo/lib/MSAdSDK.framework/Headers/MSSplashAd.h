@@ -61,6 +61,8 @@ NS_ASSUME_NONNULL_BEGIN
 
 @end
 
+static BOOL isShowSplash;
+
 @interface MSSplashAd : MSAdLoader
 
 @property (nonatomic, strong) UIImage* backgroundImage;
@@ -69,6 +71,7 @@ NS_ASSUME_NONNULL_BEGIN
  *  委托对象
  */
 @property (nonatomic, weak) id<MSSplashAdDelegate> delegate;
+
 
 /**
  *  拉取广告超时时间，默认为3秒
@@ -85,6 +88,10 @@ NS_ASSUME_NONNULL_BEGIN
  *  @param pid 广告id
  */
 - (void)loadAdAndShowInWindow:(UIWindow *)window pid:(NSString *)pid;
+
+- (BOOL)isShowSplash;
+
+- (void)setShowSplash:(BOOL)_isShowSplash;
 
 @end
 
