@@ -11,8 +11,8 @@
 #import "MSConfiger.h"
 #import "MSCommCore.h"
 
-static NSString *kMSVersionName = @"0.8.20";
-static NSInteger kMSVersionCode = 45;
+static NSString *kMSVersionName = @"0.8.22";
+static NSInteger kMSVersionCode = 47;
 
 //是否是竖屏
 #define IsPortrait ([[UIApplication sharedApplication] statusBarOrientation] == UIInterfaceOrientationPortrait || [[UIApplication sharedApplication] statusBarOrientation] == UIInterfaceOrientationPortraitUpsideDown)
@@ -123,9 +123,20 @@ typedef NS_ENUM(NSInteger, MSTargetType) {
 /**
  性别
  */
-typedef NS_ENUM(NSInteger, MSGender) {
-    MSGenderUnknown = -1,   // 未知
-    MSGenderMale = 1,       // 男性
-    MSGenderFemale = 10,    // 女性
-};
+ typedef NS_ENUM(NSInteger, MSGender) {
+     MSGenderUnknown = -1,   // 未知
+     MSGenderMale = 1,       // 男性
+     MSGenderFemale = 10,    // 女性
+ };
 
+
+typedef NS_ENUM(NSInteger, MSAdType) {
+    MSAdTypeFeed = 1,           // 自渲染信息流
+    MSAdTypeFeedPreRender = 2,  // 模板渲染信息流
+    MSAdTypeBanner = 3,         // 横幅 banner
+    MSAdTypeSplash = 4,         // 开屏
+    MSAdTypeInterstitial = 5,   // 插屏
+    MSAdTypePaster = 6,         // 贴片
+    MSAdTypeReward = 7,         // 激励视频
+    MSAdTypeDraw = 8,           // 信息流视频
+};

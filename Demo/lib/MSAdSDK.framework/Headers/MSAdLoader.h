@@ -17,6 +17,9 @@
 /** 广告数据模型 */
 @property (strong, nonatomic)MSAdModel *adModel;
 
+/** 广告类型 */
+@property (assign, nonatomic)MSAdType adType;
+
 /** 平台广告加载器 */
 @property (strong, nonatomic)MSPlatformLoader *platformLoader;
 
