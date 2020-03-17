@@ -13,9 +13,14 @@
 @protocol MSFeedAdDataDelegate <NSObject>
 
 /**
+ 渲染广告时触发
+ */
+- (void)attachAd:(MSFeedAdData *)feedAdData toView:(UIView *)view;
+
+/**
  * 当广告被点击时触发
  */
-- (void)onAdClicked:(MSFeedAdData *)feedAdData;
+- (void)onAdClicked:(MSFeedAdData *)feedAdData view:(UIView *)view;
 
 - (void)adShowByType:(NSInteger)SDKType feedAdData:(MSFeedAdData *)feedAdData;
 
@@ -32,6 +37,10 @@
 @property (nonatomic, strong) MSAdModel *adModel;
 
 @property (nonatomic, assign) BOOL showVideoDetail;
+
+@property (nonatomic, assign) NSInteger index;
+
+@property (nonatomic, assign) NSInteger showType;
 
 - (instancetype)initWithModel:(MSAdModel *)adModel;
 
