@@ -109,43 +109,51 @@ extern NSString* const kGDTUnifiedNativeAdKeyVideoDuration;
 
 
 /**
+ 注册可点击的callToAction视图的方法
+ 建议开发者使用GDTUnifiedNativeAdDataObject中的callToAction字段来创建视图，并取代自定义的下载或打开等button,
+ 调用此方法之前必须先调用registerDataObject:clickableViews
+ @param callToActionView CTA视图, 系统自动处理点击事件
+ */
+- (void)registerClickableCallToActionView:(UIView *)callToActionView;
+
+/**
  注销数据对象，在 tableView、collectionView 等场景需要复用 GDTUnifiedNativeAdView 时，
  需要在合适的时机，例如 cell 的 prepareForReuse 方法内执行 unregisterDataObject 方法，
  将广告对象与 GDTUnifiedNativeAdView 解绑，具体可参考示例 demo 的 UnifiedNativeAdBaseTableViewCell 类
  */
 - (void)unregisterDataObject;
 
-#pragma mark - DEPRECATED
-/**
- 此方法已经废弃
- 自渲染2.0视图注册方法
-
- @param dataObject 数据对象，必传字段
- @param logoView logo视图
- @param viewController 所在ViewController，必传字段。支持在register之后对其进行修改
- @param clickableViews 可点击的视图数组，此数组内的广告元素才可以响应广告对应的点击事件
- */
-- (void)registerDataObject:(GDTUnifiedNativeAdDataObject *)dataObject
-                  logoView:(GDTLogoView *)logoView
-            viewController:(UIViewController *)viewController
-            clickableViews:(NSArray<UIView *> *)clickableViews GDT_DEPRECATED_MSG_ATTRIBUTE("use registerDataObject:clickableViews: instead.");
-
-
-/**
- 此方法已经废弃
- 自渲染2.0视图注册方法
- 
- @param dataObject 数据对象，必传字段
- @param mediaView 媒体对象视图，此处放视频播放器的容器视图
- @param logoView logo视图
- @param viewController 所在ViewController，必传字段。支持在register之后对其进行修改
- @param clickableViews 可点击的视图数组，此数组内的广告元素才可以响应广告对应的点击事件
- */
-- (void)registerDataObject:(GDTUnifiedNativeAdDataObject *)dataObject
-                 mediaView:(GDTMediaView *)mediaView
-                  logoView:(GDTLogoView *)logoView
-            viewController:(UIViewController *)viewController
-            clickableViews:(NSArray<UIView *> *)clickableViews GDT_DEPRECATED_MSG_ATTRIBUTE("use registerDataObject:clickableViews: instead.");
+//#pragma mark - DEPRECATED
+///**
+// 此方法已经废弃
+// 自渲染2.0视图注册方法
+//
+// @param dataObject 数据对象，必传字段
+// @param logoView logo视图
+// @param viewController 所在ViewController，必传字段。支持在register之后对其进行修改
+// @param clickableViews 可点击的视图数组，此数组内的广告元素才可以响应广告对应的点击事件
+// */
+//- (void)registerDataObject:(GDTUnifiedNativeAdDataObject *)dataObject
+//                  logoView:(GDTLogoView *)logoView
+//            viewController:(UIViewController *)viewController
+//            clickableViews:(NSArray<UIView *> *)clickableViews GDT_DEPRECATED_MSG_ATTRIBUTE("use registerDataObject:clickableViews: instead.");
+//
+//
+///**
+// 此方法已经废弃
+// 自渲染2.0视图注册方法
+// 
+// @param dataObject 数据对象，必传字段
+// @param mediaView 媒体对象视图，此处放视频播放器的容器视图
+// @param logoView logo视图
+// @param viewController 所在ViewController，必传字段。支持在register之后对其进行修改
+// @param clickableViews 可点击的视图数组，此数组内的广告元素才可以响应广告对应的点击事件
+// */
+//- (void)registerDataObject:(GDTUnifiedNativeAdDataObject *)dataObject
+//                 mediaView:(GDTMediaView *)mediaView
+//                  logoView:(GDTLogoView *)logoView
+//            viewController:(UIViewController *)viewController
+//            clickableViews:(NSArray<UIView *> *)clickableViews GDT_DEPRECATED_MSG_ATTRIBUTE("use registerDataObject:clickableViews: instead.");
 @end
 
 

@@ -21,9 +21,9 @@
 #define GDT_DEPRECATED_ATTRIBUTE
 #endif
 
-#define ScreenHeight ([UIScreen mainScreen].bounds.size.height)
-#define ScreenWidth  ([UIScreen mainScreen].bounds.size.width)
-
+#define GDTScreenHeight ([UIScreen mainScreen].bounds.size.height)
+#define GDTScreenWidth  ([UIScreen mainScreen].bounds.size.width)
+#define GDTTangramSchemePrefix  @"gdtmsg://e.qq.com/"
 /**
  *  视频播放器状态
  *
@@ -45,12 +45,24 @@ typedef enum GDTSDKLoginType {
     GDTSDKLoginTypeQQ = 2,        //QQ账号
 } GDTSDKLoginType;
 
+typedef NS_ENUM(NSUInteger, GDTVideoPlayPolicy) {
+    GDTVideoPlayPolicyUnknow = 0, // 默认值，未设置
+    GDTVideoPlayPolicyAuto = 1,   // 用户角度看起来是自动播放
+    GDTVideoPlayPolicyManual = 2  // 用户角度看起来是手动播放或点击后播放
+};
+
+typedef NS_ENUM(NSUInteger, GDTVideoRenderType) {
+    GDTVideoRenderTypeUnknow = 0,
+    GDTVideoRenderTypeSDK = 1,
+    GDTVideoRenderTypeDeveloper = 2
+};
+
 static inline BOOL isIPhoneXSeries() {
-//    if (@available(iOS 11.0, *)) {
-//        UIWindow *mainWindow = [[[UIApplication sharedApplication] delegate] window];
-//        if (mainWindow.safeAreaInsets.bottom > 0.0) {
-//            return YES;
-//        }
-//    }
+    if (@available(iOS 11.0, *)) {
+        UIWindow *mainWindow = [[[UIApplication sharedApplication] delegate] window];
+        if (mainWindow.safeAreaInsets.bottom > 0.0) {
+            return YES;
+        }
+    }
     return NO;
 }

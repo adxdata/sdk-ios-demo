@@ -106,7 +106,7 @@
  *  详解：appId - 媒体 ID
  *       placementId - 广告位 ID
  */
-- (instancetype)initWithAppId:(NSString *)appId placementId:(NSString *)placementId;
+- (instancetype)initWithAppId:(NSString *)appId placementId:(NSString *)placementId GDT_DEPRECATED_MSG_ATTRIBUTE("插屏1.0接口将于近期下线，请尽快切换到插屏2.0");
 
 /**
  *  广告发起请求方法
@@ -121,6 +121,6 @@
 - (void)presentFromRootViewController:(UIViewController *)rootViewController;
 
 #pragma mark - DEPRECATED
-- (instancetype)initWithAppkey:(NSString *)appkey placementId:(NSString *)placementId GDT_DEPRECATED_MSG_ATTRIBUTE("use initWithAppId:placementId: instead.");
+- (instancetype)initWithAppkey:(NSString *)appkey placementId:(NSString *)placementId GDT_DEPRECATED_MSG_ATTRIBUTE("插屏1.0接口将于近期下线，请尽快切换到插屏2.0");
 
 @end

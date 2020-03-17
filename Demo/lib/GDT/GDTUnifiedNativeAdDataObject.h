@@ -7,9 +7,24 @@
 //
 
 #import <Foundation/Foundation.h>
+#import <UIKit/UIKit.h>
 #import "GDTVideoConfig.h"
 
-@interface GDTUnifiedNativeAdDataObject : NSObject
+typedef NS_ENUM(NSInteger, GDTVastAdEventType) {
+    GDTVastAdEventTypeUnknow,
+    GDTVastAdEventTypeLoaded,
+    GDTVastAdEventTypeStarted,
+    GDTVastAdEventTypeFirstQuartile,
+    GDTVastAdEventTypeMidPoint,
+    GDTVastAdEventTypeThirdQuartile,
+    GDTVastAdEventTypeComplete,
+    GDTVastAdEventTypeAllAdsComplete,
+    GDTVastAdEventTypeExposed,
+    GDTVastAdEventTypeClicked,
+};
+
+
+@interface GDTUnifiedNativeAdDataObject : NSObject 
 
 /**
  广告标题
@@ -79,9 +94,51 @@
 @property (nonatomic, readonly) NSInteger eCPM;
 
 /**
+ 返回广告的eCPM等级
+ 
+ @return 成功返回一个包含数字的string，@""或nil表示无权限或后台异常
+ */
+@property (nonatomic, readonly) NSString *eCPMLevel;
+
+/**
+ 广告对应的CTA文案，自定义CTA视图时建议使用此字段
+ 广告对应的callToAction文案，比如“立即预约”或“电话咨询”, 自定义callToAction视图时建议使用此字段
+
+ 该字段在部分广告类型中可能为空
+ */
+@property (nonatomic, readonly) NSString *callToAction;
+
+/**
+返回广告是否可以跳过，用于做前贴片场景
+
+@return YES 表示可跳过、NO 表示不可跳过
+*/
+@property (nonatomic, readonly) BOOL skippable;
+
+/**
  视频广告播放配置
  */
 @property (nonatomic, strong) GDTVideoConfig *videoConfig;
+
+/**
+ * 视频广告时长，单位 ms
+ */
+@property (nonatomic, readonly) CGFloat duration;
+
+/**
+ *  VAST Tag Url，可能为空。
+ */
+@property (nonatomic, copy, readonly) NSString *vastTagUrl;
+
+/**
+ * VAST Content，可能为空。
+ */
+@property (nonatomic, copy, readonly) NSString *vastContent;
+
+/**
+ * 是否为 VAST 广告
+ */
+@property (nonatomic, assign, readonly) BOOL isVastAd;
 
 /**
  判断两个自渲染2.0广告数据是否相等
@@ -89,6 +146,14 @@
  @param dataObject 需要对比的自渲染2.0广告数据对象
  @return YES or NO
  */
-- (BOOL) equlasAdData:(GDTUnifiedNativeAdDataObject *)dataObject;
+- (BOOL)equalsAdData:(GDTUnifiedNativeAdDataObject *)dataObject;
+
+/**
+ 可选方法，请根据场景酌情上报，用于提高广告预估准确性，提高 ecpm。
+ 使用场景：当广告为视频广告，且开发者自行渲染视频广告封面图，开发者点击封面进入下一页才展示视频广告容器时，其他场景无需使用。
+ 上报时机：开发者自行渲染的视频广告封面图展示给用户时。
+*/
+- (void)videoCoverExpose;
+
 
 @end

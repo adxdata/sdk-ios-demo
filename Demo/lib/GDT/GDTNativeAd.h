@@ -57,6 +57,13 @@ extern NSString* const GDTNativeAdDataKeyImgHeight;
  */
 - (NSInteger)eCPM;
 
+/**
+ 返回广告的eCPM等级
+ 
+ @return 成功返回一个包含数字的string，@""或nil表示无权限或后台异常
+ */
+- (NSString *)eCPMLevel;
+
 @end
 
 @class GDTNativeAd;

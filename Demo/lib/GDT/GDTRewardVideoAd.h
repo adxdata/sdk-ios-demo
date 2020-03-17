@@ -9,14 +9,18 @@
 #import <Foundation/Foundation.h>
 #import <UIKit/UIKit.h>
 
+NS_ASSUME_NONNULL_BEGIN
+
 @protocol GDTRewardedVideoAdDelegate;
 
 @interface GDTRewardVideoAd : NSObject
 
 @property (nonatomic, getter=isAdValid, readonly) BOOL adValid;
+@property (nonatomic) BOOL videoMuted;
 @property (nonatomic, assign, readonly) NSInteger expiredTimestamp;
 @property (nonatomic, weak) id <GDTRewardedVideoAdDelegate> delegate;
-
+@property (nonatomic, readonly) NSString *placementId;
+@property (nonatomic, readonly) NSString *adId;
 /**
  构造方法
 
@@ -44,6 +48,21 @@
  @return 成功返回一个大于等于0的值，-1表示无权限或后台出现异常
  */
 - (NSInteger)eCPM;
+
+/**
+ 返回广告的eCPM等级
+ 
+ @return 成功返回一个包含数字的string，@""或nil表示无权限或后台异常
+ */
+- (NSString *)eCPMLevel;
+
+
+/**
+ 返回广告平台名称
+
+ @return 当使用激励视频聚合功能时，用于区分广告平台
+ */
+- (NSString *)adNetworkName;
 
 @end
 
@@ -118,3 +137,5 @@
 - (void)gdt_rewardVideoAdDidPlayFinish:(GDTRewardVideoAd *)rewardedVideoAd;
 
 @end
+
+NS_ASSUME_NONNULL_END

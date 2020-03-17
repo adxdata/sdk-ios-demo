@@ -114,7 +114,7 @@
  *  详解：appId - 媒体 ID
  *       placementId - 广告位 ID
  */
-- (instancetype)initWithAppId:(NSString *)appId placementId:(NSString *)placementId;
+- (instancetype)initWithAppId:(NSString *)appId placementId:(NSString *)placementId GDT_DEPRECATED_MSG_ATTRIBUTE("banner1.0接口将于近期下线，请尽快切换到banner2.0");
 
 /**
  *  构造方法
@@ -123,7 +123,7 @@
  *       placementId - 广告位 ID
  */
 
-- (instancetype)initWithFrame:(CGRect)frame appId:(NSString *)appId placementId:(NSString *)placementId;
+- (instancetype)initWithFrame:(CGRect)frame appId:(NSString *)appId placementId:(NSString *)placementId GDT_DEPRECATED_MSG_ATTRIBUTE("banner1.0接口将于近期下线，请尽快切换到banner2.0");
 
 /**
  *  拉取并展示广告
@@ -131,8 +131,8 @@
 - (void)loadAdAndShow;
 
 #pragma mark - DEPRECATED
-- (instancetype)initWithAppkey:(NSString *)appkey placementId:(NSString *)placementId GDT_DEPRECATED_MSG_ATTRIBUTE("use initWithAppId:placementId: instead.");
-- (instancetype)initWithFrame:(CGRect)frame appkey:(NSString *)appkey placementId:(NSString *)placementId GDT_DEPRECATED_MSG_ATTRIBUTE("use initWithFrame:appId:placementId: instead.");
+- (instancetype)initWithAppkey:(NSString *)appkey placementId:(NSString *)placementId GDT_DEPRECATED_MSG_ATTRIBUTE("banner1.0接口将于近期下线，请尽快切换到banner2.0");
+- (instancetype)initWithFrame:(CGRect)frame appkey:(NSString *)appkey placementId:(NSString *)placementId GDT_DEPRECATED_MSG_ATTRIBUTE("banner1.0接口将于近期下线，请尽快切换到banner2.0");
 
 
 @end
