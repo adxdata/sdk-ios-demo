@@ -12,7 +12,26 @@ info.plist里添加
         <true/>
     </dict>
 
-#### 3.代码接入
+#### 3.添加依赖库
+
+| 库名称 | SDK |  备注  |
+| :--------   | :-----:  | :----  |
+| AdSupport.framework     | 4.7.2及以后版本 |        |
+| CoreLocation.framework        |   同上   |      |
+| QuartzCore.framework     | 同上 |        |
+| SystemConfiguration.framework        |   同上   |      |
+| CoreTelephony.framework     | 同上 |        |
+| libz.tbd        |   同上   |   或者是libz.dylib   |
+| Security.framework     | 同上 |        |
+| StoreKit.framework        |   同上   |      |
+| libxml2.tbd     | 同上 |        |
+| AVFoundation.framework        |   同上   |      |
+| WebKit.framework     | 同上 |        |
+| libresolv.9.tbd        |   同上   |      |
+| libc++.tbd     | 同上 |        |
+
+
+#### 4.代码接入
 请在您的 AppDelegate 初始化 sdk，代码如下：
 
     #import <MSAdSDK/MSAdSDK.h>
@@ -32,7 +51,7 @@ info.plist里添加
         }
     }
 
-#### 4.广告位代码接入
+#### 5.广告位代码接入
 请参考 demo 代码
 
 
