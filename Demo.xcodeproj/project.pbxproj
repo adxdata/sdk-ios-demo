@@ -60,7 +60,6 @@
 		E986F27E23BB59A300A5EECA /* BDIdProvider.m in Sources */ = {isa = PBXBuildFile; fileRef = E986F27D23BB59A300A5EECA /* BDIdProvider.m */; };
 		E986F28123BB627A00A5EECA /* IdProviderFactory.m in Sources */ = {isa = PBXBuildFile; fileRef = E986F28023BB627A00A5EECA /* IdProviderFactory.m */; };
 		E986F28723BD94DB00A5EECA /* IAdIdProvider.m in Sources */ = {isa = PBXBuildFile; fileRef = E986F28623BD94DB00A5EECA /* IAdIdProvider.m */; };
-		E994793823ED052900F75214 /* MSAdSDK.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E994793723ED052900F75214 /* MSAdSDK.framework */; };
 		E9B9499F2408F73F001C95DA /* FeedVideoView.m in Sources */ = {isa = PBXBuildFile; fileRef = E9B9499E2408F73F001C95DA /* FeedVideoView.m */; };
 		E9C5C07523C74B2000EB6791 /* NSLayoutConstraint+MASDebugAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = E9C5C05C23C74B2000EB6791 /* NSLayoutConstraint+MASDebugAdditions.m */; };
 		E9C5C07623C74B2000EB6791 /* ViewController+MASAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = E9C5C06523C74B2000EB6791 /* ViewController+MASAdditions.m */; };
@@ -73,6 +72,8 @@
 		E9C5C07D23C74B2000EB6791 /* MASViewConstraint.m in Sources */ = {isa = PBXBuildFile; fileRef = E9C5C07223C74B2000EB6791 /* MASViewConstraint.m */; };
 		E9C5C07E23C74B2000EB6791 /* MASViewAttribute.m in Sources */ = {isa = PBXBuildFile; fileRef = E9C5C07323C74B2000EB6791 /* MASViewAttribute.m */; };
 		E9C5C0AA23C7940600EB6791 /* VideoViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E9C5C0A823C7940500EB6791 /* VideoViewController.m */; };
+		E9EF203A2421ECCB0048FDFE /* MSAdSDK.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E9EF20372421ECB60048FDFE /* MSAdSDK.framework */; };
+		E9EF203D2421ED170048FDFE /* logo@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = E9EF203C2421ED170048FDFE /* logo@3x.png */; };
 		E9F5ED2E23CC6063006CAEE6 /* Reachability.m in Sources */ = {isa = PBXBuildFile; fileRef = E9F5ED2C23CC6063006CAEE6 /* Reachability.m */; };
 /* End PBXBuildFile section */
 
@@ -90,6 +91,20 @@
 			proxyType = 1;
 			remoteGlobalIDString = 548F3EBF231F47A4003CE914;
 			remoteInfo = Demo;
+		};
+		E9EF20362421ECB60048FDFE /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = E9EF20302421ECB60048FDFE /* MSAdSDK.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = E99478D523EC10E900F75214;
+			remoteInfo = MSAdSDK;
+		};
+		E9EF20382421ECB60048FDFE /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = E9EF20302421ECB60048FDFE /* MSAdSDK.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = E923A62423CB945500666B47;
+			remoteInfo = MSBundle;
 		};
 /* End PBXContainerItemProxy section */
 
@@ -170,7 +185,6 @@
 		E986F28423BB668F00A5EECA /* GDTIdProvider.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = GDTIdProvider.h; sourceTree = "<group>"; };
 		E986F28523BB66BA00A5EECA /* BDIdProvider.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BDIdProvider.h; sourceTree = "<group>"; };
 		E986F28623BD94DB00A5EECA /* IAdIdProvider.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = IAdIdProvider.m; sourceTree = "<group>"; };
-		E994793723ED052900F75214 /* MSAdSDK.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = MSAdSDK.framework; sourceTree = "<group>"; };
 		E9B9499D2408F73F001C95DA /* FeedVideoView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FeedVideoView.h; sourceTree = "<group>"; };
 		E9B9499E2408F73F001C95DA /* FeedVideoView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FeedVideoView.m; sourceTree = "<group>"; };
 		E9C5C05B23C74B2000EB6791 /* MASCompositeConstraint.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MASCompositeConstraint.h; sourceTree = "<group>"; };
@@ -201,6 +215,8 @@
 		E9C5C07423C74B2000EB6791 /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		E9C5C0A623C7940500EB6791 /* VideoViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VideoViewController.h; sourceTree = "<group>"; };
 		E9C5C0A823C7940500EB6791 /* VideoViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = VideoViewController.m; sourceTree = "<group>"; };
+		E9EF20302421ECB60048FDFE /* MSAdSDK.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = MSAdSDK.xcodeproj; path = "../sdk-ios-lib/MSAdSDK.xcodeproj"; sourceTree = "<group>"; };
+		E9EF203C2421ED170048FDFE /* logo@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "logo@3x.png"; sourceTree = "<group>"; };
 		E9F5ED2C23CC6063006CAEE6 /* Reachability.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Reachability.m; sourceTree = "<group>"; };
 		E9F5ED2D23CC6063006CAEE6 /* Reachability.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Reachability.h; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -210,13 +226,13 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E9EF203A2421ECCB0048FDFE /* MSAdSDK.framework in Frameworks */,
 				2F2520D8231F5C55003212B0 /* AVFoundation.framework in Frameworks */,
 				E98605BE23BEEBD000A5EECA /* MessageUI.framework in Frameworks */,
 				E98605BC23BEEBC000A5EECA /* SafariServices.framework in Frameworks */,
 				088392C92398D58700C0BB1F /* libsqlite3.tbd in Frameworks */,
 				088392C72398D56600C0BB1F /* Accelerate.framework in Frameworks */,
 				088392C52398D53F00C0BB1F /* CoreTelephony.framework in Frameworks */,
-				E994793823ED052900F75214 /* MSAdSDK.framework in Frameworks */,
 				088392C32398D51900C0BB1F /* CoreMedia.framework in Frameworks */,
 				088392C12398D50A00C0BB1F /* MediaPlayer.framework in Frameworks */,
 				088392BF2398D4F200C0BB1F /* MobileCoreServices.framework in Frameworks */,
@@ -289,6 +305,7 @@
 		548F3EB7231F47A4003CE914 = {
 			isa = PBXGroup;
 			children = (
+				E9EF20302421ECB60048FDFE /* MSAdSDK.xcodeproj */,
 				548F3EC2231F47A4003CE914 /* Demo */,
 				548F3EDC231F47A5003CE914 /* DemoTests */,
 				548F3EE7231F47A5003CE914 /* DemoUITests */,
@@ -310,6 +327,7 @@
 		548F3EC2231F47A4003CE914 /* Demo */ = {
 			isa = PBXGroup;
 			children = (
+				E9EF203B2421ED170048FDFE /* res */,
 				548F3FB6231F4AAA003CE914 /* lib */,
 				548F3FB8231F4AAA003CE914 /* MSAds */,
 				E986F27423BB4AC300A5EECA /* adid */,
@@ -360,7 +378,6 @@
 		548F3FB6231F4AAA003CE914 /* lib */ = {
 			isa = PBXGroup;
 			children = (
-				E994793723ED052900F75214 /* MSAdSDK.framework */,
 				E9F5ED2B23CC6063006CAEE6 /* reachability */,
 				E923A63A23CB986500666B47 /* MSBundle.bundle */,
 				E9C5C05A23C74B2000EB6791 /* Masonry */,
@@ -505,6 +522,23 @@
 			path = MSVideoAd;
 			sourceTree = "<group>";
 		};
+		E9EF20312421ECB60048FDFE /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				E9EF20372421ECB60048FDFE /* MSAdSDK.framework */,
+				E9EF20392421ECB60048FDFE /* MSBundle.bundle */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		E9EF203B2421ED170048FDFE /* res */ = {
+			isa = PBXGroup;
+			children = (
+				E9EF203C2421ED170048FDFE /* logo@3x.png */,
+			);
+			path = res;
+			sourceTree = "<group>";
+		};
 		E9F5ED2B23CC6063006CAEE6 /* reachability */ = {
 			isa = PBXGroup;
 			children = (
@@ -608,6 +642,12 @@
 			mainGroup = 548F3EB7231F47A4003CE914;
 			productRefGroup = 548F3EC1231F47A4003CE914 /* Products */;
 			projectDirPath = "";
+			projectReferences = (
+				{
+					ProductGroup = E9EF20312421ECB60048FDFE /* Products */;
+					ProjectRef = E9EF20302421ECB60048FDFE /* MSAdSDK.xcodeproj */;
+				},
+			);
 			projectRoot = "";
 			targets = (
 				548F3EBF231F47A4003CE914 /* Demo */,
@@ -616,6 +656,23 @@
 			);
 		};
 /* End PBXProject section */
+
+/* Begin PBXReferenceProxy section */
+		E9EF20372421ECB60048FDFE /* MSAdSDK.framework */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.framework;
+			path = MSAdSDK.framework;
+			remoteRef = E9EF20362421ECB60048FDFE /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		E9EF20392421ECB60048FDFE /* MSBundle.bundle */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.cfbundle;
+			path = MSBundle.bundle;
+			remoteRef = E9EF20382421ECB60048FDFE /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+/* End PBXReferenceProxy section */
 
 /* Begin PBXResourcesBuildPhase section */
 		548F3EBE231F47A4003CE914 /* Resources */ = {
@@ -630,6 +687,7 @@
 				548F3FD6231F4AAA003CE914 /* BannerViewController.xib in Resources */,
 				548F3ED0231F47A4003CE914 /* Assets.xcassets in Resources */,
 				5409F028237CDC1300776571 /* RewardVideoViewController.xib in Resources */,
+				E9EF203D2421ED170048FDFE /* logo@3x.png in Resources */,
 				548F3ECE231F47A4003CE914 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

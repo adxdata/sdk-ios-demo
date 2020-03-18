@@ -28,16 +28,30 @@
     [super viewDidLoad];
     self.logoHeightTextField.text = [NSString stringWithFormat:@"%@", @([[UIScreen mainScreen] bounds].size.height * 0.25)] ;
     self.logoDescLabel.text = [NSString stringWithFormat:@"底部logo高度上限：\n %@(屏幕高度) * 25%% = %@", @([[UIScreen mainScreen] bounds].size.height), @([[UIScreen mainScreen] bounds].size.height * 0.25)];
-    [self loadAd];
+    [self loadAd:nil];
 }
 - (IBAction)clickLoad:(id)sender {
-    [self loadAd];
+    [self loadAd:nil];
 }
 
-- (void)loadAd
-{
+- (IBAction)clickLoadHalf:(id)sender {
+    UIView *bottomView = [[UIView alloc] initWithFrame:CGRectMake(0, 0, msScreenWidth, msScreenHeight * 0.25)];
+    bottomView.backgroundColor = UIColor.whiteColor;
+
+    UIImage *image = [UIImage imageNamed:@"logo@3x.png"];
+    UIImageView *logoView = [[UIImageView alloc] initWithImage:image];
+//    logoView.contentMode =  UIViewContentModeCenter;
+    CGFloat width = 114;
+    CGFloat height = 40;
+    logoView.frame = CGRectMake((msScreenWidth - width) / 2, (msScreenHeight * 0.25 - height) / 2, width, height) ;
+    [bottomView addSubview:logoView];
+    [self loadAd:bottomView];
+}
+
+- (void)loadAd:(UIView *)bottomView {
     MSSplashAd *splash = [[MSSplashAd alloc]init];
     splash.delegate = self;
+    splash.bottomView = bottomView;
     self.splash = splash;
 //    NSString *pid = @"100424147";
     NSString *pid = [[[IdProviderFactory sharedIdProviderFactory] getDefaultProvider] splash];
