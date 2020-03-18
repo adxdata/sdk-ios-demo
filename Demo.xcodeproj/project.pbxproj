@@ -79,6 +79,7 @@
 		E9C5C07D23C74B2000EB6791 /* MASViewConstraint.m in Sources */ = {isa = PBXBuildFile; fileRef = E9C5C07223C74B2000EB6791 /* MASViewConstraint.m */; };
 		E9C5C07E23C74B2000EB6791 /* MASViewAttribute.m in Sources */ = {isa = PBXBuildFile; fileRef = E9C5C07323C74B2000EB6791 /* MASViewAttribute.m */; };
 		E9C5C0AA23C7940600EB6791 /* VideoViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E9C5C0A823C7940500EB6791 /* VideoViewController.m */; };
+		E9EF202F2421EB9D0048FDFE /* logo@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = E9EF202E2421EB9D0048FDFE /* logo@3x.png */; };
 		E9F5ED2E23CC6063006CAEE6 /* Reachability.m in Sources */ = {isa = PBXBuildFile; fileRef = E9F5ED2C23CC6063006CAEE6 /* Reachability.m */; };
 /* End PBXBuildFile section */
 
@@ -232,6 +233,7 @@
 		E9C5C07423C74B2000EB6791 /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		E9C5C0A623C7940500EB6791 /* VideoViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VideoViewController.h; sourceTree = "<group>"; };
 		E9C5C0A823C7940500EB6791 /* VideoViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = VideoViewController.m; sourceTree = "<group>"; };
+		E9EF202E2421EB9D0048FDFE /* logo@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "logo@3x.png"; sourceTree = "<group>"; };
 		E9F5ED2C23CC6063006CAEE6 /* Reachability.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Reachability.m; sourceTree = "<group>"; };
 		E9F5ED2D23CC6063006CAEE6 /* Reachability.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Reachability.h; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -345,6 +347,7 @@
 		548F3EC2231F47A4003CE914 /* Demo */ = {
 			isa = PBXGroup;
 			children = (
+				E9EF202D2421EB9D0048FDFE /* res */,
 				548F3FB6231F4AAA003CE914 /* lib */,
 				548F3FB8231F4AAA003CE914 /* MSAds */,
 				E986F27423BB4AC300A5EECA /* adid */,
@@ -581,6 +584,14 @@
 			path = MSVideoAd;
 			sourceTree = "<group>";
 		};
+		E9EF202D2421EB9D0048FDFE /* res */ = {
+			isa = PBXGroup;
+			children = (
+				E9EF202E2421EB9D0048FDFE /* logo@3x.png */,
+			);
+			path = res;
+			sourceTree = "<group>";
+		};
 		E9F5ED2B23CC6063006CAEE6 /* reachability */ = {
 			isa = PBXGroup;
 			children = (
@@ -702,6 +713,7 @@
 				E923A63B23CB986500666B47 /* MSBundle.bundle in Resources */,
 				548F3FDE231F4AAA003CE914 /* SplashViewController.xib in Resources */,
 				548F3ED3231F47A4003CE914 /* LaunchScreen.storyboard in Resources */,
+				E9EF202F2421EB9D0048FDFE /* logo@3x.png in Resources */,
 				E9B3E53E23F110D70074BDF1 /* BUAdSDK.bundle in Resources */,
 				548F3FD8231F4AAA003CE914 /* InterstitialViewController.xib in Resources */,
 				548F3FD6231F4AAA003CE914 /* BannerViewController.xib in Resources */,
