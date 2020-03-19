@@ -252,6 +252,10 @@
     NSLog(@"demo 广告曝光");
 }
 
+- (void)msNativeDetailShow {
+    NSLog(@"demo 广告点击");
+}
+
 - (void)dealloc {
     
 }

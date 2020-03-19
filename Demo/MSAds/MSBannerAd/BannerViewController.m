@@ -100,6 +100,8 @@
  */
 - (void)msBannerClosed:(MSBannerView *)msBannerAd{
     NSLog(@"demo 广告关闭");
+    [_bannerView removeFromSuperview];
+    _bannerView = nil;
 }
 
 - (void)dealloc
