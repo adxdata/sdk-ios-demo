@@ -11,8 +11,8 @@
 #import "MSConfiger.h"
 #import "MSCommCore.h"
 
-static NSString *kMSVersionName = @"0.8.26";
-static NSInteger kMSVersionCode = 51;
+static NSString *kMSVersionName = @"0.8.27";
+static NSInteger kMSVersionCode = 52;
 
 //是否是竖屏
 #define IsPortrait ([[UIApplication sharedApplication] statusBarOrientation] == UIInterfaceOrientationPortrait || [[UIApplication sharedApplication] statusBarOrientation] == UIInterfaceOrientationPortraitUpsideDown)
@@ -129,14 +129,24 @@ typedef NS_ENUM(NSInteger, MSTargetType) {
      MSGenderFemale = 10,    // 女性
  };
 
+/**
+ * 广告类型
+ */
+ typedef NS_ENUM(NSInteger, MSAdType) {
+     MSAdTypeFeed = 1,           // 自渲染信息流
+     MSAdTypeFeedPreRender = 2,  // 模板渲染信息流
+     MSAdTypeBanner = 3,         // 横幅 banner
+     MSAdTypeSplash = 4,         // 开屏
+     MSAdTypeInterstitial = 5,   // 插屏
+     MSAdTypePaster = 6,         // 贴片
+     MSAdTypeReward = 7,         // 激励视频
+     MSAdTypeDraw = 8,           // 信息流视频
+ };
 
-typedef NS_ENUM(NSInteger, MSAdType) {
-    MSAdTypeFeed = 1,           // 自渲染信息流
-    MSAdTypeFeedPreRender = 2,  // 模板渲染信息流
-    MSAdTypeBanner = 3,         // 横幅 banner
-    MSAdTypeSplash = 4,         // 开屏
-    MSAdTypeInterstitial = 5,   // 插屏
-    MSAdTypePaster = 6,         // 贴片
-    MSAdTypeReward = 7,         // 激励视频
-    MSAdTypeDraw = 8,           // 信息流视频
-};
+/**
+ * 广告点击范围
+ */
+ typedef NS_ENUM(NSInteger, MSClickRange) {
+     MSClickRangeButton = 1,           // 按钮可点
+     MSClickRangeScreen = 2,           // 全屏可点
+ };

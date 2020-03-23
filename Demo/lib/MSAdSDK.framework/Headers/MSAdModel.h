@@ -52,6 +52,8 @@ typedef NS_ENUM(NSInteger, MSCreativeType) {
 
 @property (nonatomic , assign) NSInteger              video_duration;//音视频时长(单位/秒)
 
+@property (nonatomic , assign) NSInteger              clickable_range;// 激励视频的点击范围，1：只有按钮可点，2：全屏幕可点
+
 @property (nonatomic , copy) NSString              * title;//标题
 @property (nonatomic , copy) NSString              * content;//摘要、􏰁述
 @property (nonatomic , copy) NSString              * icon;//角标(品牌 Logo、广告主头像等)
