@@ -85,6 +85,9 @@ static BOOL isShowSplash;
  */
  @property (nonatomic, strong) UIView *bottomView;
 
+ /** 广告是否正在显示 */
+ @property (nonatomic, assign) BOOL adShow;
+
 /**
  *  广告发起请求并展示在Window中
  *  详解：[可选]发起拉取广告请求,并将获取的广告以全屏形式展示在传入的Window参数中
@@ -93,10 +96,6 @@ static BOOL isShowSplash;
  *  @param pid 广告id
  */
 - (void)loadAdAndShowInWindow:(UIWindow *)window pid:(NSString *)pid;
-
-- (BOOL)isShowSplash;
-
-- (void)setShowSplash:(BOOL)_isShowSplash;
 
 @end
 
