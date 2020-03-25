@@ -89,6 +89,7 @@ typedef NS_ENUM(NSInteger, MSCreativeType) {
 
 @property (nonatomic , assign) NSInteger  sort;
 @property (nonatomic , strong) NSMutableDictionary *extention;
+@property (nonatomic , assign) BOOL isMSLoaded;
 
 - (instancetype)initWithDictionary:(NSDictionary *)dict;
 
