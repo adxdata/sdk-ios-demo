@@ -58,5 +58,7 @@
 
 + (NSInteger)getSDKType:(NSString *)sdk;
 
++ (NSString *)getIOSUA;
+
 @end
 

@@ -248,8 +248,12 @@
 /**
  * 原生广告曝光
  */
-- (void)msNativeShow:(MSFeedAdData *)data {
+- (void)msNativeCli:(MSFeedAdData *)feedAdData {
     NSLog(@"demo 广告曝光");
+}
+
+- (void)msNativeClick:(MSFeedAdData *)feedAdData {
+    NSLog(@"demo 广告点击");
 }
 
 - (void)dealloc {
