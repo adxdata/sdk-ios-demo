@@ -24,7 +24,7 @@
 
 - (void)adShowByType:(NSInteger)SDKType feedAdData:(MSFeedAdData *)feedAdData;
 
-- (void)adDetailWillShowByType:(NSInteger)SDKType;
+- (void)adDetailWillShowByType:(NSInteger)SDKType feedAdData:(MSFeedAdData *)feedAdData ;
 
 - (void)adDetailClosedByType:(NSInteger)SDKType;
 
