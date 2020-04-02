@@ -26,7 +26,7 @@
 /**
  * 获取广告的参数
  * @param pid 广告位id
- * @param adType广告类型
+ * @param adType 广告类型
  */
 + (NSMutableDictionary *)adParams:(NSString *)pid adType:(NSInteger)adType;
 

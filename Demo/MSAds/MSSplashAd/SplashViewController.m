@@ -51,7 +51,9 @@
 - (void)loadAd:(UIView *)bottomView {
     MSSplashAd *splash = [[MSSplashAd alloc]init];
     splash.delegate = self;
-    splash.bottomView = bottomView;
+    if (bottomView) {
+        splash.bottomView = bottomView;
+    }
     self.splash = splash;
 //    NSString *pid = @"100424147";
     NSString *pid = [[[IdProviderFactory sharedIdProviderFactory] getDefaultProvider] splash];

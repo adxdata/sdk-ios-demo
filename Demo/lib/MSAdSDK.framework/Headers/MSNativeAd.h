@@ -85,7 +85,7 @@ NS_ASSUME_NONNULL_BEGIN
 /**
  *  广告数据渲染完毕即将展示时调用方法
  *  详解：[必选]广告数据渲染完毕，即将展示时需调用本方法。
- *      @param MSFeedAdData 广告渲染的数据对象
+ *      @param feedAdData 广告渲染的数据对象
  *      @param view         渲染出的广告结果页面
  */
 - (void)attachAd:(MSFeedAdData *)feedAdData toView:(UIView *)view;

@@ -21,12 +21,12 @@ extern PlatformName const _Nonnull PlatformNameBD;
 
 @interface IdProviderFactory : NSObject
 
-+ (instancetype) sharedIdProviderFactory;
++ (_Nonnull instancetype) sharedIdProviderFactory;
 
--(void) setDefaultPlatform:(NSString *) platformName;
+-(void) setDefaultPlatform:( NSString * _Nonnull ) platformName;
 
--(IAdIdProvider *) getProvider:(NSString *) platformName;
+-(IAdIdProvider * _Nonnull) getProvider:(NSString * _Nonnull) platformName;
 
--(IAdIdProvider *) getDefaultProvider;
+-(IAdIdProvider * _Nonnull ) getDefaultProvider;
 
 @end

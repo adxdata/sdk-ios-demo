@@ -42,10 +42,10 @@
 
 - (IBAction)loadAd:(id)sender {
     if (sender == self.portraitButton) {
-        NSString *placementId = self.portraitPlacementIdTextField.text.length > 0 ?self.portraitPlacementIdTextField.text: self.portraitPlacementIdTextField.placeholder;
+//        NSString *placementId = self.portraitPlacementIdTextField.text.length > 0 ?self.portraitPlacementIdTextField.text: self.portraitPlacementIdTextField.placeholder;
         self.rewardVideoAd = [[MSRewardVideoAd alloc] initWithCurController:self];
     } else {
-        NSString *placementId = self.placementIdTextField.text.length > 0 ?self.placementIdTextField.text: self.placementIdTextField.placeholder;
+//        NSString *placementId = self.placementIdTextField.text.length > 0 ?self.placementIdTextField.text: self.placementIdTextField.placeholder;
         self.rewardVideoAd = [[MSRewardVideoAd alloc] initWithCurController:self];
     }
     self.rewardVideoAd.delegate = self;
