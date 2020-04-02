@@ -191,7 +191,7 @@
  */
 - (void)msVideoShow:(MSVideoAd *)videoAd {
     NSLog(@"demo 视频广告曝光");
-    NSLog(@"demo 视频广告总时长（秒）：%ld", [self.videoAd duration]);
+    NSLog(@"demo 视频广告总时长（秒）：%ld", (long)[self.videoAd duration]);
     self.pauseButton.hidden = NO;
     self.isPlaying = YES;
     [self.pauseButton setTitle:@"暂停" forState:UIControlStateNormal];
@@ -201,9 +201,6 @@
 - (void)viewDidDisappear:(BOOL)animated {
     NSLog(@"%s", __FUNCTION__);
     [super viewDidDisappear:animated];
-
-    self.videoAd.delegate = nil;
-    self.videoAd = nil;
     [self destroyTimer];
 }
 
@@ -237,6 +234,8 @@
 }
 
 - (void)dealloc {
+    self.videoAd.delegate = nil;
+    self.videoAd = nil;
     NSLog(@"%s", __FUNCTION__);
     [[NSNotificationCenter defaultCenter] removeObserver:self];
 }

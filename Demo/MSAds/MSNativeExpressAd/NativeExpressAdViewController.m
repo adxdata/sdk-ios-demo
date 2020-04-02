@@ -71,8 +71,7 @@
     [self.tableView registerClass:[UITableViewCell class] forCellReuseIdentifier:@"nativeexpresscell"];
     [self.tableView registerClass:[UITableViewCell class] forCellReuseIdentifier:@"testdatacell"];
     
-    NSString *placementId = self.placementIdTextField.text.length > 0? self.placementIdTextField.text: self.placementIdTextField.placeholder;
-    MSWS(ws);
+//    NSString *placementId = self.placementIdTextField.text.length > 0? self.placementIdTextField.text: self.placementIdTextField.placeholder;
     self.nativeAd = [[MSNativeAd alloc]initWithCurController:self];
     self.nativeAd.delegate = self;
     [self refreshButton:nil];
@@ -97,7 +96,9 @@
      * 拉取广告,传入参数为拉取个数。
      * 发起拉取广告请求,在获得广告数据后回调delegate
      */
-    [self.nativeAd loadAd:10 pid:pid]; //这里以一次拉取一条原生广告为例
+    if (pid) {
+        [self.nativeAd loadAd:10 pid:pid]; //这里以一次拉取一条原生广告为例
+    }
 }
 
 
