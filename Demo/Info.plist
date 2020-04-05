@@ -20,6 +20,17 @@
 	<string>1</string>
 	<key>LSApplicationCategoryType</key>
 	<string></string>
+	<key>LSApplicationQueriesSchemes</key>
+	<array>
+		<string>vipshop</string>
+		<string>suning</string>
+		<string>openapp.jdmobile</string>
+		<string>eleme</string>
+		<string>alipay</string>
+		<string>alipays</string>
+		<string>alipayshare</string>
+		<string>tbopen</string>
+	</array>
 	<key>LSRequiresIPhoneOS</key>
 	<true/>
 	<key>NSAppTransportSecurity</key>
@@ -29,8 +40,12 @@
 	</dict>
 	<key>NSCameraUsageDescription</key>
 	<string>$(EXECUTABLE_NAME) camera use</string>
+	<key>NSLocationAlwaysAndWhenInUseUsageDescription</key>
+	<string></string>
+	<key>NSLocationWhenInUseUsageDescription</key>
+	<string></string>
 	<key>NSPhotoLibraryUsageDescription</key>
-	<string>$(EXECUTABLE_NAME) photo use</string>
+	<string></string>
 	<key>UILaunchStoryboardName</key>
 	<string>LaunchScreen</string>
 	<key>UIRequiredDeviceCapabilities</key>
@@ -50,20 +65,5 @@
 		<string>UIInterfaceOrientationLandscapeLeft</string>
 		<string>UIInterfaceOrientationLandscapeRight</string>
 	</array>
-	<key>NSLocationWhenInUseUsageDescription</key>
-	<string>允许Demo在应用使用期间访问您的位置,来用于定位功能</string>
-	<key>NSLocationAlwaysAndWhenInUseUsageDescription</key>
-	<string>允许Demo访问您的位置,来用于定位功能</string>
-    <key>LSApplicationQueriesSchemes</key>
-    <array>
-        <string>vipshop</string>
-        <string>suning</string>
-        <string>openapp.jdmobile</string>
-        <string>eleme</string>
-        <string>alipay</string>
-        <string>alipays</string>
-        <string>alipayshare</string>
-        <string>tbopen</string>
-    </array>
 </dict>
 </plist>
