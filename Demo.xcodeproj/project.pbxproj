@@ -67,7 +67,6 @@
 		E9C5C0AA23C7940600EB6791 /* VideoViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E9C5C0A823C7940500EB6791 /* VideoViewController.m */; };
 		E9EF203D2421ED170048FDFE /* logo@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = E9EF203C2421ED170048FDFE /* logo@3x.png */; };
 		E9EF203F2421F5530048FDFE /* MSAdSDK.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E9EF203E2421F5530048FDFE /* MSAdSDK.framework */; };
-		E9F5ED2E23CC6063006CAEE6 /* Reachability.m in Sources */ = {isa = PBXBuildFile; fileRef = E9F5ED2C23CC6063006CAEE6 /* Reachability.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -178,8 +177,6 @@
 		E9C5C0A823C7940500EB6791 /* VideoViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = VideoViewController.m; sourceTree = "<group>"; };
 		E9EF203C2421ED170048FDFE /* logo@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "logo@3x.png"; sourceTree = "<group>"; };
 		E9EF203E2421F5530048FDFE /* MSAdSDK.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = MSAdSDK.framework; sourceTree = "<group>"; };
-		E9F5ED2C23CC6063006CAEE6 /* Reachability.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Reachability.m; sourceTree = "<group>"; };
-		E9F5ED2D23CC6063006CAEE6 /* Reachability.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Reachability.h; sourceTree = "<group>"; };
 		F64DFE418188FDA1D8FDC435 /* Pods-Demo.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Demo.debug.xcconfig"; path = "Target Support Files/Pods-Demo/Pods-Demo.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -361,7 +358,6 @@
 			isa = PBXGroup;
 			children = (
 				E9EF203E2421F5530048FDFE /* MSAdSDK.framework */,
-				E9F5ED2B23CC6063006CAEE6 /* reachability */,
 				E923A63A23CB986500666B47 /* MSBundle.bundle */,
 			);
 			path = lib;
@@ -477,15 +473,6 @@
 				E9EF203C2421ED170048FDFE /* logo@3x.png */,
 			);
 			path = res;
-			sourceTree = "<group>";
-		};
-		E9F5ED2B23CC6063006CAEE6 /* reachability */ = {
-			isa = PBXGroup;
-			children = (
-				E9F5ED2C23CC6063006CAEE6 /* Reachability.m */,
-				E9F5ED2D23CC6063006CAEE6 /* Reachability.h */,
-			);
-			path = reachability;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -750,7 +737,6 @@
 				E986F27C23BB529300A5EECA /* GDTIdProvider.m in Sources */,
 				E986F27A23BB51CF00A5EECA /* CSJIdProvider.m in Sources */,
 				548F3FDF231F4AAA003CE914 /* MSAdViewController.m in Sources */,
-				E9F5ED2E23CC6063006CAEE6 /* Reachability.m in Sources */,
 				548F3FD7231F4AAA003CE914 /* InterstitialViewController.m in Sources */,
 				548F3FDD231F4AAA003CE914 /* SplashViewController.m in Sources */,
 				E9B9499F2408F73F001C95DA /* FeedVideoView.m in Sources */,
