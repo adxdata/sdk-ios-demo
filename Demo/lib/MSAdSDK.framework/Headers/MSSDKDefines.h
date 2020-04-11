@@ -11,8 +11,8 @@
 #import "MSConfiger.h"
 #import "MSCommCore.h"
 
-static NSString *kMSVersionName = @"0.8.47";
-static NSInteger kMSVersionCode = 72;
+static NSString *kMSVersionName = @"0.8.48";
+static NSInteger kMSVersionCode = 73;
 
 //是否是竖屏
 #define IsPortrait ([[UIApplication sharedApplication] statusBarOrientation] == UIInterfaceOrientationPortrait || [[UIApplication sharedApplication] statusBarOrientation] == UIInterfaceOrientationPortraitUpsideDown)
@@ -30,7 +30,7 @@ alpha:1.0]
 #define MSUIColorFromRGBA(rgbValue)\
 \
 [UIColor colorWithRed:((float)((rgbValue & 0xFF000000) >> 24))/255.0 \
-green:((float)((rgbValue & 0xFF0000) >> 26))/255.0 \
+green:((float)((rgbValue & 0xFF0000) >> 16))/255.0 \
 blue:((float)(rgbValue & 0xFF00 >> 8))/255.0 \
 alpha:((float)(rgbValue & 0xFF))/255.0]
 

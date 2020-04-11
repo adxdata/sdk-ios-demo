@@ -17,7 +17,7 @@
 
 /** 竖版激励视频 */
 -(NSString *) rewardPortrait {
-    return @"100424261";
+    return @"73646b0702001991";
 }
 /** 横版激励视频 */
 -(NSString *) rewardLandscape {
@@ -34,7 +34,7 @@
 /** 信息流上图下文 */
 -(NSString *) feedImageVertical {
     //return @"100424257";
-    return @"100424027";
+    return @"73646b0199001011";
 }
 /** 信息流左图右文 */
 -(NSString *) feedImageHorizon {
@@ -63,7 +63,7 @@
 }
 /** 插屏 */
 -(NSString *) insertScreen {
-    return @"100424252";
+    return @"73646b0501001991";
 }
 /** 开屏 */
 -(NSString *) splash {
@@ -71,7 +71,7 @@
 }
 /** banner */
 -(NSString *) banner {
-    return @"100424250";
+    return @"73646b0301001991";
 }
 /** 平台名称 */
 -(NSString *) platformName {
