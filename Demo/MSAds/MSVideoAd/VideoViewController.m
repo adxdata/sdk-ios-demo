@@ -164,15 +164,15 @@
 }
 
 - (void)msVideoLoad:(MSVideoAd *)videoAd {
-    NSLog(@"demo 视频广告加载成功");
+    NSLog(@"DEMO ADEVENT 广告加载成功");
 }
 
 /**
  *  视频广告成功展示
  */
 - (void)msVideoShow:(MSVideoAd *)videoAd {
-    NSLog(@"demo 视频广告曝光");
-    NSLog(@"demo 视频广告总时长（秒）：%ld", (long)[self.videoAd duration]);
+    NSLog(@"DEMO ADEVENT 广告曝光");
+    NSLog(@"DEMO INFO 视频广告总时长（秒）：%ld", (long)[self.videoAd duration]);
     self.pauseButton.hidden = NO;
     self.isPlaying = YES;
     [self.pauseButton setTitle:@"暂停" forState:UIControlStateNormal];
@@ -189,14 +189,14 @@
  *  视频广告展示失败
  */
 - (void)msVideoError:(MSVideoAd *)videoAd error:(NSError *)error {
-    NSLog(@"demo 视频广告加载失败");
+    NSLog(@"DEMO ADEVENT 广告加载失败");
 }
 
 /**
  *  视频广告点击回调
  */
 - (void)msVideoClick:(MSVideoAd *)videoAd {
-    NSLog(@"demo 视频广告被点击");
+    NSLog(@"DEMO ADEVENT 广告点击");
 //    [self.videoAd destroy];
 }
 
@@ -204,7 +204,7 @@
  *  视频广告将要关闭回调
  */
 - (void)msVideoCompletion:(MSVideoAd *)videoAd {
-    NSLog(@"demo 视频广告播放完成");
+    NSLog(@"DEMO ADEVENT 视频广告播放完成");
 }
 
 - (void)destroyTimer {

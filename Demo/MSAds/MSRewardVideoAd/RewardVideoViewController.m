@@ -78,7 +78,7 @@
  */
 - (void)msRewardVideoLoaded:(MSRewardVideoAd *)msRewardVideoAd{
     self.statusLabel.text = @"广告数据加载成功";
-    NSLog(@"demo 广告数据加载成功");
+    NSLog(@"DEMO ADEVENT 广告加载成功");
 }
 
 /**
@@ -88,7 +88,7 @@
  */
 - (void)msRewardVideoCached:(MSRewardVideoAd *)msRewardVideoAd{
     self.statusLabel.text = @"视频文件加载成功";
-    NSLog(@"demo 视频文件加载成功");
+    NSLog(@"DEMO ADEVENT 视频文件加载成功");
 }
 
 /**
@@ -98,7 +98,7 @@
  */
 - (void)msRewardVideoShow:(MSRewardVideoAd *)msRewardVideoAd{
 //    NSLog(@"广告已曝光");
-    NSLog(@"demo 广告已曝光");
+    NSLog(@"DEMO ADEVENT 广告曝光");
 }
 
 /**
@@ -110,7 +110,7 @@
     self.statusLabel.text = @"广告已关闭";
 //    NSLog(@"广告已关闭");
     self.rewardVideoAd = nil;
-    NSLog(@"demo 广告已关闭");
+    NSLog(@"DEMO ADEVENT 广告关闭");
 }
 
 /**
@@ -120,7 +120,7 @@
  */
 - (void)msRewardVideoClicked:(MSRewardVideoAd *)msRewardVideoAd{
 //    NSLog(@"广告已点击");
-    NSLog(@"demo 广告被点击");
+    NSLog(@"DEMO ADEVENT 广告点击");
 }
 
 /**
@@ -155,7 +155,7 @@
 //        NSLog(@"请求太频繁，请稍后再试");
     }
     self.statusLabel.text = @"视频文件加载失败";
-    NSLog(@"demo 广告加载失败: %@", error);
+    NSLog(@"DEMO ADEVENT 广告加载失败: %@", error);
 }
 /**
  视频广告播放达到激励条件回调
@@ -163,7 +163,7 @@
  @param msRewardVideoAd MSRewardVideoAd 实例
  */
 - (void)msRewardVideoReward:(MSRewardVideoAd *)msRewardVideoAd{
-    NSLog(@"demo 播放达到激励条件");
+    NSLog(@"DEMO ADEVENT 播放达到激励条件");
 }
 
 /**
@@ -172,7 +172,7 @@
  @param msRewardVideoAd MSRewardVideoAd 实例
  */
 - (void)msRewardVideoFinish:(MSRewardVideoAd *)msRewardVideoAd{
-    NSLog(@"demo 视频播放结束");
+    NSLog(@"DEMO ADEVENT 视频播放结束");
 }
 
 - (void)dealloc {
