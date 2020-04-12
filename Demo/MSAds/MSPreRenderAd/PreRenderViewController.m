@@ -82,7 +82,7 @@
         [self.expressAdViews addObjectsFromArray:adViewArray];
     }
     [self.tableView reloadData];
-    NSLog(@"demo 模板信息流广告加载成功");
+    NSLog(@"DEMO ADEVENT 广告加载成功");
 }
 
 /**
@@ -90,7 +90,7 @@
  *  详解:当接收服务器返回的广告数据失败后调用该函数
  */
 - (void)msPrerenderError:(MSPrerenderAd *)prerenderAd error:(NSError *)error {
-    NSLog(@"demo 模板信息流广告加载失败");
+    NSLog(@"DEMO ADEVENT 广告加载失败");
 }
 
 /**
@@ -99,7 +99,7 @@
  */
 - (void)msPrerenderRenderSuccess:(UIView *)adView {
     [self.tableView reloadData];
-    NSLog(@"demo 模板信息流广告渲染成功");
+    NSLog(@"DEMO ADEVENT 广告渲染成功");
 }
 
 /**
@@ -107,21 +107,21 @@
  *  详解:广告视图渲染失败后调用该函数
  */
 - (void)msPrerenderRenderError:(UIView *)adView error:(NSError *)error {
-    NSLog(@"demo 模板信息流广告渲染失败");
+    NSLog(@"DEMO ADEVENT 广告渲染失败");
 }
 
 /**
  *  prerender广告曝光
  */
 - (void)msPrerenderShow:(UIView *)adView {
-    NSLog(@"demo 模板信息流广告曝光");
+    NSLog(@"DEMO ADEVENT 广告曝光");
 }
 
 /**
  *  prerender点击回调
  */
 - (void)msPrerenderClicked:(UIView *)adView {
-    NSLog(@"demo 模板信息流广告被点击");
+    NSLog(@"DEMO ADEVENT 广告点击");
 }
 
 /**
@@ -129,7 +129,7 @@
  *  详解:用户有可能点击关闭按钮从而把广告条关闭
  */
 - (void)msPrerenderClosed:(UIView *)adView {
-    NSLog(@"demo 模板信息流广告被关闭");
+    NSLog(@"DEMO ADEVENT 广告关闭");
     //【重要】需要在点击叉以后 在这个回调中移除视图，否则，会出现用户点击叉无效的情况
     [self.expressAdViews removeObject:adView];
     

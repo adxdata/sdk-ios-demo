@@ -198,7 +198,7 @@
  *  原生广告加载广告数据成功回调，返回为MSFeedAdData对象的数组
  */
 - (void)msNativeLoaded:(NSArray *)nativeAdDataArray{
-    NSLog(@"demo 加载成功");
+    NSLog(@"DEMO ADEVENT 广告加载成功");
     MSWS(ws);
     if (nativeAdDataArray.count > 0) {
         [ws.tableView beginUpdates];
@@ -243,18 +243,18 @@
  *  原生广告加载广告数据失败回调
  */
 - (void)msNativeError:(NSError *)error{
-    NSLog(@"demo 加载失败");
+    NSLog(@"DEMO ADEVENT 广告加载失败");
 }
 
 /**
  * 原生广告曝光
  */
 - (void)msNativeShow:(MSFeedAdData *)feedAdData {
-    NSLog(@"demo 广告曝光");
+    NSLog(@"DEMO ADEVENT 广告曝光");
 }
 
 - (void)msNativeClick:(MSFeedAdData *)feedAdData {
-    NSLog(@"demo 广告点击");
+    NSLog(@"DEMO ADEVENT 广告点击");
 }
 
 - (void)dealloc {

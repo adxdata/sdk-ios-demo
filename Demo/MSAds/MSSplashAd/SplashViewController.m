@@ -63,21 +63,21 @@
 
 
 - (void)msSplashLoaded:(MSSplashAd *)splashAd {
-    NSLog(@"demo 广告加载成功");
+    NSLog(@"DEMO ADEVENT 广告加载成功");
 }
 
 /**
  *  开屏广告成功展示
  */
 - (void)msSplashShow:(MSSplashAd *)splashAd{
-    NSLog(@"demo 广告曝光");
+    NSLog(@"DEMO ADEVENT 广告曝光");
 }
 
 /**
  *  开屏广告展示失败
  */
 - (void)msSplashError:(MSSplashAd *)splashAd withError:(NSError *)error{
-    NSLog(@"demo 广告加载失败");
+    NSLog(@"DEMO ADEVENT 广告加载失败");
 }
 
 
@@ -85,7 +85,7 @@
  *  开屏广告点击回调
  */
 - (void)msSplashClicked:(MSSplashAd *)splashAd{
-    NSLog(@"demo 广告点击");
+    NSLog(@"DEMO ADEVENT 广告点击");
 }
 
 /**
@@ -93,7 +93,7 @@
  */
 - (void)msSplashClosed:(MSSplashAd *)splashAd{
     self.splash = nil;
-    NSLog(@"demo 广告关闭");
+    NSLog(@"DEMO ADEVENT 广告关闭");
 }
 
 - (void)dealloc {

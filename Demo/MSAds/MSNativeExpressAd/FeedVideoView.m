@@ -82,19 +82,19 @@
 }
 
 - (void)msFeedVideoFinish {
-    NSLog(@"信息流视频播放完成");
+    NSLog(@"DEMO ADEVENT 信息流视频播放完成");
 }
 
 - (void)msFeedVideoStart {
-    NSLog(@"信息流视频播放开始");
+    NSLog(@"DEMO ADEVENT 信息流视频播放开始");
 }
 
 - (void)msFeedVideoPause {
-    NSLog(@"信息流视频播放暂停");
+    NSLog(@"DEMO ADEVENT 信息流视频播放暂停");
 }
 
 - (void)msFeedVideoError:(NSError *)error {
-    NSLog(@"信息流视频播放失败");
+    NSLog(@"DEMO ADEVENT 信息流视频播放失败");
 }
 
 @end
