@@ -89,7 +89,7 @@
     } else if (self.showType == MSThreeImage) {
         pid = [[[IdProviderFactory sharedIdProviderFactory] getDefaultProvider] feedThreeImgs];
     } else if (self.showType == MSVideo) {
-        pid = [[[IdProviderFactory sharedIdProviderFactory] getDefaultProvider] video];
+        pid = [[[IdProviderFactory sharedIdProviderFactory] getDefaultProvider] feedVideo];
     }
     self.nativeAd.showVideoDetail = YES;
     /*
