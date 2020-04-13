@@ -70,4 +70,9 @@
  */
 - (void)platformAdDetailClosed;
 
+/**
+ * 各平台广告被跳过时调用
+ */
+- (void)platformAdSkip;
+
 @end
