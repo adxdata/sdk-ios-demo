@@ -100,7 +100,7 @@
  * 广告被跳过时调用
  */
 - (void)msSplashSkip:(MSSplashAd *)splashAd {
-    NSLog(@"demo 广告跳过");
+    NSLog(@"DEMO ADEVENT 广告跳过");
 }
 
 - (void)dealloc {

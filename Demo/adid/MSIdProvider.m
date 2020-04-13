@@ -17,32 +17,32 @@
 
 /** 竖版激励视频 */
 -(NSString *) rewardPortrait {
-    return @"73646b0702001991";
+    return @"73646b0799001991";
 }
 /** 横版激励视频 */
 -(NSString *) rewardLandscape {
-    return @"100424260";
+    return @"73646b0799001991";
 }
 /** 信息流视频 */
 -(NSString *) feedVideo {
-    return @"100424259";
+    return @"73646b0102001991";
 }
 /** 信息流三图一文 */
 -(NSString *) feedThreeImgs {
-    return @"100424262";
+    return @"73646b0104001991";
 }
 /** 信息流上图下文 */
 -(NSString *) feedImageVertical {
     //return @"100424257";
-    return @"73646b0199001011";
+    return @"73646b0101001991";
 }
 /** 信息流左图右文 */
 -(NSString *) feedImageHorizon {
-    return @"100424256";
+    return @"73646b0103001991";
 }
 /** 信息流左图右文图文摘要 */
 -(NSString *) feedImageHorizonDesc {
-    return @"100424258";
+    return @"73646b0103001991";
 }
 /** 信息流预渲染 */
 -(NSString *) feedPreRender {
@@ -50,12 +50,12 @@
 }
 /** 纯视频 */
 -(NSString *) video {
-    return @"987654002";
+    return @"73646b0699001991";
 //    return @"1006736";
 }
 /** 视频暂停贴片 */
 -(NSString *) videoImg {
-    return @"100424254";
+    return @"73646b0602001991";
 }
 /** 图片 */
 -(NSString *) image {
@@ -63,15 +63,15 @@
 }
 /** 插屏 */
 -(NSString *) insertScreen {
-    return @"73646b0501001991";
+    return @"73646b0599001991";
 }
 /** 开屏 */
 -(NSString *) splash {
-    return @"73646b0401001091";
+    return @"73646b0499001991";
 }
 /** banner */
 -(NSString *) banner {
-    return @"73646b0301001991";
+    return @"73646b0399001991";
 }
 /** 平台名称 */
 -(NSString *) platformName {
