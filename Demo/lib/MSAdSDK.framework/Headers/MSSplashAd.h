@@ -59,6 +59,11 @@ NS_ASSUME_NONNULL_BEGIN
 - (void)splashAdDidDismissFullScreenModal:(MSSplashAd *)splashAd DEPRECATED_MSG_ATTRIBUTE("use msSplashDetailClosed: instead");
 - (void)msSplashDetailClosed:(MSSplashAd *)splashAd;
 
+/**
+ * 当用户点击跳过按钮时触发
+ */
+- (void)msSplashSkip:(MSSplashAd *)splashAd;
+
 @end
 
 static BOOL isShowSplash;
