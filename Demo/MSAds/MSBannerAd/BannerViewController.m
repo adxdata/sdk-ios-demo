@@ -53,10 +53,9 @@
 #pragma mark - event repsonse
 - (IBAction)clickLoadAd:(id)sender {
     [self clickRemoveAd:nil];
-    [self.view addSubview:self.bannerView];
 //    NSString *pid = @"100424146";
     NSString *pid = [[[IdProviderFactory sharedIdProviderFactory] getDefaultProvider] banner];
-    [_bannerView loadAdAndShow:self pid:pid];
+    [self.bannerView loadAdAndShow:self pid:pid];
 }
 
 - (IBAction)clickRemoveAd:(id)sender {
@@ -70,6 +69,7 @@
  */
 - (void)msBannerLoaded:(MSBannerView *)msBannerAd{
     NSLog(@"DEMO ADEVENT 广告加载成功");
+    [self.view addSubview:self.bannerView];
 }
 
 /**
