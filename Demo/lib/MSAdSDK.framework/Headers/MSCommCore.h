@@ -60,5 +60,11 @@
 
 + (NSString *)getIOSUA;
 
++ (void)setTouchBegin:(CGPoint)touch;
+
++ (void)setTouchEnd:(CGPoint)touch;
+
++ (NSString *)replaceGDTHong:(NSString *)url;
+
 @end
 
