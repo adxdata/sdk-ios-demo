@@ -33,7 +33,6 @@
 }
 /** 信息流上图下文 */
 -(NSString *) feedImageVertical {
-    //return @"100424257";
     return @"73646b0101001991";
 }
 /** 信息流左图右文 */
@@ -51,7 +50,6 @@
 /** 纯视频 */
 -(NSString *) video {
     return @"73646b0699001991";
-//    return @"1006736";
 }
 /** 视频暂停贴片 */
 -(NSString *) videoImg {
