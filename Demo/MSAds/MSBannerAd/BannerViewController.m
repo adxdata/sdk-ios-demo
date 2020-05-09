@@ -20,6 +20,7 @@
 @property (weak, nonatomic) IBOutlet UISwitch *animationSwitch;
 @property (weak, nonatomic) IBOutlet UISwitch *closeBtnSwitch;
 @property (weak, nonatomic) IBOutlet UIButton *showCloseBtn;
+@property BOOL showCloseButton;
 
 @end
 
@@ -53,8 +54,9 @@
 
 #pragma mark - event repsonse
 - (IBAction)clickLoadAd:(id)sender {
+    self.showCloseButton    = ![((UIButton *)sender).accessibilityIdentifier isEqualToString:@"show_ad_button_without_close_btn"];
+
     [self clickRemoveAd:nil];
-//    NSString *pid = @"100424146";
     NSString *pid = [[[IdProviderFactory sharedIdProviderFactory] getDefaultProvider] banner];
     [self.bannerView loadAdAndShow:self pid:pid];
 }
@@ -74,6 +76,7 @@
  */
 - (void)msBannerLoaded:(MSBannerView *)msBannerAd{
     NSLog(@"DEMO ADEVENT 广告加载成功");
+    self.bannerView.showCloseBtn    = self.showCloseButton;
     [self.view addSubview:self.bannerView];
 }
 
