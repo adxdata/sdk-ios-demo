@@ -19,6 +19,7 @@
 @property (weak, nonatomic) IBOutlet UISwitch *gpsSwitch;
 @property (weak, nonatomic) IBOutlet UISwitch *animationSwitch;
 @property (weak, nonatomic) IBOutlet UISwitch *closeBtnSwitch;
+@property (weak, nonatomic) IBOutlet UIButton *showCloseBtn;
 
 @end
 
@@ -61,6 +62,10 @@
 - (IBAction)clickRemoveAd:(id)sender {
     [_bannerView removeFromSuperview];
     _bannerView = nil;
+}
+
+- (IBAction)showOrHideCloseBtn:(id)sender {
+    _bannerView.showCloseBtn = !_bannerView.showCloseBtn;
 }
 
 /**

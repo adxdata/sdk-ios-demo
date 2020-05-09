@@ -1,16 +1,15 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
-    <device id="retina4_7" orientation="portrait">
-        <adaptation id="fullscreen"/>
-    </device>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="15705" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait" appearance="light"/>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14460.20"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15706"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="BannerViewController">
             <connections>
+                <outlet property="showCloseBtn" destination="BnF-ay-1w1" id="LXK-dY-Lna"/>
                 <outlet property="view" destination="ZbE-3t-Maf" id="UXP-76-GcB"/>
             </connections>
         </placeholder>
@@ -27,24 +26,35 @@
                         <action selector="clickLoadAd:" destination="-1" eventType="touchUpInside" id="j3R-Yw-7vf"/>
                     </connections>
                 </button>
-                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="scA-oh-CAh">
-                    <rect key="frame" x="144" y="355" width="62" height="30"/>
+                <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="scA-oh-CAh">
+                    <rect key="frame" x="32" y="395" width="62" height="30"/>
                     <accessibility key="accessibilityConfiguration" identifier="remove_ad_button"/>
                     <state key="normal" title="移除广告"/>
                     <connections>
                         <action selector="clickRemoveAd:" destination="-1" eventType="touchUpInside" id="fYU-tW-Rzt"/>
                     </connections>
                 </button>
+                <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="BnF-ay-1w1">
+                    <rect key="frame" x="17" y="431" width="92" height="30"/>
+                    <accessibility key="accessibilityConfiguration" identifier="remove_ad_button"/>
+                    <state key="normal" title="移除关闭按钮"/>
+                    <connections>
+                        <action selector="showOrHideCloseBtn:" destination="-1" eventType="touchUpInside" id="7bO-v0-D7o"/>
+                    </connections>
+                </button>
             </subviews>
             <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
             <constraints>
                 <constraint firstAttribute="bottom" secondItem="vpU-NE-FSg" secondAttribute="bottom" constant="282" id="0OW-Xa-xpq"/>
+                <constraint firstItem="BnF-ay-1w1" firstAttribute="centerY" secondItem="scA-oh-CAh" secondAttribute="centerY" constant="30" id="JLM-G5-i6n"/>
                 <constraint firstItem="scA-oh-CAh" firstAttribute="width" secondItem="vpU-NE-FSg" secondAttribute="width" id="MUm-Uo-ToJ"/>
-                <constraint firstItem="scA-oh-CAh" firstAttribute="centerY" secondItem="vpU-NE-FSg" secondAttribute="centerY" id="N6R-id-oRH"/>
+                <constraint firstItem="scA-oh-CAh" firstAttribute="centerY" secondItem="vpU-NE-FSg" secondAttribute="centerY" constant="30" id="N6R-id-oRH"/>
                 <constraint firstItem="vpU-NE-FSg" firstAttribute="leading" secondItem="ZbE-3t-Maf" secondAttribute="leading" constant="32" id="Pca-JE-qbs"/>
-                <constraint firstItem="scA-oh-CAh" firstAttribute="leading" secondItem="vpU-NE-FSg" secondAttribute="trailing" constant="50" id="UEN-uK-IbH"/>
+                <constraint firstItem="scA-oh-CAh" firstAttribute="centerX" secondItem="vpU-NE-FSg" secondAttribute="centerX" id="UEN-uK-IbH"/>
                 <constraint firstItem="scA-oh-CAh" firstAttribute="height" secondItem="vpU-NE-FSg" secondAttribute="height" id="aid-z6-55Y"/>
+                <constraint firstItem="BnF-ay-1w1" firstAttribute="centerX" secondItem="scA-oh-CAh" secondAttribute="centerXWithinMargins" id="doK-CA-WIX"/>
             </constraints>
+            <point key="canvasLocation" x="138" y="115"/>
         </view>
     </objects>
 </document>
