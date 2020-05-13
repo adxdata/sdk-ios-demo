@@ -43,7 +43,7 @@
 - (MSBannerView *)bannerView
 {
     if (!_bannerView) {
-        CGRect rect = {CGPointZero, [UIScreen mainScreen].bounds.size.width, [UIScreen mainScreen].bounds.size.width * 100 / 640};
+        CGRect rect = {CGPointZero, [UIScreen mainScreen].bounds.size.width, [UIScreen mainScreen].bounds.size.width * 160 / 640};
 //        __weak __typeof__(self) weakSelf = self;
         _bannerView = [[MSBannerView alloc] initWithFrame:rect curController:self];
 //        _bannerView.currentViewController = self;
