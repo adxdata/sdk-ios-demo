@@ -45,7 +45,7 @@
 }
 /** 信息流预渲染 */
 -(NSString *) feedPreRender {
-    return @"100424304";
+    return @"73646b0299831991";
 }
 /** 纯视频 */
 -(NSString *) video {

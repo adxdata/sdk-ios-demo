@@ -69,7 +69,7 @@
 }
 /** banner */
 -(NSString *) banner {
-    return @"100424290";
+    return @"73646b0399631991";
 }
 /** 平台名称 */
 -(NSString *) platformName {
