@@ -32,6 +32,8 @@
 /** 平台广告加载器工厂字典 */
 @property (strong, nonatomic)NSDictionary *platformLoaderFactorys;
 
+@property (strong, nonatomic)MSPlatformLoader *currentPlatformLoader;
+
 /*
  * 访问美数服务器，加载广告数据
  */
