@@ -65,7 +65,8 @@
 }
 /** 开屏 */
 -(NSString *) splash {
-    return @"73646b0499001991";
+//    return @"73646b0499001991";
+    return @"987654996";
 }
 /** banner */
 -(NSString *) banner {

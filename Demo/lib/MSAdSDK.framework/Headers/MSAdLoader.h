@@ -34,6 +34,9 @@
 
 @property (strong, nonatomic)MSPlatformLoader *currentPlatformLoader;
 
+/** 广告是否被取消显示 */
+@property (nonatomic, assign) BOOL canceled;
+
 /*
  * 访问美数服务器，加载广告数据
  */

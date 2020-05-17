@@ -93,9 +93,6 @@ static BOOL isShowSplash;
  /** 广告是否正在显示 */
 @property (nonatomic, assign) BOOL adShow;
 
-/** 广告是否被取消显示 */
-@property (nonatomic, assign) BOOL canceled;
-
 /**
  *  广告发起请求并展示在Window中
  *  详解：[可选]发起拉取广告请求,并将获取的广告以全屏形式展示在传入的Window参数中

@@ -29,6 +29,12 @@
 /** 广告是否正在显示 */
 @property (nonatomic, assign) BOOL adShow;
 
+/** 广告是否被取消显示 */
+@property (nonatomic, assign) BOOL canceled;
+
+/** 广告是否被取消显示 */
+@property (nonatomic, assign) BOOL hasLoaded;
+
 /** 构造方法 */
 - (instancetype) initWithModel:(MSAdModel *)adModel sdkModel:(MSSDKModel *)sdkModel;
 
