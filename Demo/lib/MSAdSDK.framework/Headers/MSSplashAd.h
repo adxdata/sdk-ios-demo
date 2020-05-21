@@ -83,15 +83,15 @@ static BOOL isShowSplash;
  *  详解：拉取广告超时时间，开发者调用loadAd方法以后会立即展示backgroundImage，然后在该超时时间内，如果广告拉
  *  取成功，则立马展示开屏广告，否则放弃此次广告展示机会。
  */
- @property (nonatomic, assign) NSInteger fetchDelay;
+@property (nonatomic, assign) NSInteger fetchDelay;
 
 /**
  * 自定义底部视图
  */
- @property (nonatomic, strong) UIView *bottomView;
+@property (nonatomic, strong) UIView *bottomView;
 
  /** 广告是否正在显示 */
- @property (nonatomic, assign) BOOL adShow;
+@property (nonatomic, assign) BOOL adShow;
 
 /**
  *  广告发起请求并展示在Window中
