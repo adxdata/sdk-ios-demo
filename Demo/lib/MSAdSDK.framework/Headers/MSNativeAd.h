@@ -67,12 +67,18 @@ NS_ASSUME_NONNULL_BEGIN
  */
 @property (nonatomic, assign) BOOL showVideoDetail;
 
+/*
+ *  viewControllerForPresentingModalView
+ *  详解：[必选]开发者需传入用来弹出目标页的ViewController，一般为当前ViewController
+ */
+@property (nonatomic, weak) UIViewController *viewController;
+
 /**
  *  构造方法
  *  详解：appId - 媒体 ID
  *       placementId - 广告位 ID
  */
-- (instancetype)initWithCurController:(UIViewController*)controller;
+ - (instancetype)initWithCurController:(UIViewController*)controller;
 
 /**
  *  广告发起请求方法

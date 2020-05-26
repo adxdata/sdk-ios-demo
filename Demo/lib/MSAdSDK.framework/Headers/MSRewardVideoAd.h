@@ -97,9 +97,11 @@
 
 /**
  *  构造方法
- *  详解：frame - banner 展示的位置和大小
+ *  详解：controller - 当前UIViewController
  */
-- (instancetype)initWithCurController:(UIViewController*)controller;
+ - (instancetype)initWithCurController:(UIViewController*)controller;
+
+- (instancetype)init;
 
 /**
 *  加载数据
@@ -111,6 +113,8 @@
  *  显示广告
  *  详解：显示广告
  */
-- (void)showAd;
+ - (void)showAd;
+
+ - (void)showAd:(UIViewController*)controller;
 
 @end
