@@ -68,8 +68,8 @@ NS_ASSUME_NONNULL_BEGIN
 @property (nonatomic, assign) BOOL showVideoDetail;
 
 /*
- *  viewControllerForPresentingModalView
- *  详解：[必选]开发者需传入用来弹出目标页的ViewController，一般为当前ViewController
+ *  viewController
+ *  详解：开发者需传入用来弹出目标页的ViewController，一般为当前ViewController
  */
 @property (nonatomic, weak) UIViewController *viewController;
 
@@ -83,20 +83,12 @@ NS_ASSUME_NONNULL_BEGIN
 /**
  *  广告发起请求方法
  *  详解：[必选]发起拉取广告请求,在获得广告数据后回调delegate
- *  @param adCount 一次拉取广告的个数
+ *  @param adCount 一次拉取广告的个数，目前仅应用于穿山甲，美数一次只能取一个，百度每次只能取3个
  *  @param pid 广告id
  */
 - (void)loadAd:(int)adCount pid:(NSString *)pid;
 
-/**
- *  广告数据渲染完毕即将展示时调用方法
- *  详解：[必选]广告数据渲染完毕，即将展示时需调用本方法。
- *      @param feedAdData 广告渲染的数据对象
- *      @param view         渲染出的广告结果页面
- */
-- (void)attachAd:(MSFeedAdData *)feedAdData toView:(UIView *)view;
 - (void)reloadAd;
-
 
 @end
 

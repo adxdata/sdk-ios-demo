@@ -13,11 +13,6 @@
 @protocol MSFeedAdDataDelegate <NSObject>
 
 /**
- 渲染广告时触发
- */
-- (void)attachAd:(MSFeedAdData *)feedAdData toView:(UIView *)view;
-
-/**
  * 当广告被点击时触发
  */
 - (void)onAdClicked:(MSFeedAdData *)feedAdData view:(UIView *)view;
@@ -41,6 +36,29 @@
 @property (nonatomic, assign) NSInteger index;
 
 @property (nonatomic, assign) NSInteger showType;
+
+/*
+ *  viewController
+ *  详解：开发者需传入用来弹出目标页的ViewController，一般为当前ViewController
+ */
+@property (nonatomic, weak) UIViewController *viewController;
+
+/**
+ * 广点通广告对象
+ */
+@property (nonatomic, strong) id gdtNativeAd;
+@property (nonatomic, strong) id gdtNativeData;
+
+/**
+ * 穿山甲广告对象
+ */
+@property (nonatomic, strong) id buNativeAd;
+
+/**
+ * 百度广告对象
+ */
+@property (nonatomic, strong) id bdNativeAd;
+@property (nonatomic, strong) id bdNativeData;
 
 - (instancetype)initWithModel:(MSAdModel *)adModel;
 
