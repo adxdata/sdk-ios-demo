@@ -37,6 +37,12 @@
 /** 广告是否被取消显示 */
 @property (nonatomic, assign) BOOL canceled;
 
+/**
+ *  拉取广告超时时间，默认为3秒
+ *  详解：拉取广告超时时间，超过此时间则放弃此次广告展示机会。
+ */
+@property (nonatomic, assign) NSInteger fetchDelay;
+
 /*
  * 访问美数服务器，加载广告数据
  */
