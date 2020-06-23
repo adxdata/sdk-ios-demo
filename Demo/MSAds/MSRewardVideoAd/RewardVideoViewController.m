@@ -78,7 +78,10 @@
  */
 - (void)msRewardVideoLoaded:(MSRewardVideoAd *)msRewardVideoAd{
     self.statusLabel.text = @"广告数据加载成功";
+    
     NSLog(@"DEMO ADEVENT 广告加载成功");
+//    [msRewardVideoAd showAd];  //自动展示广告
+    
 }
 
 /**
